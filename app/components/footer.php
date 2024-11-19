@@ -6,12 +6,12 @@
     <title>Document</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="../public/css/footer.css">
+    <link rel="stylesheet" href="../../public/css/footer.css">
 </head>
 <body>
     <div class="listen">
         <div class="media">
-            <div class="media_cd" style="background-image: url('../public/images/singers/chuBin.jpg')"></div>
+            <div class="media_cd" style="background-image: url('../../public/images/singers/chuBin.jpg')"></div>
             <div class="media_title">
                 <marquee class="media_title--name" scrolldelay="130">Cô đơn trên sofa</marquee>
                 <a class="media_title--author">Chu Bin</a>
