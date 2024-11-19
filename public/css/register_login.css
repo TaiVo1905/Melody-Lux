@@ -229,7 +229,7 @@
     }
 
     .overlay {
-        background-image: url('../../public/images/register_login/72b4c93713da9a32ccc573bae11ec8e8.gif');
+        background-image: url('../images/register_login/register_login.gif');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 0 0;

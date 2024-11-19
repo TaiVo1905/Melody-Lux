@@ -27,7 +27,7 @@
         </div>
         <div class="form-container login-container">
             <form  class="form" action="#">
-                <h1 class="dangnhap">Đăng nhập</h1>
+                <h1 class="dangnhap">Đăng Nhập</h1>
                 <input class="input" type="email" placeholder="Email">
                 <input class="input" type="password" placeholder="Mật khẩu">
                 <div class="content">
@@ -67,19 +67,6 @@
             </div>
         </div>
     </div>
-    <script>
-        const registerButton = document.getElementById('register');
-        const loginButton = document.getElementById('login');
-        const container = document.getElementById('container');
-
-        registerButton.addEventListener("click", () => {
-            container.classList.add("right-panel-active");
-        });
-
-        loginButton.addEventListener("click", () => {
-            container.classList.remove("right-panel-active");
-        });
-    </script>
+    <script src="../../public/js/register_login.js"></script>
 </body>
-
 </html>
