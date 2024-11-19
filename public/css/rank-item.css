@@ -5,11 +5,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1000px;
-    height: 60px;
+    width: 992px;
+    height: 64px;
     background-color: #170F23;
-    /* background-color: antiquewhite; */
-    padding-left: 15px;
+    padding-left: 20px;
 }
 .rank_item_left{
     display: flex; 
@@ -20,7 +19,8 @@
     display: flex; 
     align-items: center;
     justify-content: space-around;
-    width: 60%;
+    width: 282px; /**/
+
 }
 .number-box {
     font-size: 45px; /* Kích thước số */
@@ -67,6 +67,7 @@
 }
 
 .rank_song_singer{
+    padding-top: 5px;
     padding-left: 10px;
 }
 .rank_item_right{
@@ -80,12 +81,12 @@
     color: #ffffff;
 }
 .rank_song_name{
-    font-size: 18px;
+    font-size: 16px;
     color: #ffffff;
     cursor: pointer;
 }
 .rank_singer{
-    font-size: 14px;
+    font-size: 13px;
     color: #ffffff80;
     cursor: pointer;
     line-height: 24px;
@@ -99,7 +100,7 @@
 }
 .rank_item_right .song_name{
     color: #ffffff80;
-    font-size: 12px;
+    font-size: 15px;
 }
 .rank_icon{
     color: #ffffff;
