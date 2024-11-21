@@ -1,0 +1,89 @@
+.sidebar{
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #231B2E;
+}
+
+.icon_sidebar{
+    color: #9A979D;
+    font-size: 17px;
+}
+.logo_img img{
+    width: 220px;
+    height: 200px;
+}
+.bar_title, .add_playlist{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    padding-left: 40px;
+}
+
+.bar_title_box{
+    width: 210px;
+    padding-left: 30px !important;
+}
+.bar_title p, .add_playlist p{
+    color: #BEBCBF;
+}
+
+.bar_title_content{
+    margin-left: 20px;
+    font-size: 20px;
+}
+/* .sidebar_top .bar_title_content{
+    margin-left: 30px;
+} */
+
+.bar_title:hover, .add_playlist:hover{
+    background-color: #393243;
+    cursor: pointer;
+}
+
+ .bar_title:hover .icon_sidebar {
+    color: #FFFFFF; 
+}
+
+.bar_title:hover .bar_title_content {
+    color: #FFFFFF; 
+}
+
+.add_playlist:hover .icon_sidebar{
+    color: #FFFFFF; 
+}
+.add_playlist:hover .bar_title_content {
+    color: #FFFFFF; 
+}
+.box_icon_bar{
+    border-radius: 13px;
+    width: 30px;
+    height: 30px;
+    background-color: #2F2739;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon_time{
+    background-color: #8239FF;
+}
+.icon_heart{
+    background-color: #1185B2;
+}
+.icon_play{
+    background-color: #FA712E;
+}
+.icon_album{
+    background-color: #FF4DAF;
+}
+.icon_upload{
+    background-color: #FF5757;
+}
+.box_icon_bar .icon_sidebar{
+    color: #FEC4E5;
+}
+.add_playlist .icon_sidebar{
+    padding-right: 5px;
+}
