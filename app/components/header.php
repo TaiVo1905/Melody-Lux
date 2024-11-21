@@ -9,9 +9,8 @@
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="../../public/css/header.css?v=<?php echo time(); ?>">
-    
-    </head>
+    <link rel="stylesheet" href="../../public/css/header.css?v=<?php echo time(); ?>"> 
+</head>
 <body>
     <div class="header_container">
         <div class="header_left">
