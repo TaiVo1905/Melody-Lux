@@ -149,11 +149,11 @@ VALUES
 -- inser vào bảng albums
 INSERT INTO albums (album_name, quantity, datetime, album_img) 
 VALUES 
-	('Album 1', 1, '2024-11-17 08:00:00', 'public\images\singers\hoGiaHung.jpg'),
-	('Album 2', 1, '2024-11-18 09:30:00', 'public\images\singers\hoQuangHieu.jpg'),
-    ('Album 3', 1, '2024-11-18 09:30:00', 'public\images\singers\phanManhQuynh.jpg'),
-    ('Album 4', 1, '2024-11-18 09:30:00', 'public\images\singers\trinhThienAn.jpg'),
-    ('Album 5', 3, '2024-11-18 09:30:00', 'public\images\singers\quachBeem.jpg');
+	('Album 1', 1, '2024-11-17 08:00:00', 'public/images/singers/hoGiaHung.jpg'),
+	('Album 2', 1, '2024-11-18 09:30:00', 'public/images/singers/hoQuangHieu.jpg'),
+    ('Album 3', 1, '2024-11-18 09:30:00', 'public/images/singers/phanManhQuynh.jpg'),
+    ('Album 4', 1, '2024-11-18 09:30:00', 'public/images/singers/trinhThienAn.jpg'),
+    ('Album 5', 3, '2024-11-18 09:30:00', 'public/images/singers/quachBeem.jpg');
 
 insert into Album_Singers values
 	(1, 1),
@@ -178,17 +178,17 @@ VALUES
 -- Insert bài hát vào bảng songs
 INSERT INTO songs (song_name, path_audio, path_img, album_id, category_id, author_id, user_id)
 VALUES
-  ('Thay thế', 'public\audio\ThayThe-HoGiaHungHKT-5308924.mp3', 'public\images\singers\hoGiaHung.jpg', 1, 2, 1, 2),
-  ('Khóc cho đấng sinh thành', 'public\audio\KhocChoDangSinhThanhThieuNienRaGiangHoOST-HoQuangHieu-5533643.mp3', 'public\images\singers\hoQuangHieu.jpg', 2, 2, 2, 2),
-  ('Nước ngoài', 'public\audio\nuocNgoai.m4a', 'public\images\singers\phanManhQuynh.jpg', 3, 2, 3, 2),
-  ('Khi yêu nào đâu ai muốn', 'public\audio\KhiYeuNaoDauAiMuon-TrinhThienAn-7624200.mp3', 'public\images\singers\trinhThienAn.jpg', 4, 2, 3, 2),
-  ('Hà giang ơi', 'public\audio\HaGiangOi-QuachBeem-6260097.mp3', 'public\images\singers\quachBeem.jpg', 5, 2, 5, 2),
-  ('Giả vờ thương anh có được không', 'GiaVoThuongAnhDuocKhong-ChuBin-4858628.mp3', 'public\images\singers\chuBin.jpg', null, 2, 6, 2),
-  ('Đơn giản anh yêu em', 'public\audio\DonGianAnhYeuEm-DucPhat-7857286.mp3', 'public\images\singers\ducPhat.jpg', 5, 2, 5, 2),
-  ('Đời là thế thôi', 'public\audio\DoiLaTheThoi-QuachBeem_4cmjg.mp3', 'public\images\singers\quachBeem.jpg', 5, 2, 5, 2),
-  ('Điếu thuốc tàn', 'public\audio\DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3', 'public\images\singers\lamChanhKhang.jpg', null, 2, 6, 2),
-  ('Cô đơn trong nhà mình', 'public\audio\CÔ ĐƠN TRONG NHÀ MÌNH  HOÀI LÂM.mp3', 'public\images\singers\hoaiLam.jpg', null, 2, 7, 2),
-  ('Cha', 'public\audio\Cha-QuachBeem-6283468.mp3', 'public\images\singers\quachBeem.jpg', null, 1, 5, 2);
+  ('Thay thế', 'public/audio/ThayThe-HoGiaHungHKT-5308924.mp3', 'public/images/singers/hoGiaHung.jpg', 1, 2, 1, 2),
+  ('Khóc cho đấng sinh thành', 'public/audio/KhocChoDangSinhThanhThieuNienRaGiangHoOST-HoQuangHieu-5533643.mp3', 'public/images/singers/hoQuangHieu.jpg', 2, 2, 2, 2),
+  ('Nước ngoài', 'public/audio/nuocNgoai.m4a', 'public/images/singers/phanManhQuynh.jpg', 3, 2, 3, 2),
+  ('Khi yêu nào đâu ai muốn', 'public/audio/KhiYeuNaoDauAiMuon-TrinhThienAn-7624200.mp3', 'public/images/singers/trinhThienAn.jpg', 4, 2, 3, 2),
+  ('Hà giang ơi', 'public/audio/HaGiangOi-QuachBeem-6260097.mp3', 'public/images/singers/quachBeem.jpg', 5, 2, 5, 2),
+  ('Giả vờ thương anh có được không', 'public/audio/GiaVoThuongAnhDuocKhong-ChuBin-4858628.mp3', 'public/mages/singers/chuBin.jpg', null, 2, 6, 2),
+  ('Đơn giản anh yêu em', 'public/audio/DonGianAnhYeuEm-DucPhat-7857286.mp3', 'public/images/singers/ducPhat.jpg', 5, 2, 5, 2),
+  ('Đời là thế thôi', 'public/audio/DoiLaTheThoi-QuachBeem_4cmjg.mp3', 'public/images/singers/quachBeem.jpg', 5, 2, 5, 2),
+  ('Điếu thuốc tàn', 'public/audio/DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3', 'public/images/singers/lamChanhKhang.jpg', null, 2, 6, 2),
+  ('Cô đơn trong nhà mình', 'public/audio/CÔ ĐƠN TRONG NHÀ MÌNH  HOÀI LÂM.mp3', 'public/images/singers/hoaiLam.jpg', null, 2, 7, 2),
+  ('Cha', 'public/audio/Cha-QuachBeem-6283468.mp3', 'public/images/singers/quachBeem.jpg', null, 1, 5, 2);
 
 insert into Song_Singers values
 	(1, 1),

@@ -1,0 +1,13 @@
+.card {
+    overflow: hidden;
+}
+.card img {
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1);
+}
+.card img:hover {
+    transform: scale(1.1);
+}
+p {
+    font-size: 11px;
+}
