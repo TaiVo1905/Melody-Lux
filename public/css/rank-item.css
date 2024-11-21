@@ -1,0 +1,158 @@
+*{
+    font-family: 'Inter, sanserif';
+}
+.rank_items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    height: 60px;
+    background-color: #170F23;
+    /* background-color: antiquewhite; */
+    padding-left: 15px;
+}
+.rank_item_left{
+    display: flex; 
+    align-items: center;
+    width: 500px;
+}
+.item_left_content{
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+}
+.number-box {
+    font-size: 45px; /* Kích thước số */
+    font-weight: bold; /* Đậm nét */
+    color: transparent; /* Làm chữ trong suốt */
+    -webkit-text-stroke: 2px rgb(108, 108, 248); /* Tạo viền màu xanh */
+}
+.rank_song{
+    /* padding-top: 5px; */
+    display: flex;
+    
+}
+.rank_song_img{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.rank_song img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    /* margin-right: 10px; */
+}
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color:white;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.rank_items:hover .play-icon {
+    opacity: 1;
+}
+
+.rank_song_singer{
+    padding-left: 10px;
+}
+.rank_item_right{
+    display: flex; 
+    align-items: center;
+    width: 500px;
+    justify-content: space-between;
+}
+.letter_spec{
+    font-size: 18px;
+    color: #ffffff;
+}
+.rank_song_name{
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.rank_singer{
+    font-size: 14px;
+    color: #ffffff80;
+    cursor: pointer;
+    line-height: 24px;
+}
+.item_action{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    padding-right: 20px;
+}
+.rank_item_right .song_name{
+    color: #ffffff80;
+    font-size: 12px;
+}
+.rank_icon{
+    color: #ffffff;
+    font-size: 20px;
+}
+.items_icon_rank{
+    width: 40px;
+    height: 40px;
+    /* background-color:antiquewhite; */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.micro_icon{
+    opacity: 0;;
+}
+.heart-filled{
+    color: #B36CDB;
+}
+/* hover */
+.rank_items:hover{
+    background-color: #2F2739;
+}
+.items_icon_rank:hover{
+    background-color: #40374a;
+}
+.rank_song_name:hover{
+    color: #B36CDB;
+}
+.rank_singer:hover{
+    color: #B36CDB;
+}
+.song_name:hover{
+    color: #B36CDB;
+}
+.rank_song_img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1; 
+}
+
+.rank_items:hover img {
+    opacity: 0.6; 
+}
+.rank_items:hover .micro_icon {
+    opacity: 1; 
+}
