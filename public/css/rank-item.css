@@ -150,10 +150,31 @@
     transition: opacity 0.3s ease;
     z-index: 1; 
 }
-
 .rank_items:hover img {
     opacity: 0.6; 
 }
 .rank_items:hover .micro_icon {
     opacity: 1; 
+}
+/* bổ sung code chỗ này nha */
+.rank_music{
+    color: #ffffff;
+}
+.timemusic {
+    margin-top: 13px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.rank_music {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.rank_items:hover .timemusic {
+    opacity: 0;
+}
+
+.rank_items:hover .rank_music {
+    opacity: 1;
 }

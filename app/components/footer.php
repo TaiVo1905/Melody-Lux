@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="../../public/css/footer.css">
-</head>
-<body>
+
     <div class="listen">
         <div class="media">
             <div class="media_cd" style="background-image: url('../../public/images/singers/chuBin.jpg')"></div>
@@ -53,5 +43,3 @@
             </div>
         </div>
     </div>
-</body>
-</html>
