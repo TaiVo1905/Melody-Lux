@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="../../public/css/sidebar.css?v=<?php echo time(); ?>">
-</head>
-<body>
+
     <div class="sidebar">
         <div class="logo_img">
-            <img src="../public/images/logo/melody_lux.png" alt="">
+            <img src="../../public/images/logo/melody_lux.png" alt="">
         </div>
         <div class="sidebar_top">
             <div class="bar_title">
@@ -32,6 +20,7 @@
                 <ion-icon class="icon_sidebar" name="radio-outline"></ion-icon>
                 <p class="bar_title_content">Radio</p>
             </div>
+            <hr style="color: gray;">
         </div>
         <div class="sidebar_center">
             <div class="bar_title">
@@ -82,5 +71,3 @@
             <p class="bar_title_content">Tạo playlist mới</p>
         </div>
     </div>
-</body>
-</html>
