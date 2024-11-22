@@ -1,17 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>header</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="../../public/css/header.css?v=<?php echo time(); ?>"> 
-</head>
-<body>
     <div class="header_container">
         <div class="header_left">
             <div class="arrow_icon">
@@ -20,7 +7,7 @@
             </div>
             <div class="header_search">
                 <ion-icon class="search_icon" name="search-outline"></ion-icon>
-                <input class="search_fiel" type="text" placeholder="Search for songs, singers, song lyrics,...">
+                <input class="search_fiel" type="text" placeholder="Tìm kiếm lời bài hát, nghệ sĩ, bài hát,...">
             </div>
         </div>
         <div class="header_right">
@@ -38,5 +25,3 @@
             </div>
         </div>
     </div>
-</body>
-</html>

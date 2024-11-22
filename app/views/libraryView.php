@@ -12,48 +12,18 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="../../public/css/sidebar.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../../public/css/song-item.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../public/css/header.css?v=<?php echo time(); ?>">
     <style>
-        .right {
+        /* .right {
             background-color: #061d4f;
-    margin-top: 70px;
+    margin-top: 60px;
 
-        }
+        } */
         h1 {
             color: #fff;
             padding-left: 12px;
             padding-top: 12px;
         }
-        .nav_label--sidebar_croller {
-    width: 100%;
-    height: 100vh;
-    overflow-y: auto;
-    cursor: default;
-    /* margin-top: 6px; */
-    padding-top: 6px;
-}
-.nav_label--sidebar_croller::-webkit-scrollbar{
-    height: 0px;
-    width: 0px;
-}
-
-.nav_label--sidebar_croller.active::-webkit-scrollbar{
-    height:4px;
-    width:4px;
-}
-
-.nav_label--sidebar_croller::-webkit-scrollbar-track{
-    /* --webkit-box-shadow: inset 0 0 0 #ffffff; */
-    /* background: #231B2E; */     /* background: của thanh*/
-    border:0 solid #000
-}
-
-/* thanh trượt bên trong */
-.nav_label--sidebar_croller::-webkit-scrollbar-thumb
-{
-    --webkit-box-shadow:inset 0 0 0 #ffffff;
-    background:#82878a; 
-    border-radius:4px 4px 4px 4px;
-}
 .container_profile--head_list{
     width: 730px;
     height: 32px;
@@ -162,11 +132,11 @@
 <body>
     <div class="grid">
         <div class="row no-gutters">
-            <div class="sidebar col c-3 nav_label--sidebar_croller">
+            <div class="col c-3">
                 <?php include_once("../components/sidebar.php");
                 ?>
             </div>
-            <div class="right col c-9">
+            <div class="col c-9">
                 <div class="header">
                     <?php include_once("../components/header.php");?>
                 </div>

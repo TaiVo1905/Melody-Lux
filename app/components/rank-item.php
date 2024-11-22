@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="../../public/css/rank-item.css?v=<?php echo time(); ?>">
-    
-</head>
-<body>
-    <div class="rank_items">
+<div class="rank_items">
         <div class="rank_item_left">
             <div class="item_left_content">
                 <div class="number-box">1</div>
@@ -44,12 +30,18 @@
                 <div class="items_icon_rank heart_icon">
                     <ion-icon class="rank_icon" name="heart"></ion-icon>
                 </div>
-                <div class="items_icon_rank option_icon">
-                    <ion-icon class="rank_icon" name="ellipsis-horizontal-outline"></ion-icon>
+                <!-- Với chỉnh chỗ này  -->
+                <div class="items_icon_rank" style="position:relative;">
+                    <li style="position: absolute; list-style-type: none;"> <ion-icon class="rank_music" name="ellipsis-horizontal-outline"></ion-icon></li>
+                    <p class="timemusic" style="color: #ffffff;">04:40</p>
                 </div>
             </div>
         </div>
     </div>
-    <script src="../../public/js/rank-item.js"></script>
-</body>
-</html>
+    <script>
+        var heartBox = document.querySelector('.heart_icon')
+        var heart = document.querySelector('.heart_icon .rank_icon');
+        heartBox.addEventListener('click', function() {
+            heart.classList.toggle('heart-filled');
+        });
+    </script>
