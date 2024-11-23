@@ -7,10 +7,11 @@
     align-items: center;
     /* width: 1015px; */
     height: 65px;
-    background-color: #170F23;
-    /* background-color: antiquewhite; */
     padding-left: 5px;
-    
+    border-bottom: 2px;
+    border-top: 2px;
+    border-color: #fff;
+    border-bottom: 2px solid #3f3f3f;
 }
 .song_item_left{
     display: flex; 
@@ -79,12 +80,12 @@
 }
 
 .song_song_name{
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff;
     cursor: pointer;
 }
 .song_singer{
-    font-size: 13px;
+    font-size: 12px;
     color: #ffffff80;
     cursor: pointer;
     line-height: 24px;
@@ -98,7 +99,7 @@
 }
 .song_item_right .song_name{
     color: #ffffff80;
-    font-size: 15px;
+    font-size: 12px;
 }
 .song_icon{
     color: #ffffff;
@@ -116,7 +117,8 @@
 }
 /* hover */
 .song_items:hover{
-    background-color: #2F2739;
+    background-color: #3f3f3f;
+    border-radius: 6px;
 }
 .items_icon_song:hover{
     background-color: #40374a;
