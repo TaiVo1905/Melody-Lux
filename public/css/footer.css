@@ -1,5 +1,5 @@
 .listen {
-    background-color:#170F23;
+    background-color: #181818;
     height: 88px;
     width: 100%;
     position: fixed;
@@ -58,13 +58,13 @@ border-radius: 50%;
 
 .media_title--author {
     font-size: 12px;
-    color: white;
+    color: #ffffff80;
     margin-top: 4px;
     font-weight: 500;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
+    /* -webkit-line-clamp: 1; */
     text-decoration: none;
 }
 
@@ -131,6 +131,11 @@ border-radius: 50%;
     align-items: center;
     width: 100%;
     gap: 10px;
+}
+
+.controls_extend--lever > li {
+    display: flex;
+    align-items: center;
 }
 
 .controls_extend--lever_item {
