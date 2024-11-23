@@ -1,13 +1,13 @@
 .header_container{
     display: flex;
-    width: 1139px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     background-color: #170F23;
     height: 60px;
-    position: fixed;
+    /* position: fixed;
     top: 0;
-    right: 0;
+    right: 0; */
 }
 .header_left{
     display: flex;
