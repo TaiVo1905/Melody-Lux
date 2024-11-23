@@ -43,6 +43,7 @@ create table Songs (
     song_name varchar(80) not null,
     path_audio varchar(250) not null,
     path_img varchar(250) not null,
+    plays int default 0 check (plays >= 0), 
     album_id int,
     category_id int not null,
     author_id int not null,

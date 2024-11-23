@@ -1,10 +1,10 @@
 .sidebar{
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #231B2E;
-    /* height: 87%; */
+    background-color: #292929;
+    height: calc(100vh - 88px);
     /* position: fixed;
     top: 0;
     left: 0;
@@ -13,10 +13,11 @@
 .sidebar_center{
     overflow-y: auto;
     max-height: calc(100vh - 200px);
+    width: 100%;
 }
 
 .sidebar_center::-webkit-scrollbar {
-    width: 5px; /* Độ rộng của thanh cuộn */
+    width: 2px; /* Độ rộng của thanh cuộn */
 }
 
 .sidebar_center::-webkit-scrollbar-thumb {
@@ -41,7 +42,7 @@
     align-items: center;
     width: 100%;
     height: 47px;
-    /* padding-left: 27px; */
+    padding-left: 27px;
 }
 .add_playlist{
     border-top: 1px solid gray;
@@ -52,7 +53,7 @@
 }
 .bar_title_box{
     width: 100%;
-    padding-left: 24px !important;
+    /* padding-left: 24px !important; */
 }
 .bar_title p, .add_playlist p{
     color: #BEBCBF;
@@ -63,12 +64,12 @@
     margin-top: 15px;
     font-size: 15px;
 }
-/* .sidebar_top .bar_title_content{
-    margin-left: 30px;
-} */
+.sidebar_top {
+    width: 100%;
+}
 
 .bar_title:hover, .add_playlist:hover{
-    background-color: #393243;
+    background-color: #3f3f3f;
     cursor: pointer;
 }
 
@@ -87,9 +88,9 @@
     color: #FFFFFF; 
 }
 .box_icon_bar{
-    border-radius: 13px;
-    width: 30px;
-    height: 30px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
     background-color: #2F2739;
     display: flex;
     justify-content: center;
@@ -112,6 +113,7 @@
 }
 .box_icon_bar .icon_sidebar{
     color: #FEC4E5;
+    
 }
 .add_playlist .icon_sidebar{
     padding-right: 5px;

@@ -1,5 +1,4 @@
-
-    <div class="header_container">
+<div class="header_container">
         <div class="header_left">
             <div class="arrow_icon">
                 <ion-icon class = "icon_header arrow_left" name="arrow-back-outline"></ion-icon>
