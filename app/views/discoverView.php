@@ -11,6 +11,7 @@
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
     
     <?php include("../components/linkbootstrap.php"); ?>
+
     <link rel="stylesheet" href="../../public/css/footer.css?v=<?php echo time(); ?>">
     
     <link rel="stylesheet" href="../../public/css/header.css?v=<?php echo time(); ?>"> 
@@ -22,8 +23,26 @@
     <link rel="stylesheet" href="../../public/css/song-item.css?v=<?php echo time(); ?>">
 
     <link rel="stylesheet" href="../../public/css/slider.css?v=<?php echo time(); ?>">
+
+    <link rel="stylesheet" href="../../public/css/song.css?v<?php echo time(); ?>">
+
     <link rel="stylesheet" href="../../public/css/grid.css">
+
+    <link rel="stylesheet" href="../../public/css/album.css?v<?php echo time(); ?>">
 </head>
+<style>
+    h4{
+        color: white;
+        padding-left: 116px;
+        margin: 0;
+        padding-top: 30px;
+    }
+    .albums_hot{
+        display: flex;
+        gap: 20px;
+
+    }
+</style>
 <body>
    <div class="grid" style="background-color: #170F23;">
         <div class="row no-gutters">
@@ -36,10 +55,29 @@
                 <?php
                 include_once '../components/header.php';
                 ?>
-                <?php
-                include_once '../components/slider.php';
-                ?>
-                
+                <div>
+                    <?php
+                    include_once '../components/slider.php';
+                    ?>
+                    <h4>Gợi ý dành riêng cho bạn</h4>
+                    <?php
+                     include_once '../components/song.php';
+                     ?>
+                    <h4>Nhạc Hot gây bão</h4>
+                    <div class="albums_hot">
+                         <?php
+                        include_once '../models/albumModel.php'; 
+                        displayAlbums(5,0);
+                        ?>
+                    </div>
+                    <h4>Chill</h4>
+                    <div class="albums_hot">
+                         <?php
+                        include_once '../models/albumModel.php'; 
+                        displayAlbums(5,5);
+                         ?>
+                    </div>
+                 </div>
             </div>
                 <?php
                 include_once '../components/footer.php';
@@ -47,4 +85,13 @@
         </div>
    </div>
 </body>
+<script src="../../public/js/discoverView.js"></script>
 </html>
+
+
+
+
+
+
+
+
