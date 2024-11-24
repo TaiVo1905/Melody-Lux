@@ -28,7 +28,6 @@
     margin-right: 5px;
 }
 .header_search{
-    background-color: white;
     border-radius: 45px;
     background-color: #3c3447;
     padding-left: 10px;
@@ -36,7 +35,7 @@
     align-items: center;
 }
 .search_icon{
-    font-size: 25px;
+    font-size: 17px;
     color: #C6C4CA;
     
 

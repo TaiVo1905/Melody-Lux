@@ -50,7 +50,7 @@ require_once '../models/songModel.php';
                             <!-- Với chỉnh chỗ này  -->
                             <div class="items_icon_rank" style="position:relative;">
                                 <li style="position: absolute; list-style-type: none;"> <ion-icon class="rank_music" name="ellipsis-horizontal-outline"></ion-icon></li>
-                                <p class="timemusic" style="color: #ffffff;">04:40</p>
+                                <p class="timemusic" style="color: #ffffff;" data-path= "../../'.$row['path_audio'].'"></p>
                             </div>
                         </div>
                     </div>

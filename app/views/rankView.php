@@ -20,7 +20,6 @@
 
     <link rel="stylesheet" href="../../public/css/sidebar.css?v=<?php echo time(); ?>">
 
-    <link rel="stylesheet" href="../../public/css/song-item.css?v=<?php echo time(); ?>">
 
 </head>
 <body>
@@ -49,6 +48,7 @@
                     include_once '../components/footer.php';
                 ?>
    </div>
+   <script src="../../public/js/rank-item.js"></script>
 </body>
 </html>
           
