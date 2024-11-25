@@ -27,8 +27,9 @@
     font-size: 45px; /* Kích thước số */
     font-weight: bold; /* Đậm nét */
     color: transparent; /* Làm chữ trong suốt */
-    -webkit-text-stroke: 2px rgb(108, 108, 248); /* Tạo viền màu xanh */
+    -webkit-text-stroke:1px #C3C3C3; /* Tạo viền màu xanh */
     padding-right: 20px;
+    padding-bottom: 10px;
 }
 .rank_song{
     /* padding-top: 5px; */
@@ -98,7 +99,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 120px;
+    width: 35%;
     padding-right: 20px;
 }
 .rank_item_right .song_name{
@@ -171,6 +172,9 @@
     width: 54px;
     height: 26px;
     padding-top: 13px;
+}
+.heart_icon.active .rank_icon {
+    color: #9B4DE0; /* Đổi màu trái tim thành tím */
 }
 
 /* bổ sung code chỗ này nha */
