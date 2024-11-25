@@ -11,7 +11,6 @@
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
     
     <?php include("../components/linkbootstrap.php"); ?>
-
     <link rel="stylesheet" href="../../public/css/footer.css?v=<?php echo time(); ?>">
     
     <link rel="stylesheet" href="../../public/css/header.css?v=<?php echo time(); ?>"> 
@@ -87,11 +86,3 @@
 </body>
 <script src="../../public/js/discoverView.js"></script>
 </html>
-
-
-
-
-
-
-
-

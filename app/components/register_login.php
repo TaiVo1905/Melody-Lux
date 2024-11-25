@@ -10,7 +10,7 @@
 <body>
     <div class="container" id="container">
         <div class="form-container register-container">
-            <form class="form" action="#">
+            <form class="form" action="" method="POST">
                 <h1 class="dangnhap">Đăng Kí</h1>
                 <input class="input" type="text" placeholder="Tên">
                 <input class="input" type="email" placeholder="Email">
