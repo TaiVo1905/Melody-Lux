@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="../../public/css/grid.css">
 
     <link rel="stylesheet" href="../../public/css/album.css?v<?php echo time(); ?>">
+
+    <link rel="stylesheet" href="../../public/css/rank.css?v<?php echo time(); ?>">
+</head>
 </head>
 <style>
     h4{
@@ -59,22 +62,21 @@
                     <?php
                     include_once '../components/slider.php';
                     ?>
-                    <h4>Gợi ý dành riêng cho bạn</h4>
                     <?php
-                     include_once '../components/song.php';
+                     include_once '../components/rank.php';
                      ?>
-                    <h4>Nhạc Hot gây bão</h4>
+                    <h4>Trữ Tình & Bolero</h4>
                     <div class="albums_hot">
                          <?php
                         include_once '../models/albumModel.php'; 
-                        displayAlbums(5,0);
+                        displayAlbums(5,10);
                         ?>
                     </div>
-                    <h4>Chill</h4>
+                    <h4>Dance/Electronic</h4>
                     <div class="albums_hot">
                          <?php
                         include_once '../models/albumModel.php'; 
-                        displayAlbums(5,5);
+                        displayAlbums(5,15);
                          ?>
                     </div>
                  </div>
@@ -85,13 +87,5 @@
         </div>
    </div>
 </body>
-<script src="../../public/js/discoverView.js"></script>
+<script src="../../public/js/categoryView.js"></script>
 </html>
-
-
-
-
-
-
-
-
