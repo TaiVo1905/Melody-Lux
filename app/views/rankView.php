@@ -39,7 +39,6 @@
                 <div class="rank-body" style="padding:30px 45px 0 45px;">
                     <?php
                         include_once '../components/rank-item.php';
-                        renderRankItems()
                     ?>
                 </div>
             </div>
