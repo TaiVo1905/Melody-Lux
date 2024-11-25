@@ -26,6 +26,7 @@ require_once '../models/songModel.php';
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <div class="rank_item_right">

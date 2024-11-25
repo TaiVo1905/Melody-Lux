@@ -1,14 +1,17 @@
+.active {
+    background-color: #393243;
+}
 .sidebar{
-    /* width: 100%; */
+    /* width: 100%; */ //240
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #231B2E;
+    background-color: #292929;
     height: calc(100vh - 88px);
-    /* position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1; */
+    z-index: 3;
 }
 .sidebar_center{
     overflow-y: auto;
@@ -47,10 +50,7 @@
 .add_playlist{
     border-top: 1px solid gray;
 }
-.sidebar_center .bar_title{
-    width: 100%;
-    padding-left: 24px !important;
-}
+
 .bar_title_box{
     width: 100%;
     /* padding-left: 24px !important; */

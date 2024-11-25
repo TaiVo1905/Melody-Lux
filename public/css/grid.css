@@ -1,7 +1,10 @@
+/* Width 1200px vi 2 ly do 76% nam 2010 va chia het cho 2 3 4 5 6 */
+
 .grid {
     width: 100%;
     display: block;
     padding: 0;
+    height: 1500px;
 }
 
 .grid.wide {
@@ -178,11 +181,6 @@
     .m-2 {
         flex: 0 0 16.66667%;
         max-width: 16.66667%;
-    }
-
-    .m-2-4 {
-        flex: 0 0 20%;
-        max-width: 20%;
     }
 
     .m-3 {

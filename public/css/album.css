@@ -1,13 +1,52 @@
 .card {
     overflow: hidden;
+    width: 11rem;
+    margin-top: 0px;
+    background: transparent; 
+    border: none;
 }
+.card:first-child {
+    margin-left: 144px; 
+}
+/* .card:nth-child(4n+1) {
+    margin-left: 144px; 
+} */
 .card img {
     transition: transform 0.5s ease-in-out;
     transform: scale(1);
+    height: 165px;
+    object-fit: cover;
+    border-radius: 2%;
 }
 .card img:hover {
     transform: scale(1.1);
 }
 p {
+        color: rgb(209, 209, 209);
     font-size: 11px;
+}
+.card-body{
+    --bs-card-spacer-x: 0rem;
+}
+h6{
+    color: #7C7782;
+}
+
+
+
+.play-icon {
+    position: relative;
+    top: 113px;
+    left: 85px;
+    color: white;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+.card:hover .play-icon {
+    opacity: 1;
 }
