@@ -36,14 +36,14 @@
 <style>
     h4{
         color: white;
-        padding-left: 95px;
+        padding-left: 116px;
         margin: 0;
         padding-top: 30px;
     }
     .albums_hot{
         display: flex;
         gap: 20px;
-        justify-content: center;
+        padding-left: 116px;
     }
 </style>
 <body>
@@ -69,14 +69,29 @@
                     <div class="albums_hot">
                          <?php
                         include_once '../models/albumModel.php'; 
-                        displayAlbums(5,10);
+                        $result = displayAlbums(5,10);
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img']);
+                            }
+                        } else {
+                            echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
+                        }  
                         ?>
                     </div>
                     <h4>Dance/Electronic</h4>
                     <div class="albums_hot">
                          <?php
                         include_once '../models/albumModel.php'; 
-                        displayAlbums(5,15);
+                        include_once '../models/albumModel.php'; 
+                        $result = displayAlbums(5,15);
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img']);
+                            }
+                        } else {
+                            echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
+                        } 
                          ?>
                     </div>
                  </div>
