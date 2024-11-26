@@ -86,7 +86,7 @@
         })
 
 
-        const img_animate_first = document.querySelectorAll('.libarary-img--animaiton-item')[0];
+    const img_animate_first = document.querySelectorAll('.libarary-img--animaiton-item')[0];
     const img_animate_second = document.querySelectorAll('.libarary-img--animaiton-item')[1];
     const img_animate_third = document.querySelectorAll('.libarary-img--animaiton-item')[2];
     setTimeout(function(){

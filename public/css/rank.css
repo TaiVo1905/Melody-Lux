@@ -1,14 +1,10 @@
-.containersss {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+
 
   .cardsss {
     display: flex;
     gap: 20px;
-    padding-left: 124px;
     padding-top: 20px;
+    justify-content: center;
   }
 
   .cardsb {

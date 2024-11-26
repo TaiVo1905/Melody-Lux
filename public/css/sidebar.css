@@ -1,17 +1,14 @@
-.active {
-    background-color: #393243;
-}
 .sidebar{
-    /* width: 100%; */ //240
+    width: 16.66667%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #292929;
+    background-color: #231B2E;
     height: calc(100vh - 88px);
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 1;
 }
 .sidebar_center{
     overflow-y: auto;
@@ -20,7 +17,7 @@
 }
 
 .sidebar_center::-webkit-scrollbar {
-    width: 2px; /* Độ rộng của thanh cuộn */
+    width: 5px; /* Độ rộng của thanh cuộn */
 }
 
 .sidebar_center::-webkit-scrollbar-thumb {
@@ -40,6 +37,10 @@
     width: 110px;
     height: 110px;
 }
+.sidebar_top {
+    width: 100%;
+}
+
 .bar_title, .add_playlist{
     display: flex;
     align-items: center;
@@ -47,13 +48,14 @@
     height: 47px;
     padding-left: 27px;
 }
-.add_playlist{
-    border-top: 1px solid gray;
+
+.sidebar a {
+    text-decoration: none;
+    color: #BEBCBF;
 }
 
-.bar_title_box{
-    width: 100%;
-    /* padding-left: 24px !important; */
+.add_playlist{
+    border-top: 1px solid gray;
 }
 .bar_title p, .add_playlist p{
     color: #BEBCBF;
@@ -64,12 +66,12 @@
     margin-top: 15px;
     font-size: 15px;
 }
-.sidebar_top {
-    width: 100%;
-}
+/* .sidebar_top .bar_title_content{
+    margin-left: 30px;
+} */
 
 .bar_title:hover, .add_playlist:hover{
-    background-color: #3f3f3f;
+    background-color: #393243;
     cursor: pointer;
 }
 
@@ -88,9 +90,9 @@
     color: #FFFFFF; 
 }
 .box_icon_bar{
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    border-radius: 13px;
+    width: 30px;
+    height: 30px;
     background-color: #2F2739;
     display: flex;
     justify-content: center;
@@ -113,7 +115,6 @@
 }
 .box_icon_bar .icon_sidebar{
     color: #FEC4E5;
-    
 }
 .add_playlist .icon_sidebar{
     padding-right: 5px;
