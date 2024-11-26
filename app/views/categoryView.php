@@ -36,14 +36,14 @@
 <style>
     h4{
         color: white;
-        padding-left: 116px;
+        padding-left: 95px;
         margin: 0;
         padding-top: 30px;
     }
     .albums_hot{
         display: flex;
         gap: 20px;
-
+        justify-content: center;
     }
 </style>
 <body>

@@ -39,7 +39,7 @@
     .albums_hot{
         display: flex;
         gap: 20px;
-
+        justify-content: center;
     }
 </style>
 <body>

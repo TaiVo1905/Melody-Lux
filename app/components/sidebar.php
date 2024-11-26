@@ -4,14 +4,18 @@
             <img src="../../public/images/logo/melody_lux.png" alt="">
         </div>
         <div class="sidebar_top">
-            <div class="bar_title">
-                <ion-icon class="icon_sidebar" name="home-outline"></ion-icon>
-                <p class="bar_title_content">Thư viện</p>
-            </div>
-            <div class="bar_title">
-                <i class="fas fa-bullseye icon_sidebar"></i>
-                <p class="bar_title_content">Khám phá</p>
-            </div>
+            <a href="libraryController.php">
+                <div class="bar_title">
+                    <ion-icon class="icon_sidebar" name="home-outline"></ion-icon>
+                    <p class="bar_title_content">Thư viện</p>
+                </div>
+            </a>
+            <a href="discoverController.php">
+                <div class="bar_title">
+                    <i class="fas fa-bullseye icon_sidebar"></i>
+                    <p class="bar_title_content">Khám phá</p>
+                </div>
+            </a>
             <div class="bar_title">
                 <i class="fas fa-signal icon_sidebar"></i>
                 <p class="bar_title_content">Biểu đồ</p>
@@ -23,14 +27,18 @@
             <hr style="color: gray;">
         </div>
         <div class="sidebar_center">
-            <div class="bar_title">
-                <ion-icon class="icon_sidebar" name="musical-notes-outline"></ion-icon>
-                <p class="bar_title_content">Xếp hạng</p>
-            </div>
-            <div class="bar_title">
-                <ion-icon class="icon_sidebar" name="grid-outline"></ion-icon>
-                <p class="bar_title_content">Thể loại</p>
-            </div>
+            <a href="rankController.php">
+                <div class="bar_title">
+                    <ion-icon class="icon_sidebar" name="musical-notes-outline"></ion-icon>
+                    <p class="bar_title_content">Xếp hạng</p>
+                </div>
+            </a>
+            <a href="categoryController.php">
+                <div class="bar_title">
+                    <ion-icon class="icon_sidebar" name="grid-outline"></ion-icon>
+                    <p class="bar_title_content">Thể loại</p>
+                </div>
+            </a>
             <div class="bar_title">
                 <ion-icon class="icon_sidebar" name="star-outline"></ion-icon>
                 <p class="bar_title_content">Top 100</p>
