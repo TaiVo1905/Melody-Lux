@@ -1,3 +1,3 @@
 <?php
-    require_once '../views/categoryView.php';
+    require_once './app/views/categoryView.php';
 ?>

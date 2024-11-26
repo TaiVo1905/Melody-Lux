@@ -121,11 +121,11 @@ create trigger insertCurrentSong after insert
 -- insert vào bảng bacground trước (giả sử ở đây sẽ có 5 backgrounds)
 INSERT INTO backgrounds (path)
 VALUES
-  ('../../public/images/backgrounds/background1.jpg'),
-  ('../../public/images/backgrounds/background2.jpg'),
-  ('../../public/images/backgrounds/background3.jpg'),
-  ('../../public/images/backgrounds/background4.jpg'),
-  ('../../public/images/backgrounds/background5.jpg');
+  ('./public/images/backgrounds/background1.jpg'),
+  ('./public/images/backgrounds/background2.jpg'),
+  ('./public/images/backgrounds/background3.jpg'),
+  ('./public/images/backgrounds/background4.jpg'),
+  ('./public/images/backgrounds/background5.jpg');
   
 -- insert vào bảng user
 INSERT INTO users (email, password, user_name, user_img, background_id, role)
@@ -150,26 +150,26 @@ VALUES
 -- inser vào bảng albums
 INSERT INTO albums (album_name, quantity, datetime, album_img) 
 VALUES 
-	('Những ca khúc V-POP mới cập nhật bạn phải nghe', 1, '2024-11-17 08:00:00', '../../public/images/albums/album1.jpg'),
-	('Những ca khúc V-POP đã "gây bão"', 1, '2024-11-18 09:30:00', '../../public/images/albums/album2.jpg'),
-    ('Lên kế hoạch tuần kèm theo vài ca khúc V-POP', 1, '2024-11-18 09:30:00', '../../public/images/albums/album3.jpg'),
-    ('Nhạc hot chọn lọc dành riêng cho bạn!', 1, '2024-11-18 09:30:00', '../../public/images/albums/album4.jpg'),
-    ('Những ca khúc V-POP nghe một lần là mê', 3, '2024-11-18 09:30:00', '../../public/images/albums/album5.jpg'),
-    ('Thả mình vào dòng chảy giai điệu cực chill', 1, '2024-11-17 08:00:00', '../../public/images/albums/album6.jpg'),
-	('Không âu lo muộn phiền, một ngày êm đềm trôi', 1, '2024-11-18 09:30:00', '../../public/images/albums/album7.jpg'),
-    ('Khi những bản nhạc cũ làm mới đầy thi vị', 1, '2024-11-18 09:30:00', '../../public/images/albums/album8.jpg'),
-    ('Thả mình vào giai điệu lofi chill nghe là nghiện', 1, '2024-11-18 09:30:00', '../../public/images/albums/album9.jpg'),
-    ('Lắng nghe giai điệu nhạc Hoa lời Việt nhẹ nhàng', 3, '2024-11-18 09:30:00', '../../public/images/albums/album10.jpg'),
-    ('Bolero Ngôi Sao Trẻ', 1, '2024-11-17 08:00:00', '../../public/images/albums/album11.jpg'),
-	('Bolero mới nhất', 1, '2024-11-18 09:30:00', '../../public/images/albums/album12.jpg'),
-    ('Bolero hay nhất', 1, '2024-11-18 09:30:00', '../../public/images/albums/album13.jpg'),
-    ('Trữ tình việt nổi bật', 1, '2024-11-18 09:30:00', '../../public/images/albums/album14.jpg'),
-    ('Nhạc quê hương hôm nay', 3, '2024-11-18 09:30:00', '../../public/images/albums/album15.jpg'),
-     ('EDM Now', 1, '2024-11-17 08:00:00', '../../public/images/albums/album16.jpg'),
-	('Đỉnh cao EDM', 1, '2024-11-18 09:30:00', '../../public/images/albums/album17.jpg'),
-    ('Today EDM Hits', 1, '2024-11-18 09:30:00', '../../public/images/albums/album18.jpg'),
-    ('EDM Việt Gây Nghiện', 1, '2024-11-18 09:30:00', '../../public/images/albums/album19.jpg'),
-    ('EDM With Female Vocal', 3, '2024-11-18 09:30:00', '../../public/images/albums/album20.jpg');
+	('Những ca khúc V-POP mới cập nhật bạn phải nghe', 1, '2024-11-17 08:00:00', './public/images/albums/album1.jpg'),
+	('Những ca khúc V-POP đã "gây bão"', 1, '2024-11-18 09:30:00', './public/images/albums/album2.jpg'),
+    ('Lên kế hoạch tuần kèm theo vài ca khúc V-POP', 1, '2024-11-18 09:30:00', './public/images/albums/album3.jpg'),
+    ('Nhạc hot chọn lọc dành riêng cho bạn!', 1, '2024-11-18 09:30:00', './public/images/albums/album4.jpg'),
+    ('Những ca khúc V-POP nghe một lần là mê', 3, '2024-11-18 09:30:00', './public/images/albums/album5.jpg'),
+    ('Thả mình vào dòng chảy giai điệu cực chill', 1, '2024-11-17 08:00:00', './public/images/albums/album6.jpg'),
+	('Không âu lo muộn phiền, một ngày êm đềm trôi', 1, '2024-11-18 09:30:00', './public/images/albums/album7.jpg'),
+    ('Khi những bản nhạc cũ làm mới đầy thi vị', 1, '2024-11-18 09:30:00', './public/images/albums/album8.jpg'),
+    ('Thả mình vào giai điệu lofi chill nghe là nghiện', 1, '2024-11-18 09:30:00', './public/images/albums/album9.jpg'),
+    ('Lắng nghe giai điệu nhạc Hoa lời Việt nhẹ nhàng', 3, '2024-11-18 09:30:00', './public/images/albums/album10.jpg'),
+    ('Bolero Ngôi Sao Trẻ', 1, '2024-11-17 08:00:00', './public/images/albums/album11.jpg'),
+	('Bolero mới nhất', 1, '2024-11-18 09:30:00', './public/images/albums/album12.jpg'),
+    ('Bolero hay nhất', 1, '2024-11-18 09:30:00', './public/images/albums/album13.jpg'),
+    ('Trữ tình việt nổi bật', 1, '2024-11-18 09:30:00', './public/images/albums/album14.jpg'),
+    ('Nhạc quê hương hôm nay', 3, '2024-11-18 09:30:00', './public/images/albums/album15.jpg'),
+     ('EDM Now', 1, '2024-11-17 08:00:00', './public/images/albums/album16.jpg'),
+	('Đỉnh cao EDM', 1, '2024-11-18 09:30:00', './public/images/albums/album17.jpg'),
+    ('Today EDM Hits', 1, '2024-11-18 09:30:00', './public/images/albums/album18.jpg'),
+    ('EDM Việt Gây Nghiện', 1, '2024-11-18 09:30:00', './public/images/albums/album19.jpg'),
+    ('EDM With Female Vocal', 3, '2024-11-18 09:30:00', './public/images/albums/album20.jpg');
 
 insert into Album_Singers values
 	(1, 1),
@@ -194,26 +194,26 @@ VALUES
 -- Insert bài hát vào bảng songs
 INSERT INTO songs (song_name, path_audio, path_img, album_id, category_id, author_id, user_id)
 VALUES
-  ('Thay thế', '../../public/audio/ThayThe-HoGiaHungHKT-5308924.mp3', '../../public/images/singers/hoGiaHung.jpg', 1, 2, 1, 2),
-  ('Khóc cho đấng sinh thành', '../../public/audio/KhocChoDangSinhThanhThieuNienRaGiangHoOST-HoQuangHieu-5533643.mp3', '../../public/images/singers/hoQuangHieu.jpg', 2, 2, 2, 2),
-  ('Nước ngoài', '../../public/audio/nuocNgoai.m4a', '../../public/images/singers/phanManhQuynh.jpg', 3, 2, 3, 2),
-  ('Khi yêu nào đâu ai muốn', '../../public/audio/KhiYeuNaoDauAiMuon-TrinhThienAn-7624200.mp3', '../../public/images/singers/trinhThienAn.jpg', 4, 2, 3, 2),
-  ('Hà giang ơi', '../../public/audio/HaGiangOi-QuachBeem-6260097.mp3', '../../public/images/singers/quachBeem.jpg', 5, 2, 5, 2),
+  ('Thay thế', './public/audio/ThayThe-HoGiaHungHKT-5308924.mp3', './public/images/singers/hoGiaHung.jpg', 1, 2, 1, 2),
+  ('Khóc cho đấng sinh thành', './public/audio/KhocChoDangSinhThanhThieuNienRaGiangHoOST-HoQuangHieu-5533643.mp3', './public/images/singers/hoQuangHieu.jpg', 2, 2, 2, 2),
+  ('Nước ngoài', './public/audio/nuocNgoai.m4a', './public/images/singers/phanManhQuynh.jpg', 3, 2, 3, 2),
+  ('Khi yêu nào đâu ai muốn', './public/audio/KhiYeuNaoDauAiMuon-TrinhThienAn-7624200.mp3', './public/images/singers/trinhThienAn.jpg', 4, 2, 3, 2),
+  ('Hà giang ơi', './public/audio/HaGiangOi-QuachBeem-6260097.mp3', './public/images/singers/quachBeem.jpg', 5, 2, 5, 2),
   ('Giả vờ thương anh có được không', 'public/audio/GiaVoThuongAnhDuocKhong-ChuBin-4858628.mp3', 'public/mages/singers/chuBin.jpg', 6, 2, 6, 2),
-  ('Đơn giản anh yêu em', 'public/audio/DonGianAnhYeuEm-DucPhat-7857286.mp3', '../../public/images/singers/ducPhat.jpg', 7, 2, 5, 2),
-  ('Đời là thế thôi', 'public/audio/DoiLaTheThoi-QuachBeem_4cmjg.mp3', '../../public/images/singers/quachBeem.jpg', 8, 2, 5, 2),
-  ('Điếu thuốc tàn', 'public/audio/DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3', '../../public/images/singers/lamChanhKhang.jpg',9 , 2, 6, 2),
-  ('Cô đơn trong nhà mình', 'public/audio/CÔ ĐƠN TRONG NHÀ MÌNH  HOÀI LÂM.mp3', '../../public/images/singers/hoaiLam.jpg', 10, 2, 7, 2),
-  ('Cha', 'public/audio/Cha-QuachBeem-6283468.mp3', '../../public/images/singers/quachBeem.jpg', 11, 1, 5, 2),
-   ('Thay thế', 'public/audio/ThayThe-HoGiaHungHKT-5308924.mp3', '../../public/images/singers/hoGiaHung.jpg', 12, 2, 1, 2),
-  ('Khóc cho đấng sinh thành', 'public/audio/KhocChoDangSinhThanhThieuNienRaGiangHoOST-HoQuangHieu-5533643.mp3', '../../public/images/singers/hoQuangHieu.jpg',13, 2, 2, 2),
-  ('Nước ngoài', 'public/audio/nuocNgoai.m4a', '../../public/images/singers/phanManhQuynh.jpg', 14, 2, 3, 2),
-  ('Khi yêu nào đâu ai muốn', 'public/audio/KhiYeuNaoDauAiMuon-TrinhThienAn-7624200.mp3', '../../public/images/singers/trinhThienAn.jpg', 15, 2, 3, 2),
-  ('Hà giang ơi', 'public/audio/HaGiangOi-QuachBeem-6260097.mp3', '../../public/images/singers/quachBeem.jpg', 16, 2, 5, 2),
+  ('Đơn giản anh yêu em', 'public/audio/DonGianAnhYeuEm-DucPhat-7857286.mp3', './public/images/singers/ducPhat.jpg', 7, 2, 5, 2),
+  ('Đời là thế thôi', 'public/audio/DoiLaTheThoi-QuachBeem_4cmjg.mp3', './public/images/singers/quachBeem.jpg', 8, 2, 5, 2),
+  ('Điếu thuốc tàn', 'public/audio/DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3', './public/images/singers/lamChanhKhang.jpg',9 , 2, 6, 2),
+  ('Cô đơn trong nhà mình', 'public/audio/CÔ ĐƠN TRONG NHÀ MÌNH  HOÀI LÂM.mp3', './public/images/singers/hoaiLam.jpg', 10, 2, 7, 2),
+  ('Cha', 'public/audio/Cha-QuachBeem-6283468.mp3', './public/images/singers/quachBeem.jpg', 11, 1, 5, 2),
+   ('Thay thế', 'public/audio/ThayThe-HoGiaHungHKT-5308924.mp3', './public/images/singers/hoGiaHung.jpg', 12, 2, 1, 2),
+  ('Khóc cho đấng sinh thành', 'public/audio/KhocChoDangSinhThanhThieuNienRaGiangHoOST-HoQuangHieu-5533643.mp3', './public/images/singers/hoQuangHieu.jpg',13, 2, 2, 2),
+  ('Nước ngoài', 'public/audio/nuocNgoai.m4a', './public/images/singers/phanManhQuynh.jpg', 14, 2, 3, 2),
+  ('Khi yêu nào đâu ai muốn', 'public/audio/KhiYeuNaoDauAiMuon-TrinhThienAn-7624200.mp3', './public/images/singers/trinhThienAn.jpg', 15, 2, 3, 2),
+  ('Hà giang ơi', 'public/audio/HaGiangOi-QuachBeem-6260097.mp3', './public/images/singers/quachBeem.jpg', 16, 2, 5, 2),
   ('Giả vờ thương anh có được không', 'public/audio/GiaVoThuongAnhDuocKhong-ChuBin-4858628.mp3', 'public/mages/singers/chuBin.jpg', 17, 2, 6, 2),
-  ('Đơn giản anh yêu em', 'public/audio/DonGianAnhYeuEm-DucPhat-7857286.mp3', '../../public/images/singers/ducPhat.jpg', 18, 2, 5, 2),
-  ('Đời là thế thôi', 'public/audio/DoiLaTheThoi-QuachBeem_4cmjg.mp3', '../../public/images/singers/quachBeem.jpg', 19, 2, 5, 2),
-  ('Điếu thuốc tàn', 'public/audio/DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3', '../../public/images/singers/lamChanhKhang.jpg',20 , 2, 6, 2);
+  ('Đơn giản anh yêu em', 'public/audio/DonGianAnhYeuEm-DucPhat-7857286.mp3', './public/images/singers/ducPhat.jpg', 18, 2, 5, 2),
+  ('Đời là thế thôi', 'public/audio/DoiLaTheThoi-QuachBeem_4cmjg.mp3', './public/images/singers/quachBeem.jpg', 19, 2, 5, 2),
+  ('Điếu thuốc tàn', 'public/audio/DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3', './public/images/singers/lamChanhKhang.jpg',20 , 2, 6, 2);
 
 insert into Song_Singers values
 	(1, 1),

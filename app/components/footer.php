@@ -1,7 +1,7 @@
 
     <div class="listen">
         <div class="media">
-            <div class="media_cd" style="background-image: url('../../public/images/singers/chuBin.jpg')"></div>
+            <div class="media_cd" style="background-image: url('./public/images/singers/chuBin.jpg')"></div>
             <div class="media_title">
                 <marquee class="media_title--name" scrolldelay="130">Cô đơn trên sofa</marquee>
                 <a class="media_title--author">Chu Bin</a>

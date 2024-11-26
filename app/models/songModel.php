@@ -1,5 +1,5 @@
 <?php
-    require_once("../../config/config.php");
+    require_once("./config/config.php");
     function songModel (){
         $conn = connectDB();
         $sql = "select songs.song_id, songs.song_name, songs.path_audio, songs.path_img, songs.plays,

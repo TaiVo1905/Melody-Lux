@@ -1,3 +1,3 @@
 <?php
-    require_once '../views/libraryView.php';
+    require_once './app/views/libraryView.php';
 ?>
