@@ -1,3 +1,3 @@
 <?php
-require_once '../views/discoverView.php';
+require_once './app/views/discoverView.php';
 ?>

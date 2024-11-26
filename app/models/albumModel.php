@@ -1,6 +1,6 @@
 <?php
-include_once '../../config/config.php';
-include_once '../components/album.php'; 
+include_once './config/config.php';
+include_once './app/components/album.php'; 
 
 function displayAlbums($limit = 5, $offset = 0) {
     $conn = connectDB();
