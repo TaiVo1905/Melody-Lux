@@ -1,3 +1,6 @@
+.active {
+    background-color: #393243;
+}
 .sidebar{
     width: 16.66667%;
     display: flex;

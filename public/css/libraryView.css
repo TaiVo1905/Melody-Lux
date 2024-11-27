@@ -1,11 +1,12 @@
 .right {
-    background-color: #1E1E1E;
+    background-color: #170F23;
 
 }
 .header-name {
     color: #fff;
-    padding-left: 12px;
+    padding-left: 30px;
     padding-top: 12px;
+    background-color:#170F23 ;
 }
 .library-nav{
 width: 100%;
