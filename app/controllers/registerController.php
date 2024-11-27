@@ -1,6 +1,6 @@
 <?php
-    require_once '../components/register_login.php';
-    require_once '../models/loginModel.php';
+    require_once './app/components/register_login.php';
+    require_once './app/models/loginModel.php';
 
 
     function handleRegister(){
@@ -33,5 +33,7 @@
             echo "Registration failed. Please try again.";
         }
     }
-    handleRegister()
+    if($_SERVER["REQUEST_METHOD"] = "POST"){
+        handleRegister();
+    }
 ?>

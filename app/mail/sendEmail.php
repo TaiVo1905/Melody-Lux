@@ -1,9 +1,9 @@
 <?php
-include '../components/register_login.php';
+include './app/components/register_login.php';
 error_reporting(E_ALL ^ E_DEPRECATED);
-require("../../vendor/phpmailer/phpmailer/src/PHPMailer.php");
-require("../../vendor/phpmailer/phpmailer/SMTP.php");
-require("../../vendor/phpmailer/phpmailer/Exception.php");
+require("./vendor/phpmailer/phpmailer/src/PHPMailer.php");
+require("./vendor/phpmailer/phpmailer/SMTP.php");
+require("./vendor/phpmailer/phpmailer/Exception.php");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -102,5 +102,15 @@ use PHPMailer\PHPMailer\Exception;
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
     }
-
+    if (isset($_GET['func'])) {
+        $function = $_GET['func'];
+        if ($function == "senEmailCode" && isset($_GET['email'])) {
+            $email = $_GET['email'];
+            senEmailCode($email);
+        } elseif ($func == "sendConfirmationEmail") {
+            sendConfirmationEmail($name, $email, $password); 
+        } else { 
+            echo "Hàm không hợp lệ hoặc tham số không hợp lệ."; }
+    } else {
+        echo "Không có hàm nào được chỉ định."; }
 ?>

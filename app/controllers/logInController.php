@@ -1,6 +1,6 @@
 <?php
-    require_once '../components/register_login.php';
-    require_once '../models/loginModel.php';
+    include_once './app/components/register_login.php';
+    require_once './app/models/loginModel.php';
     function handleLogin() {
         $userEmail = $_POST['emailLogin'];
         $userPassword = $_POST['passwordLogin'];
@@ -16,6 +16,8 @@
             echo "Invalid email or password";
         }
     }
-    handleLogin()
+    if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+        handleLogin();
+    }
   
 ?>

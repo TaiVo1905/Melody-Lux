@@ -41,6 +41,14 @@
         gap: 20px;
         justify-content: center;
     }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 20px;
+        margin: 0 68px;
+        gap: 6px;
+    }
 </style>
 <body>
    <div class="grid" style="background-color: #170F23;">
@@ -59,9 +67,16 @@
                     include_once './app/components/slider.php';
                     ?>
                     <h4>Gợi ý dành riêng cho bạn</h4>
+                    <div class="gallery">
                     <?php
-                     include_once './app/components/song.php';
+                        include_once("./app/models/songModel.php");
+                        include_once './app/components/song.php';
+                        $results = suggestSong();
+                        while ($row = mysqli_fetch_assoc($results)) {
+                            echo createSuggestSong($row["song_name"], $row["author_singer_name"], $row["path_audio"], $row["path_img"]);
+                        }
                      ?>
+                     </div>
                     <h4>Nhạc Hot gây bão</h4>
                     <div class="albums_hot">
                          <?php
