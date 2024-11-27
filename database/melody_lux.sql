@@ -199,21 +199,12 @@ VALUES
   ('Nước ngoài', './public/audio/nuocNgoai.m4a', './public/images/singers/phanManhQuynh.jpg', 3, 2, 3, 2),
   ('Khi yêu nào đâu ai muốn', './public/audio/KhiYeuNaoDauAiMuon-TrinhThienAn-7624200.mp3', './public/images/singers/trinhThienAn.jpg', 4, 2, 3, 2),
   ('Hà giang ơi', './public/audio/HaGiangOi-QuachBeem-6260097.mp3', './public/images/singers/quachBeem.jpg', 5, 2, 5, 2),
-  ('Giả vờ thương anh có được không', 'public/audio/GiaVoThuongAnhDuocKhong-ChuBin-4858628.mp3', 'public/mages/singers/chuBin.jpg', 6, 2, 6, 2),
-  ('Đơn giản anh yêu em', 'public/audio/DonGianAnhYeuEm-DucPhat-7857286.mp3', './public/images/singers/ducPhat.jpg', 7, 2, 5, 2),
-  ('Đời là thế thôi', 'public/audio/DoiLaTheThoi-QuachBeem_4cmjg.mp3', './public/images/singers/quachBeem.jpg', 8, 2, 5, 2),
-  ('Điếu thuốc tàn', 'public/audio/DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3', './public/images/singers/lamChanhKhang.jpg',9 , 2, 6, 2),
-  ('Cô đơn trong nhà mình', 'public/audio/CÔ ĐƠN TRONG NHÀ MÌNH  HOÀI LÂM.mp3', './public/images/singers/hoaiLam.jpg', 10, 2, 7, 2),
-  ('Cha', 'public/audio/Cha-QuachBeem-6283468.mp3', './public/images/singers/quachBeem.jpg', 11, 1, 5, 2),
-   ('Thay thế', 'public/audio/ThayThe-HoGiaHungHKT-5308924.mp3', './public/images/singers/hoGiaHung.jpg', 12, 2, 1, 2),
-  ('Khóc cho đấng sinh thành', 'public/audio/KhocChoDangSinhThanhThieuNienRaGiangHoOST-HoQuangHieu-5533643.mp3', './public/images/singers/hoQuangHieu.jpg',13, 2, 2, 2),
-  ('Nước ngoài', 'public/audio/nuocNgoai.m4a', './public/images/singers/phanManhQuynh.jpg', 14, 2, 3, 2),
-  ('Khi yêu nào đâu ai muốn', 'public/audio/KhiYeuNaoDauAiMuon-TrinhThienAn-7624200.mp3', './public/images/singers/trinhThienAn.jpg', 15, 2, 3, 2),
-  ('Hà giang ơi', 'public/audio/HaGiangOi-QuachBeem-6260097.mp3', './public/images/singers/quachBeem.jpg', 16, 2, 5, 2),
-  ('Giả vờ thương anh có được không', 'public/audio/GiaVoThuongAnhDuocKhong-ChuBin-4858628.mp3', 'public/mages/singers/chuBin.jpg', 17, 2, 6, 2),
-  ('Đơn giản anh yêu em', 'public/audio/DonGianAnhYeuEm-DucPhat-7857286.mp3', './public/images/singers/ducPhat.jpg', 18, 2, 5, 2),
-  ('Đời là thế thôi', 'public/audio/DoiLaTheThoi-QuachBeem_4cmjg.mp3', './public/images/singers/quachBeem.jpg', 19, 2, 5, 2),
-  ('Điếu thuốc tàn', 'public/audio/DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3', './public/images/singers/lamChanhKhang.jpg',20 , 2, 6, 2);
+  ('Giả vờ thương anh có được không', './public/audio/GiaVoThuongAnhDuocKhong-ChuBin-4858628.mp3', './public/images/singers/chuBin.jpg', 6, 2, 6, 2),
+  ('Đơn giản anh yêu em', './public/audio/DonGianAnhYeuEm-DucPhat-7857286.mp3', './public/images/singers/ducPhat.jpg', 7, 2, 5, 2),
+  ('Đời là thế thôi', './public/audio/DoiLaTheThoi-QuachBeem_4cmjg.mp3', './public/images/singers/quachBeem.jpg', 8, 2, 5, 2),
+  ('Điếu thuốc tàn', './public/audio/DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3', './public/images/singers/lamChanhKhang.jpg',9 , 2, 6, 2),
+  ('Cô đơn trong nhà mình', './public/audio/CÔ ĐƠN TRONG NHÀ MÌNH  HOÀI LÂM.mp3', './public/images/singers/hoaiLam.jpg', 10, 2, 7, 2),
+  ('Cha', 'public/audio/Cha-QuachBeem-6283468.mp3', './public/images/singers/quachBeem.jpg', 11, 1, 5, 2)
 
 insert into Song_Singers values
 	(1, 1),
