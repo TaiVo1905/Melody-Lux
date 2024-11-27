@@ -21,14 +21,8 @@ function displayAlbums($limit = 5, $offset = 0) {
                 LIMIT $limit OFFSET $offset";  
         
         $result = mysqli_query($conn, $sql);
-        
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img']);
-            }
-        } else {
-            echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
-        }      
+        return $result;
+           
         mysqli_close($conn);
     } else {
         echo "Không thể kết nối đến cơ sở dữ liệu.";

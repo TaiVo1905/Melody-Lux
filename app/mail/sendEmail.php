@@ -1,16 +1,15 @@
 <?php
-include '../components/register_login.php';
+include './app/components/register_login.php';
 error_reporting(E_ALL ^ E_DEPRECATED);
-require("../../vendor/phpmailer/phpmailer/src/PHPMailer.php");
-require("../../vendor/phpmailer/phpmailer/SMTP.php");
-require("../../vendor/phpmailer/phpmailer/Exception.php");
+require("./vendor/phpmailer/phpmailer/src/PHPMailer.php");
+require("./vendor/phpmailer/phpmailer/SMTP.php");
+require("./vendor/phpmailer/phpmailer/Exception.php");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-    function sendEmailCode($email){
-        session_start();
+    function sendEmailCode($email){;
         $randomNumber = random_int(100000, 999999);
-        $_SESSION['codeMail'] = $randomNumber ;
+        setcookie("code", $randomNumber, time() + 180, "/");
         
         $mail = new PHPMailer(true);
         try {
@@ -35,7 +34,7 @@ use PHPMailer\PHPMailer\Exception;
                 <p>Chào bạn,</p>
                 <p>Đây là mã xác thực của bạn để hoàn tất quá trình đăng ký:</p>
                 <p><strong>$randomNumber</strong></p>
-                <p>Mã này có hiệu lực trong 10 phút. Vui lòng nhập mã vào trang đăng ký để xác nhận tài khoản của bạn.</p>
+                <p>Mã này có hiệu lực trong 3 phút. Vui lòng nhập mã vào trang đăng ký để xác nhận tài khoản của bạn.</p>
                 <p>Trân trọng, <br>Melody Lux</p>
             ";
             $mail->AltBody = "Chào bạn,\n\nĐây là mã xác thực của bạn: $randomNumber\nMã này có hiệu lực trong 10 phút.";
@@ -103,5 +102,15 @@ use PHPMailer\PHPMailer\Exception;
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
     }
-
+    if (isset($_GET['func'])) {
+        $function = $_GET['func'];
+        if ($function == "senEmailCode" && isset($_GET['email'])) {
+            $email = $_GET['email'];
+            senEmailCode($email);
+        } elseif ($func == "sendConfirmationEmail") {
+            sendConfirmationEmail($name, $email, $password); 
+        } else { 
+            echo "Hàm không hợp lệ hoặc tham số không hợp lệ."; }
+    } else {
+        echo "Không có hàm nào được chỉ định."; }
 ?>
