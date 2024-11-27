@@ -1,16 +1,16 @@
 
     <div class="sidebar">
         <div class="logo_img">
-            <img src="../../public/images/logo/melody_lux.png" alt="">
+            <img src="./public/images/logo/melody_lux.png" alt="">
         </div>
         <div class="sidebar_top">
-            <a href="libraryController.php">
+            <a href="library">
                 <div class="bar_title">
                     <ion-icon class="icon_sidebar" name="home-outline"></ion-icon>
                     <p class="bar_title_content">Thư viện</p>
                 </div>
             </a>
-            <a href="discoverController.php">
+            <a href="discover">
                 <div class="bar_title">
                     <i class="fas fa-bullseye icon_sidebar"></i>
                     <p class="bar_title_content">Khám phá</p>
@@ -27,13 +27,13 @@
             <hr style="color: gray;">
         </div>
         <div class="sidebar_center">
-            <a href="rankController.php">
+            <a href="rank">
                 <div class="bar_title">
                     <ion-icon class="icon_sidebar" name="musical-notes-outline"></ion-icon>
                     <p class="bar_title_content">Xếp hạng</p>
                 </div>
             </a>
-            <a href="categoryController.php">
+            <a href="category">
                 <div class="bar_title">
                     <ion-icon class="icon_sidebar" name="grid-outline"></ion-icon>
                     <p class="bar_title_content">Thể loại</p>

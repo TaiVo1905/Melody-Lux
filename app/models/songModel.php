@@ -1,5 +1,5 @@
 <?php
-    require_once("../../config/config.php");
+    require_once("./config/config.php");
     function songModel (){
         $conn = connectDB();
         $sql = "select songs.song_id, songs.song_name, songs.path_audio, songs.path_img, songs.plays,
@@ -10,6 +10,7 @@
         join categories on songs.category_id = categories.category_id
         join author_singers on songs.author_id = author_singers.author_singer_id
         order by plays desc;";
+        //mục đích của lệnh này là gì?
         $result = mysqli_query($conn, $sql);
         return $result;
     }

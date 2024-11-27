@@ -4,7 +4,7 @@
 </div>
 
 <?php
-require_once '../models/songModel.php';
+require_once './app/models/songModel.php';
     function renderRankItems($stt, $path_img, $song_name, $author_singer_name, $path_audio){
         echo '
         <div class="rank_items">
@@ -14,7 +14,7 @@ require_once '../models/songModel.php';
                     <p class="letter_spec">-</p>
                     <div class="rank_song">
                         <div class="rank_song_img">
-                            <img src="../../'.$path_img.'" alt="">
+                            <img src="'.$path_img.'" alt="">
                             <ion-icon class="play-icon" name="caret-forward-outline"></ion-icon>
                         </div>
                         <div class="rank_song_singer">
@@ -43,7 +43,7 @@ require_once '../models/songModel.php';
                     <!-- Với chỉnh chỗ này  -->
                     <div class="items_icon_rank" style="position:relative;">
                         <li style="position: absolute; list-style-type: none;"> <ion-icon class="rank_music" name="ellipsis-horizontal-outline"></ion-icon></li>
-                        <p class="timemusic" style="color: #ffffff;" data-path= "../../'.$path_audio.'"></p>
+                        <p class="timemusic" style="color: #ffffff;" data-path= "'.$path_audio.'"></p>
                     </div>
                 </div>
             </div>
