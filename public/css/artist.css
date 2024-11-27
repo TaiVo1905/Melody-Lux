@@ -2,7 +2,7 @@
     color: white;
     display: flex;
     align-items: center;
-    margin-left: 30px;
+    justify-content: center;
   }
   
   .artist-card {
