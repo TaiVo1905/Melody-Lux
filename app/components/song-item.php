@@ -8,7 +8,7 @@
                             <ion-icon class='music_icon' name='musical-notes-outline'></ion-icon>
                             <div class='song_song'>
                                 <div class='song_song_img'>
-                                    <img src='./public/images/singers/chuBin.jpg' alt=''>
+                                    <img src='./public/images/authors/author1.jpg' alt=''>
                                     <ion-icon class='play-icon' name='caret-forward-outline'></ion-icon>
                                 </div>
                                 <div class='song_song_singer'>
