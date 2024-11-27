@@ -10,14 +10,15 @@
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="../../public/css/footer.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="../../public/css/sidebar.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="../../public/css/song-item.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="../../public/css/header.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="../../public/css/libraryView.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="../../public/css/playList.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="../../public/css/artist.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="../../public/css/album.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./public/css/footer.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./public/css/sidebar.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./public/css/song-item.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./public/css/header.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./public/css/libraryView.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./public/css/playList.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./public/css/artist.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./public/css/album.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./public/css/grid.css?v=<?php echo time(); ?>">
 </head>
 <style>
     .albums_hot{
@@ -49,13 +50,13 @@
                     <h3 class="header-name">Bài hát</h3>
                     <div class="col c-3">
                         <div class="libarary-img--animaiton">
-                            <li class="libarary-img--animaiton-item second" style="background-image: url(../../public/images/authors/author1.jpg)"></li>
-                            <li class="libarary-img--animaiton-item third" style="background-image: url(../../public/images/authors/author1.jpg)"></li>
-                            <li class="libarary-img--animaiton-item first" style="background-image: url(../../public/images/authors/author1.jpg)"></li>
+                            <li class="libarary-img--animaiton-item second" style="background-image: url(./public/images/authors/author1.jpg)"></li>
+                            <li class="libarary-img--animaiton-item third" style="background-image: url(./public/images/authors/author1.jpg)"></li>
+                            <li class="libarary-img--animaiton-item first" style="background-image: url(./public/images/authors/author1.jpg)"></li>
                         </div>
                     </div>
                     <div class="songs col c-9">
-                        <?php include_once("../components/song-item.php");
+                        <?php include_once("./app/components/song-item.php");
                             echo createSong();
                             echo createSong();
                             echo createSong();
@@ -75,25 +76,25 @@
                 <div class="row no-gutters">
                     <h3 class="header-name">Playlist</h3>
                     <div class="col c-3">
-                        <?php include_once("../components/playList.php");?>
+                        <?php include_once("./app/components/playList.php");?>
                     </div>
                     <div class="col c-9"></div>
                     <h3 class="header-name">Nghệ sĩ</h3>
-                    <?php include_once("../components/artist.php");
+                    <?php include_once("./app/components/artist.php");
                     $artists = [
-                        ['imgPath' => '../../public/images/albums/album1.jpg', 'name' => 'ANH TRAI "SAY HI"'],
-                        ['imgPath' => '../../public/images/albums/album2.jpg', 'name' => 'Vũ.'],
-                        ['imgPath' => '../../public/images/albums/album3.jpg', 'name' => 'HIEU THU HAI'],
-                        ['imgPath' => '../../public/images/albums/album4.jpg', 'name' => 'Lê Linh'],
-                        ['imgPath' => '../../public/images/albums/album5.jpg', 'name' => 'Jack'],
-                        ['imgPath' => '../../public/images/albums/album6.jpg', 'name' => 'Hồ Quang Hiếu']
+                        ['imgPath' => './public/images/albums/album1.jpg', 'name' => 'ANH TRAI "SAY HI"'],
+                        ['imgPath' => './public/images/albums/album2.jpg', 'name' => 'Vũ.'],
+                        ['imgPath' => './public/images/albums/album3.jpg', 'name' => 'HIEU THU HAI'],
+                        ['imgPath' => './public/images/albums/album4.jpg', 'name' => 'Lê Linh'],
+                        ['imgPath' => './public/images/albums/album5.jpg', 'name' => 'Jack'],
+                        ['imgPath' => './public/images/albums/album6.jpg', 'name' => 'Hồ Quang Hiếu']
                     ];
                     echo createArtistContainer($artists);      
                     ?>
                     <h3 class="header-name">Albums</h3>
                     <div class="albums_hot">
                         <?php
-                            include_once '../models/albumModel.php'; 
+                            include_once './app//models/albumModel.php'; 
                             displayAlbums(5,10);
                         ?>
                     </div>
@@ -101,9 +102,9 @@
             </div>
         </div>
     </div>
-    <?php include_once("../components/footer.php");?>
+    <?php include_once("./app/components/footer.php");?>
 </div>
 
 </body>
-<script src="../../public/js/libraryView.js"></script>
+<script src="./public/js/libraryView.js"></script>
 </html>
