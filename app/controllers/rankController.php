@@ -1,3 +1,3 @@
 <?php
-    require_once '../views/rankView.php';
+    require_once './app/views/rankView.php';
 ?>

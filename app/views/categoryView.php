@@ -10,27 +10,27 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
     
-    <?php include("../components/linkbootstrap.php"); ?>
+    <?php include("./app/components/linkbootstrap.php"); ?>
 
-    <link rel="stylesheet" href="../../public/css/footer.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/melody-lux/public/css/footer.css?v=<?php echo time(); ?>">
     
-    <link rel="stylesheet" href="../../public/css/header.css?v=<?php echo time(); ?>"> 
+    <link rel="stylesheet" href="/melody-lux/public/css/header.css?v=<?php echo time(); ?>"> 
 
-    <link rel="stylesheet" href="../../public/css/rank-item.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/melody-lux/public/css/rank-item.css?v=<?php echo time(); ?>">
 
-    <link rel="stylesheet" href="../../public/css/sidebar.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/melody-lux/public/css/sidebar.css?v=<?php echo time(); ?>">
 
-    <link rel="stylesheet" href="../../public/css/song-item.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/melody-lux/public/css/song-item.css?v=<?php echo time(); ?>">
 
-    <link rel="stylesheet" href="../../public/css/slider.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/melody-lux/public/css/slider.css?v=<?php echo time(); ?>">
 
-    <link rel="stylesheet" href="../../public/css/song.css?v<?php echo time(); ?>">
+    <link rel="stylesheet" href="/melody-lux/public/css/song.css?v<?php echo time(); ?>">
 
-    <link rel="stylesheet" href="../../public/css/grid.css">
+    <link rel="stylesheet" href="/melody-lux/public/css/grid.css">
 
-    <link rel="stylesheet" href="../../public/css/album.css?v<?php echo time(); ?>">
+    <link rel="stylesheet" href="/melody-lux/public/css/album.css?v<?php echo time(); ?>">
 
-    <link rel="stylesheet" href="../../public/css/rank.css?v<?php echo time(); ?>">
+    <link rel="stylesheet" href="/melody-lux/public/css/rank.css?v<?php echo time(); ?>">
 </head>
 </head>
 <style>
@@ -51,41 +51,41 @@
         <div class="row no-gutters">
             <div class="col c-2">
                 <?php
-                include_once '../components/sidebar.php';
+                include_once './app/components/sidebar.php';
                 ?>  
             </div>
             <div class="col c-10">
                 <?php
-                include_once '../components/header.php';
+                include_once './app/components/header.php';
                 ?>
                 <div>
                     <?php
-                    include_once '../components/slider.php';
+                    include_once './app/components/slider.php';
                     ?>
                     <?php
-                     include_once '../components/rank.php';
+                     include_once './app/components/rank.php';
                      ?>
                     <h4>Trữ Tình & Bolero</h4>
                     <div class="albums_hot">
                          <?php
-                        include_once '../models/albumModel.php'; 
+                        include_once './app/models/albumModel.php'; 
                         displayAlbums(5,10);
                         ?>
                     </div>
                     <h4>Dance/Electronic</h4>
                     <div class="albums_hot">
                          <?php
-                        include_once '../models/albumModel.php'; 
+                        include_once './app/models/albumModel.php'; 
                         displayAlbums(5,15);
                          ?>
                     </div>
                  </div>
             </div>
                 <?php
-                include_once '../components/footer.php';
+                include_once './app/components/footer.php';
                 ?>
         </div>
    </div>
 </body>
-<script src="../../public/js/categoryView.js"></script>
+<script src="/melody-lux/public/js/categoryView.js"></script>
 </html>

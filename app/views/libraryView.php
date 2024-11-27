@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thư viện</title>
-    <?php include_once("../components/linkbootstrap.php");?>
-    <link href="../../public/css/grid.css" rel="stylesheet">
+    <?php include_once("./app/components/linkbootstrap.php");?>
+    <link href="/melody-lux/public/css/grid.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -31,10 +31,10 @@
     <div class="grid">
         <div class="row no-gutters">
             <div class="col c-2">
-                <?php include_once("../components/sidebar.php");?>
+                <?php include_once("./app/components/sidebar.php");?>
             </div>
             <div class="right col c-10">
-                <?php include_once("../components/header.php");?>
+                <?php include_once("./app/components/header.php");?>
                 <h1 class="header-name">Thư viện</h1>
                 <div class="library-nav">
                     <li class="library-nav--item active">Tổng quan</li>
