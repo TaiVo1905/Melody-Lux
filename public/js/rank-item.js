@@ -41,3 +41,13 @@ timeMusicElements.forEach(el => {
         });
     }
 });
+// Phần này dùng để xử lý các số không bằng nhau (cái thụt ra cái thụt vào á)
+const numberBoxes = document.querySelectorAll('.number-box');
+
+numberBoxes.forEach(box => {
+    const value = parseInt(box.textContent.trim(), 10);
+
+    if (value < 10) {
+        box.classList.add('padding-small');
+    }
+});

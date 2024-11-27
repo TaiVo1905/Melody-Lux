@@ -77,6 +77,7 @@
                         } else {
                             echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
                         }  
+                        ?>
                     </div>
                     <h4>Dance/Electronic</h4>
                     <div class="albums_hot">

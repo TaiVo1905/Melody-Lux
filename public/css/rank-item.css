@@ -31,6 +31,10 @@
     padding-right: 20px;
     padding-bottom: 10px;
 }
+.padding-small{
+    padding-left: 15px;
+    padding-right: 27px;
+}
 .rank_song{
     /* padding-top: 5px; */
     display: flex;

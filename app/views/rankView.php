@@ -39,6 +39,13 @@
                 <div class="rank-body" style="padding:30px 45px 0 45px;">
                     <?php
                         include_once './app/components/rank-item.php';
+                        require_once './app/models/songModel.php';
+                        $songs = songModel();
+                        $stt = 0;
+                        while ($song = mysqli_fetch_assoc($songs)){
+                            ++$stt;
+                            renderRankItems($stt, $song['path_img'], $song['song_name'], $song['author_singer_name'], $song['path_audio']);
+                        };
                     ?>
                 </div>
             </div>
