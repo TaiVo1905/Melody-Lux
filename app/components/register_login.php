@@ -12,10 +12,10 @@
         <div class="form-container register-container">
             <form class="form" action="" method="POST">
                 <h1 class="dangnhap">Đăng Kí</h1>
-                <input class="input" type="text" placeholder="Tên">
-                <input class="input" type="email" placeholder="Email">
-                <input class="input" type="password" placeholder="Mật khẩu">
-                <input class="input" type="number" placeholder="Mã xác thực">
+                <input class="input" type="text" name="username" placeholder="Tên">
+                <input class="input" type="email" name="email" placeholder="Email">
+                <input class="input" type="password" name="password" placeholder="Mật khẩu">
+                <input class="input" type="number" name="otpCode" placeholder="Mã xác thực">
                 <button class="danki">Đăng kí</button>
                 <span class="optionsaccount">hoặc sử dụng tài khoản của bạn</span>
                 <div class="social-container">
@@ -28,8 +28,8 @@
         <div class="form-container login-container">
             <form  class="form" action="#">
                 <h1 class="dangnhap">Đăng Nhập</h1>
-                <input class="input" type="email" placeholder="Email">
-                <input class="input" type="password" placeholder="Mật khẩu">
+                <input class="input" type="email" name="emailLogin" placeholder="Email">
+                <input class="input" type="password" name="passwordLogin" placeholder="Mật khẩu">
                 <div class="content">
                     <div class="checkbox">
                         <input class="input" type="checkbox" name="" id="checkbox">
@@ -39,7 +39,7 @@
                         <a href="#" class="iconMXH">Quên mật khẩu?</a>
                     </div>
                 </div>
-                <button class="danki">Đăng nhập</button>
+                <button class="danki" name="LoginButton">Đăng nhập</button>
                 <span class="optionsaccount">hoặc sử dụng tài khoản của bạn</span>
                 <div class="social-container">
                     <a href="#" class="social iconMXH"><i class="lni lni-facebook-fill"></i></a>
