@@ -1,25 +1,26 @@
 <?php
-    function registerUser($db, $email, $password, $username) {
+    require_once("./config/config.php");
+    function validate_username($username)
+    {
+        return ctype_alnum($username);
+    }
 
-        $hashedPassword = md5($password); 
-    
-        $sql = "INSERT INTO Users (email, password, username) VALUES (?, ?, ?)";
-        
-        if ($stmt = mysqli_prepare($db, $sql)) {
-            mysqli_stmt_bind_param($stmt, "sss", $email, $hashedPassword, $username);
-            
-            if (mysqli_stmt_execute($stmt)) {
-                mysqli_stmt_close($stmt);
-                return true;
-            } else {
-                echo "Error " . mysqli_stmt_error($stmt);
-                mysqli_stmt_close($stmt);
-                return false;
-            }
+    function validate_password($password)
+    {
+        return strlen($password) >= 8;
+    }
+    function validate_email($email)
+    {
+        return filter_var($email, FILTER_VALIDATE_EMAIL);
+    }
+    function register_user($username, $password, $email)   {
+        $conn = connectDB ();
+        $sql = "INSERT INTO Users (user_name, password, email)
+        VALUES ('$username', '$password', '$email')";
+        if (mysqli_query($conn, $sql)) {
+            return true;
         } else {
-            echo "Error: " . mysqli_error($db);
             return false;
         }
     }
-    
 ?>

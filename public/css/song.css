@@ -1,0 +1,68 @@
+
+  
+  .item {
+    display: flex; 
+    align-items: center; 
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2%; 
+    transition: transform 0.3s;
+    width: 98%;
+  }
+  
+  .item:hover {
+    background-color: #2F2739;
+    /* transform: scale(0.9);  */
+  }
+  
+  .item img {
+    width: 50px; 
+    height: 50px; 
+    object-fit: cover; 
+    margin-right: 16px;
+  }
+  
+  .info {
+    flex: 1;
+  }
+  
+  .info h5 {
+    color: white;
+    margin: 0;
+    font-size: 1em; 
+  }
+  
+  .info p {
+    margin: 5px 0 0;
+    color: #aaa;
+    font-size: 0.9em; 
+  }
+  .play-icon {
+      position: relative;
+      top: 20px;
+      left: -10px;
+      color:white;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      height: 30px;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+  }
+  .item:hover .play-icon {
+      opacity: 1;
+  }
+  .rank_music {
+      position: relative;
+      top: 20px;
+      color:white;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 30px;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+  }
+  .item:hover .rank_music {
+      opacity: 1;
+  }
