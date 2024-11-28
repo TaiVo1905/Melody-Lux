@@ -17,7 +17,7 @@
 
     function searchSong($searchValue) {
         $conn = connectDB();
-        $sql = "select songs.song_id, songs.song_name, songs.path_audio, songs.path_img,
+        $sql = "SELECT songs.song_id, songs.song_name, songs.path_audio, songs.path_img,
         albums.album_name, categories.category,
         author_singers.author_singer_name
         from songs
@@ -25,6 +25,14 @@
         join categories on songs.category_id = categories.category_id
         join author_singers on songs.author_id = author_singers.author_singer_id
         where songs.song_name like '%$searchValue%';";
+        $result = mysqli_query($conn, $sql);
+        return $result;
+    }
+
+    function suggestSong () {
+        $conn = connectDB();
+        $sql = "SELECT songs.song_id, songs.song_name, songs.path_audio, songs.path_img, songs.plays,author_singers.author_singer_name
+        FROM songs join author_singers on songs.author_id = author_singers.author_singer_id ORDER BY RAND() LIMIT 6;";
         $result = mysqli_query($conn, $sql);
         return $result;
     }

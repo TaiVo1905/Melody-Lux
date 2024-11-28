@@ -26,7 +26,7 @@
             </form>
         </div>
         <div class="form-container login-container">
-            <form  class="form" action="#">
+            <form  class="form" action="#" method="POST">
                 <h1 class="dangnhap">Đăng Nhập</h1>
                 <input class="input" type="email" name="emailLogin" placeholder="Email">
                 <input class="input" type="password" name="passwordLogin" placeholder="Mật khẩu">
@@ -67,6 +67,6 @@
             </div>
         </div>
     </div>
-    <script src="./public/js/register_login.js"></script>
+    <script src="./public/js/register_login.js?v=<?php echo time()?>" ></script>
 </body>
 </html>

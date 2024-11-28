@@ -1,4 +1,3 @@
-
     <div class="listen">
         <div class="media">
             <div class="media_cd" style="background-image: url('./public/images/singers/chuBin.jpg')"></div>
@@ -29,6 +28,7 @@
                 <input id="progress" class="controls_time--range" type="range" min="0" max="100" value="0" step="1">
                 <span class="controls_time--right">03.22</span>
             </div>
+            <audio id="currentSong" src=""></audio>
         </div>
         <div class="controls_extend">
             <div class="controls_extend--lever">

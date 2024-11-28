@@ -76,8 +76,8 @@
                             }
                         } else {
                             echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
-                        }  
-                        ?>
+                        } 
+                        ?> 
                     </div>
                     <h4>Dance/Electronic</h4>
                     <div class="albums_hot">
@@ -101,5 +101,5 @@
         </div>
    </div>
 </body>
-<script src="/melody-lux/public/js/categoryView.js"></script>
+<script src="./public/js/categoryView.js"></script>
 </html>

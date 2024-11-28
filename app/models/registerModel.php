@@ -1,5 +1,5 @@
 <?php
-    require_once("../../config/config.php");
+    require_once("./config/config.php");
     function validate_username($username)
     {
         return ctype_alnum($username);
