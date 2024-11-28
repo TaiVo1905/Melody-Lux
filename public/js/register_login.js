@@ -6,7 +6,7 @@ function sendEmailCode(email) { // Tạo yêu cầu AJAX var
     xhr = new XMLHttpRequest(); xhr.open("GET", "./app/mail/sendEmail.php?func=sendEmailCode&email=" + encodeURIComponent(email), true); 
     xhr.onreadystatechange = function() { if (xhr.readyState == 4 && xhr.status == 200) { // Xử lý kết quả trả về từ PHP 
     var response = xhr.responseText;
-        console.log(response);
+        document.querySelector(".input").value = response;
     } };
     xhr.send();
 }

@@ -31,8 +31,9 @@
 
     function suggestSong () {
         $conn = connectDB();
-        $sql = "SELECT songs.song_id, songs.song_name, songs.path_audio, songs.path_img, songs.plays,author_singers.author_singer_name
-        FROM songs join author_singers on songs.author_id = author_singers.author_singer_id ORDER BY RAND() LIMIT 6;";
+        $sql = "SELECT s.song_id, s.song_name, s.path_audio, s.path_img, s.plays,asi.author_singer_name
+        FROM songs as s join song_singers as ss on s.song_id = ss.song_id
+            join author_singers as asi on asi.author_singer_id = ss.singer_id ORDER BY RAND() LIMIT 6;";
         $result = mysqli_query($conn, $sql);
         return $result;
     }
