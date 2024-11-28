@@ -14,13 +14,12 @@
 .media {
     display: flex;
     align-items: center;
-    width: 364px;
-    /* Adjust if needed */
     padding-left: 20px;
+    gap: 26px;
 }
 
 .media_cd {
-width: 100px;
+width: 60px;
 height: 60px;
 cursor: pointer;
 background-size: cover;
@@ -39,8 +38,8 @@ border-radius: 50%;
 } */
 
 .media_title {
-    margin-left: 8px;
     cursor: pointer;
+    width: 100px;
 }
 
 .media_title--name {

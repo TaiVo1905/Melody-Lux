@@ -1,6 +1,7 @@
-    <div class="listen">
+
+<div class="listen">
         <div class="media">
-            <div class="media_cd" style="background-image: url('./public/images/singers/chuBin.jpg')"></div>
+            <div class="media_cd" style="background-image: url('../../public/images/singers/chuBin.jpg')"></div>
             <div class="media_title">
                 <marquee class="media_title--name" scrolldelay="130">Cô đơn trên sofa</marquee>
                 <a class="media_title--author">Chu Bin</a>
@@ -24,11 +25,10 @@
                 <li class="controls_player--icon"><ion-icon name="repeat-outline"></ion-icon></li>
             </div>
             <div class="controls_time">
-                <span class="controls_time--left" style="color:#595560">00.00</span>
+                <span class="controls_time--left" style="color:#595560;padding-right:14px;">00.00</span>
                 <input id="progress" class="controls_time--range" type="range" min="0" max="100" value="0" step="1">
-                <span class="controls_time--right">03.22</span>
+                <span class="controls_time--right" style="color:white;padding-left:14px;">03.22</span>
             </div>
-            <audio id="currentSong" src=""></audio>
         </div>
         <div class="controls_extend">
             <div class="controls_extend--lever">
