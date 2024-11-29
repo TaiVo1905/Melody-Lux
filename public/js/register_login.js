@@ -42,6 +42,7 @@ function sendEmailCode(email) { // Tạo yêu cầu AJAX var
     xhr.send();
 }
 
+
 sendCodebtn.addEventListener("click", () => {
-    sendEmailCode("voductaitxqt123@gmail.com");
+    sendEmailCode(registerForm.querySelector("input[type='email']").value);
 });
