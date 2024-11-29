@@ -24,9 +24,9 @@
                 <li class="controls_player--icon"><ion-icon name="repeat-outline"></ion-icon></li>
             </div>
             <div class="controls_time">
-                <span class="controls_time--left" style="color:#595560">00.00</span>
+                <span class="controls_time--left" style="color:#595560;padding-right:14px;">00.00</span>
                 <input id="progress" class="controls_time--range" type="range" min="0" max="100" value="0" step="1">
-                <span class="controls_time--right">03.22</span>
+                <span class="controls_time--right" style="color:white;padding-left:14px;">03.22</span>
             </div>
             <audio id="currentSong" src="./public/audio/DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3"></audio>
         </div>
