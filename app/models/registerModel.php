@@ -13,6 +13,17 @@
     {
         return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
+
+    function checkEmail($email){
+        $conn = connectDB();
+        $sql = "SELECT * FROM Users WHERE email = '$email'";
+        $result = mysqli_query($conn, $sql);
+        if (mysqli_num_rows($result) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     function register_user($username, $password, $email)   {
         $conn = connectDB ();
         $sql = "INSERT INTO Users (user_name, password, email)
