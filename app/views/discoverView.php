@@ -114,4 +114,3 @@
    <script src="./public/js/discoverView.js?v<?php echo time(); ?>"></script>
    <script src="./public/js/handleSong.js?v<?php echo time(); ?>"></script>
 </body>
-</html>
