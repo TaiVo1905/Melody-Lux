@@ -106,5 +106,6 @@
 </div>
 
 </body>
-<script src="./public/js/libraryView.js"></script>
+<script src="./public/js/libraryView.js?v<?php echo time(); ?>"></script>
+<script src="./public/js/handleSong.js?v<?php echo time(); ?>"></script>
 </html>

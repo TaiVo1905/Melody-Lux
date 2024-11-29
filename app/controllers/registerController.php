@@ -28,7 +28,7 @@
         }
         if (empty($username_error) && empty($password_error) && empty($email_error) && empty($code_error)) {
             register_user($username, $password, $email) ;
-            
+            echo "success";
         }else{
             echo "Registration failed. Please try again.";
         }

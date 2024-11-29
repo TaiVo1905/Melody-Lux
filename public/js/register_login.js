@@ -1,25 +1,47 @@
-const registerButton = document.getElementById('register');
-const loginButton = document.getElementById('login');
-const container = document.getElementById('container');
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
+const sendCodebtn = $('.sendCodebtn');
+const loginLink = $('.login-link');
+const registerLink = $('.register-link');
+const backToDiscover = $('.backToDiscover');
+const iconClose = $('.icon-close');
+const logInForm = $('.login');
+const registerForm = $('.register');
+const wrapper = $('.wrapper');
+
+
+registerLink.addEventListener('click',() => {
+    window.location.href = "register";
+});
+
+loginLink.addEventListener('click',() => {
+    window.location.href = "logIn";
+});
+
+backToDiscover.addEventListener('click',() => {
+    window.location.href = "discover";
+});
+iconClose.addEventListener('click',() => {
+    window.location.href = "discover";
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (window.location.href.includes("register")) {
+        wrapper.classList.add('active');
+    }
+})
 
 function sendEmailCode(email) { // Tạo yêu cầu AJAX var 
     xhr = new XMLHttpRequest(); xhr.open("GET", "./app/mail/sendEmail.php?func=sendEmailCode&email=" + encodeURIComponent(email), true); 
     xhr.onreadystatechange = function() { if (xhr.readyState == 4 && xhr.status == 200) { // Xử lý kết quả trả về từ PHP 
     var response = xhr.responseText;
-        console.log(response);
+        document.querySelector(".input").value = response;
     } };
     xhr.send();
 }
-const test = document.querySelector(".social-container");
-console.log(test);
-test.addEventListener("click", () => {
-    sendEmailCode("voductaitxqt123@gmail.com");
-});
-registerButton.addEventListener("click", () => {
-    container.classList.add("right-panel-active");
-    console.log("aaa");
-});
 
-loginButton.addEventListener("click", () => {
-    container.classList.remove("right-panel-active");
+sendCodebtn.addEventListener("click", () => {
+    sendEmailCode("voductaitxqt123@gmail.com");
 });

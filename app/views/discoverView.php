@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" href="./public/css/song.css?v<?php echo time(); ?>">
 
-    <link rel="stylesheet" href="./public/css/grid.css">
+    <link rel="stylesheet" href="./public/css/grid.css?v<?php echo time(); ?>">
 
     <link rel="stylesheet" href="./public/css/album.css?v<?php echo time(); ?>">
 </head>
@@ -73,7 +73,7 @@
                         include_once './app/components/song.php';
                         $results = suggestSong();
                         while ($row = mysqli_fetch_assoc($results)) {
-                            echo createSuggestSong($row["song_name"], $row["author_singer_name"], $row["path_audio"], $row["path_img"]);
+                            echo createSuggestSong($row["song_name"], $row["author_singer_name"], $row["song_id"], $row["path_img"]);
                         }
                      ?>
                      </div>
@@ -81,14 +81,27 @@
                     <div class="albums_hot">
                          <?php
                         include_once './app/models/albumModel.php'; 
-                        displayAlbums(5,0);
+                        $result = displayAlbums(5,0);
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img']);
+                            }
+                        } else {
+                            echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
+                        }
                         ?>
                     </div>
                     <h4>Chill</h4>
                     <div class="albums_hot">
                          <?php
-                        include_once './app/models/albumModel.php'; 
-                        displayAlbums(5,5);
+                        $result = displayAlbums(5,5);
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img']);
+                            }
+                        } else {
+                            echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
+                        }
                          ?>
                     </div>
                  </div>
@@ -98,7 +111,6 @@
                 ?>
         </div>
    </div>
+   <script src="./public/js/discoverView.js?v<?php echo time(); ?>"></script>
+   <script src="./public/js/handleSong.js?v<?php echo time(); ?>"></script>
 </body>
-<script src="./public/js/discoverView.js"></script>
-<script src="./public/js/search.js"></script>
-</html>

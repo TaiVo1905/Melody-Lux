@@ -164,3 +164,8 @@ border-radius: 50%;
     top: -9px;
     left: -7px;
 }
+
+#pause_song.active, 
+#play_song.active {
+    display: none;
+}
