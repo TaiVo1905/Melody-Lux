@@ -237,7 +237,7 @@ VALUES
 		  ('Điếu thuốc tàn', './public/audio/DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3', './public/images/singers/lamChanhKhang.jpg',9 , 2, 6, 2),
 		  ('Cô đơn trong nhà mình', './public/audio/CÔ ĐƠN TRONG NHÀ MÌNH  HOÀI LÂM.mp3', './public/images/singers/hoaiLam.jpg', 10, 2, 7, 2),
 		  ('Cha', 'public/audio/Cha-QuachBeem-6283468.mp3', './public/images/singers/quachBeem.jpg', 11, 1, 5, 2),
-		  ('3107-2', './public/audio/3107-2 - DuongG, Nâu, Wn x CaoTri.mp3', './public/images/songs/3107-2.jpg', 1, 2, 29, 2),
+		  ('3107-2', './public/audio/3107_2.mp3', './public/images/songs/3107-2.jpg', 1, 2, 29, 2),
 		  ('Đừng Làm Trái Tim Anh Đau','./public/audio/Đừng làm trái tim anh đau - Sơn Tùng M-TP.mp3','./public/images/songs/dung lam trai tim anh dau.jpg', 5, 2, 10, 1),
           ('Cẩm Tú Cầu','./public/audio/Cẩm Tú Cầu  RAYO x HUỲNH VĂN.mp3','./public/images/songs/cam tu cau.jpg', 2, 2,28, 2),
           ('Chiếc Khăn Gió Âm','./public/audio/Chiếc Khăn Gió Ấm  Khánh Phương  Official Music Video.mp3','./public/images/songs/chiec khan gio am.jpg', 3, 2, 30, 3),
