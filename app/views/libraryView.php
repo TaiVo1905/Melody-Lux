@@ -51,25 +51,20 @@
                     <div class="col c-3">
                         <div class="libarary-img--animaiton">
                             <li class="libarary-img--animaiton-item second" style="background-image: url(./public/images/authors/author1.jpg)"></li>
-                            <li class="libarary-img--animaiton-item third" style="background-image: url(./public/images/authors/author1.jpg)"></li>
-                            <li class="libarary-img--animaiton-item first" style="background-image: url(./public/images/authors/author1.jpg)"></li>
+                            <li class="libarary-img--animaiton-item third" style="background-image: url(./public/images/authors/author7.jpg)"></li>
+                            <li class="libarary-img--animaiton-item first" style="background-image: url(./public/images/authors/author8.jpg)"></li>
                         </div>
                     </div>
                     <div class="songs col c-9">
                         <?php include_once("./app/components/song-item.php");
-                            echo createSong();
-                            echo createSong();
-                            echo createSong();
-                            echo createSong();
-                            echo createSong();
-                            echo createSong();
-                            echo createSong();
-                            echo createSong();
-                            echo createSong();
-                            echo createSong();
-                            echo createSong();
-                            echo createSong();
-                            echo createSong();
+                              require_once './app/models/libraryModel.php';
+                            if ($_SESSION['user_id']){
+                                $user_id = $_SESSION['user_id'];
+                                $songs = getSongLibraryUser($user_id);
+                                while ($song = mysqli_fetch_assoc($songs)){
+                                    renderSongLibrary($song['path_img'], $song['song_name'], $song['author_singer_name'], $song['path_audio']);
+                                };
+                            }
                         ?>
                     </div>
                 </div>
@@ -83,8 +78,8 @@
                     <?php include_once("./app/components/artist.php");
                     $artists = [
                         ['imgPath' => './public/images/albums/album1.jpg', 'name' => 'ANH TRAI "SAY HI"'],
-                        ['imgPath' => './public/images/albums/album2.jpg', 'name' => 'Vũ.'],
-                        ['imgPath' => './public/images/albums/album3.jpg', 'name' => 'HIEU THU HAI'],
+                        ['imgPath' => './public/images/albums/album2.jpg', 'name' => 'Đức Phúc'],
+                        ['imgPath' => './public/images/albums/album3.jpg', 'name' => 'Sơn Tùng M-TP'],
                         ['imgPath' => './public/images/albums/album4.jpg', 'name' => 'Lê Linh'],
                         ['imgPath' => './public/images/albums/album5.jpg', 'name' => 'Jack'],
                         ['imgPath' => './public/images/albums/album6.jpg', 'name' => 'Hồ Quang Hiếu']
@@ -94,8 +89,15 @@
                     <h3 class="header-name">Albums</h3>
                     <div class="albums_hot">
                         <?php
-                            include_once './app//models/albumModel.php'; 
-                            displayAlbums(5,10);
+                            require_once './app//models/libraryModel.php'; 
+                            include_once("./app/components/album.php");
+                            if ($_SESSION['user_id']){
+                                $user_id = $_SESSION['user_id'];
+                                $albums = getAlbumLibraryUser($user_id);
+                                while ($album = mysqli_fetch_assoc($albums)){
+                                    renderAlbumLibrary($album['album_name'], $album['author_singer_name'], $album['album_img']);
+                                };
+                            }
                         ?>
                     </div>
                 </div>
@@ -108,4 +110,5 @@
 </body>
 <script src="./public/js/libraryView.js?v<?php echo time(); ?>"></script>
 <script src="./public/js/handleSong.js?v<?php echo time(); ?>"></script>
+<script src="/melody-lux/public/js/rank-item.js?v<?php echo time(); ?>"></script>
 </html>
