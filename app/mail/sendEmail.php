@@ -53,6 +53,7 @@ function sendEmailCode($email){;
     
 };
 function sendConfirmationEmail($name, $email, $password){
+    $mail = new PHPMailer(true);
     try {
         //Server settings
         $mail->isSMTP();// Set mailer to use SMTP
@@ -120,6 +121,9 @@ if (isset($_GET['func'])) {
         $email = $_GET['email'];
         echo sendEmailCode($email);
     } elseif ($func == "sendConfirmationEmail") {
+        $name = $_GET['name'];
+        $email = $_GET['email'];
+        $password = $_GET['password'];
         echo sendConfirmationEmail($name, $email, $password); 
     } else { 
         echo "Hàm không hợp lệ hoặc tham số không hợp lệ.";
