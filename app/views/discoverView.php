@@ -100,4 +100,5 @@
    </div>
 </body>
 <script src="./public/js/discoverView.js"></script>
+<script src="./public/js/search.js"></script>
 </html>
