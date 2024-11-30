@@ -20,7 +20,7 @@
                 <ion-icon class = "icon_header" name="settings"></ion-icon>
             </div>
             <div class="border_circle">
-                <a href="logIn"><ion-icon class = "icon_header" name="person" ></ion-icon></a>
+                <ion-icon class = "icon_header" id="border_circle" name="person"></ion-icon>
             </div>
         </div>
     </div>

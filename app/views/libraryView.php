@@ -35,7 +35,11 @@
                 <?php include_once("./app/components/sidebar.php");?>
             </div>
             <div class="right col c-10">
-                <?php include_once("./app/components/header.php");?>
+                <?php 
+                include_once("./app/components/header.php");
+                include_once("./app/components/userLogin.php");
+                echo createPersonalCard('Đức Hùng'); 
+                ?>
                 <h1 class="header-name">Thư viện</h1>
                 <div class="library-nav">
                     <li class="library-nav--item active">Tổng quan</li>
@@ -109,6 +113,7 @@
 
 </body>
 <script src="./public/js/libraryView.js?v<?php echo time(); ?>"></script>
+<script src="./public/js/header.js?v<?php echo time(); ?>"></script>
 <script src="./public/js/handleSong.js?v<?php echo time(); ?>"></script>
 <script src="/melody-lux/public/js/rank-item.js?v<?php echo time(); ?>"></script>
 </html>
