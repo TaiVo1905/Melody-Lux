@@ -20,19 +20,19 @@
         </span>
         <div class="form-box login">
             <h2>Login</h2>
-            <form action="#">
+            <form action="" method="POST">
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="mail-outline"></ion-icon>
                     </span>
-                    <input type="email" required>
+                    <input type="email" name="emailLogin" required>
                     <label >Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="lock-closed-outline"></ion-icon>
                     </span>
-                    <input type="password" required>
+                    <input type="password" name="passwordLogin" required>
                     <label >Password</label>
                 </div>
                 <div class="remember-forgot">
@@ -40,7 +40,7 @@
                     Remember me</label>
                     <a href="#">Forgot Password?</a>
                 </div>
-                <button type="submit" class="btn">Log in</button>
+                <button type="submit" class="btn" name="loginbtn">Log in</button>
                 <div class="login-register">
                     <p>Don't Have an account ?
                         <a href="#" class="register-link">Register</a></p>
@@ -51,12 +51,12 @@
 
         <div class="form-box register">
             <h2>Registration</h2>
-            <form action="#">
+            <form action="" method="POST">
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="person-circle-outline"></ion-icon>
                     </span>
-                    <input type="text" required>
+                    <input type="text" name="username" required>
                     <label >Username</label>
                 </div>
 
@@ -64,21 +64,21 @@
                     <span class="icon">
                         <ion-icon name="mail-outline"></ion-icon>
                     </span>
-                    <input type="email" required>
+                    <input type="email" name ="email" required>
                     <label >Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="lock-closed-outline"></ion-icon>
                     </span>
-                    <input type="password" required>
+                    <input type="password" name ="password" required>
                     <label >Password</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
-                        <button class="sendCodebtn">Send code</button>
+                        <button type="button" class="sendCodebtn">Send code</button>
                     </span>
-                    <input type="text" required>
+                    <input type="text" name ="otpCode" required>
                     <label >Authentication code</label>
                 </div>
                 <div class="remember-forgot">
@@ -86,7 +86,7 @@
                     I agree to the terms & conditions</label>
                     
                 </div>
-                <button type="submit" class="btn">Sign Up</button>
+                <button type="submit" class="btn" name ="registersub">Sign Up</button>
                 <div class="login-register">
                     <p>Already have an account ?
                         <a href="#" class="login-link">Login</a></p>
