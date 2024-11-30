@@ -37,8 +37,8 @@
             <div class="right col c-10">
                 <?php 
                 include_once("./app/components/header.php");
-                include_once("./app/components/userLogin.php");
-                echo createPersonalCard('Đức Hùng'); 
+                include_once("./app/components/userRegister.php");
+                echo createRegister();
                 ?>
                 <h1 class="header-name">Thư viện</h1>
                 <div class="library-nav">

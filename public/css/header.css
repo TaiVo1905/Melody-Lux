@@ -167,3 +167,72 @@
 .header_right .border_circle:hover+.personall {
     display: block;
 }
+
+
+/* phần đăng nhập */
+.update_personal {
+    top: 26px;
+    position: absolute;
+    background-color: #9B4DE0;
+    border-radius: 20px;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    margin-left: 27px;
+}
+.card_ct {
+    background-color: #dfdfca;
+    width: 214px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 82px;
+    margin-left: 28px;
+}
+
+.card_ct h2 {
+    font-size: 1.1rem;
+    color: rgb(238, 156, 23);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_ct .tag {
+    background-color: rgb(238, 156, 23); 
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.price_zing {
+    font-weight: bold;
+    color: black;
+    margin: 5px 0;
+}
+
+.pha {
+    margin-bottom: 13px;
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.button_zing {
+    background-color: rgb(238, 156, 23);
+    color: #fff;
+    border: none;
+    padding: 6px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; 
+    border-radius: 20px;
+}
+
+.button_zing:hover {
+    background-color: #7d52c1; 
+}
