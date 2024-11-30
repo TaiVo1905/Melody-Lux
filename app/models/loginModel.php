@@ -5,7 +5,7 @@ function loginUser($email, $Password) {
     $query = "SELECT * FROM Users WHERE email = '$email' AND password = '$Password'";
     $result = mysqli_query($conn, $query);
     if ($result) {  
-        return $result;    
+        return $result;
     }else{
         return false;
     }

@@ -107,6 +107,10 @@ border-radius: 50%;
 .controls_player--icon:hover{
     color: #B46BDB;
 }
+
+.controls_player--icon.active{
+    color: #B46BDB;
+}
 .controls_time {
     display: flex;
     justify-content: space-evenly;
@@ -166,6 +170,8 @@ border-radius: 50%;
 }
 
 #pause_song.active, 
-#play_song.active {
+#play_song.active,
+.volumeHigh.active,
+.volumeLow.active {
     display: none;
 }
