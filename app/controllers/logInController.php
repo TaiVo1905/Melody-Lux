@@ -8,7 +8,7 @@
         $user = mysqli_fetch_assoc($result);
         if ($user) {
             echo $user['user_name'];
-            session_start();
+            $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['username'] = $user['user_name'];
             $_SESSION['user_img'] = $user['user_img'];      
             header('location: discover');
@@ -16,7 +16,7 @@
             echo "Invalid email or password";
         }
     }
-    if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+    if (isset($_POST['loginbtn'])) { 
         handleLogin();
     }
   

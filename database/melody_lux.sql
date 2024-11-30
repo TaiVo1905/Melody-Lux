@@ -237,27 +237,27 @@ VALUES
 		  ('Điếu thuốc tàn', './public/audio/DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3', './public/images/singers/lamChanhKhang.jpg',9 , 2, 6, 2),
 		  ('Cô đơn trong nhà mình', './public/audio/CÔ ĐƠN TRONG NHÀ MÌNH  HOÀI LÂM.mp3', './public/images/singers/hoaiLam.jpg', 10, 2, 7, 2),
 		  ('Cha', 'public/audio/Cha-QuachBeem-6283468.mp3', './public/images/singers/quachBeem.jpg', 11, 1, 5, 2),
-		  ('3107-2', './public/audio/3107_2.mp3', './public/images/songs/3107-2.jpg', 1, 2, 29, 2),
-		  ('Đừng Làm Trái Tim Anh Đau','./public/audio/Đừng làm trái tim anh đau - Sơn Tùng M-TP.mp3','./public/images/songs/dung lam trai tim anh dau.jpg', 5, 2, 10, 1),
-          ('Cẩm Tú Cầu','./public/audio/Cẩm Tú Cầu  RAYO x HUỲNH VĂN.mp3','./public/images/songs/cam tu cau.jpg', 2, 2,28, 2),
-          ('Chiếc Khăn Gió Âm','./public/audio/Chiếc Khăn Gió Ấm  Khánh Phương  Official Music Video.mp3','./public/images/songs/chiec khan gio am.jpg', 3, 2, 30, 3),
-          ('Chúng Ta Của Tương Lai','./public/audio/Chúng Ta Của Tương Lai - Sơn Tùng M-TP.mp3','./public/images/songs/chung ta cua tuong lai.jpg', 5, 2, 10, 1),
-          ('Chúng Ta Không Thuộc Về Nhau Remix','./public/audio/Chúng Ta Không Thuộc Về Nhau Remix.mp3','./public/images/songs/chung ta khong thuoc ve nhau.jpg', 5, 2, 10, 1),
-          ('Đoạn Tuyệt Nàng Đi ','./public/audio/Đoạn Tuyệt Nàng Đi - PHÁT HUY T4.mp3','./public/images/songs/doan tuyet nang di.jpg', 4, 2, 14,2),
-          ('Hồng Nhan','./public/Hồng Nhan - Jack (G5R).mp3','./public/images/songs/hong nhan.jpg', 15, 3, 15, 1),
-          ('Nàng Thơ','./public/audio/Nàng Thơ - Hoàng Dũng  OFFICIAL.mp3','./public/images/songs/nang tho.jpg', 4, 1, 16, 3),
-          ('Đi Giữa Trời Rực Rỡ','./public/audio/Đi Giữa Trời Rực Rỡ - Ngô Lan Hương (MV Lyrics).mp3','./public/images/songs/di giưa troi ruc ro.jpg', 5, 1, 17, 3),
-          ('Nơi Vực Nơi Trời','./public/audio/NƠI VỰC NƠI TRỜI - LÊ BẢO BÌNH ft V.A REMIX .mp3','./public/images/songs/noi vuc noi troi.jpg', 6, 2, 31, 2),
-          ('Suýt Nữa Thì','./public/audio/SUÝT NỮA THÌ  ANDIEZ x BITIS HUNTER  LYRIC VIDEO.mp3','./public/images/songs/suyt nua thi.jpg', 7, 1, 32, 2),
-          ('Chiều Sân Ga','./public/audio/Chiều Sân Ga - Phương Anh (Official MV).mp3','./public/images/songs/chieu san ga.jpg', 11, 4, 33, 2),
-          ('Chuyện Hoa Sim','./public/audio/Chuyện Hoa Sim - Đan Nguyên [OFFICIAL MV].mp3','./public/images/songs/chuyen hoa sim.jpg', 11, 4, 34, 2),
-          ('Duyên Phận','./public/audio/Duyên Phận  Dương Hồng Loan.mp3','./public/images/songs/duyen phan.jpg', 14, 4, 35, 2),
-          ('Thương Ly Biệt','./public/audio/Thương Ly Biệt.mp3','./public/images/songs/thuong ly biet.jpg', 8, 2, 24 , 2),
-          ('Và Thế Là Hết','./public/audio/Và Thế Là Hết - Chillies (Original).mp3','./public/images/songs/va the la het.jpg', 10, 2, 25, 3),
-          ('Vùng Lá Me Bay','./public/audio/Như Quỳnh - Vùng Lá Me Bay (Anh Việt Thanh).mp3','./public/images/songs/vung la me bay.jpg', 13, 4, 36, 2),
-          ('Cô Hàng Xóm','./public/audio/PBN 72  Quang Lê - Cô Hàng Xóm.mp3','./public/images/songs/co hang xom.jpg', 12, 4, 37, 2),
-          ('Về Đâu Mái Tóc Người Thương','./public/audio/Về Đâu Mái Tóc Người Thương - Quang Lê.mp3','./public/images/songs/', 13, 4, 38, 2),
-          ('Xuân Này Con Về Mẹ Ở Đâu','./public/audio/Quang Lê - Xuân Này Con Về Mẹ Ở Đâu_ (Nhật Ngân) PBN 76.mp3','./public/images/songs/', 14, 4, 39, 2);
+		  ('3107-2', './public/audio/3107-2 - DuongG, Nâu, Wn x CaoTri.mp3', './public/images/songs/3107_2.jpg', 1, 2, 29, 2),
+		  ('Đừng Làm Trái Tim Anh Đau','./public/audio/Đừng làm trái tim anh đau - Sơn Tùng M-TP.mp3','./public/images/songs/dunglamtraitimanhdau.jpg', 5, 2, 10, 1),
+        ('Cẩm Tú Cầu','./public/audio/Cẩm Tú Cầu  RAYO x HUỲNH VĂN.mp3','./public/images/songs/camtucau.jpg', 2, 2,28, 2),
+        ('Chiếc Khăn Gió Âm','./public/audio/Chiếc Khăn Gió Ấm  Khánh Phương  Official Music Video.mp3','./public/images/songs/chieckhangioam.jpg', 3, 2, 30, 3),
+        ('Chúng Ta Của Tương Lai','./public/audio/Chúng Ta Của Tương Lai - Sơn Tùng M-TP.mp3','./public/images/songs/chungtacuatuonglai.jpg', 5, 2, 10, 1),
+        ('Chúng Ta Không Thuộc Về Nhau Remix','./public/audio/Chúng Ta Không Thuộc Về Nhau Remix.mp3','./public/images/songs/chungtakhongthuocvenhau.jpg', 5, 2, 10, 1),
+        ('Đoạn Tuyệt Nàng Đi ','./public/audio/Đoạn Tuyệt Nàng Đi - PHÁT HUY T4.mp3','./public/images/songs/doantuyetnangdi.jpg', 4, 2, 14,2),
+        ('Hồng Nhan','./public/audio/Hồng Nhan - Jack (G5R).mp3','./public/images/songs/hongnhan.jpg', 15, 3, 15, 1),
+        ('Nàng Thơ','./public/audio/Nàng Thơ - Hoàng Dũng  OFFICIAL.mp3','./public/images/songs/nangtho.jpg', 4, 1, 16, 3),
+        ('Đi Giữa Trời Rực Rỡ','./public/audio/Đi Giữa Trời Rực Rỡ - Ngô Lan Hương (MV Lyrics).mp3','./public/images/songs/digiưatroirucro.jpg', 5, 1, 17, 3),
+        ('Nơi Vực Nơi Trời','./public/audio/NƠI VỰC NƠI TRỜI - LÊ BẢO BÌNH ft V.A REMIX .mp3','./public/images/songs/noivucnoitroi.jpg', 6, 2, 31, 2),
+        ('Suýt Nữa Thì','./public/audio/SUÝT NỮA THÌ  ANDIEZ x BITIS HUNTER  LYRIC VIDEO.mp3','./public/images/songs/suytnuathi.jpg', 7, 1, 32, 2),
+        ('Chiều Sân Ga','./public/audio/Chiều Sân Ga - Phương Anh (Official MV).mp3','./public/images/songs/chieusanga.jpg', 11, 4, 33, 2),
+        ('Chuyện Hoa Sim','./public/audio/Chuyện Hoa Sim - Đan Nguyên [OFFICIAL MV].mp3','./public/images/songs/chuyenhoasim.jpg', 11, 4, 34, 2),
+        ('Duyên Phận','./public/audio/Duyên Phận  Dương Hồng Loan.mp3','./public/images/songs/duyenphan.jpg', 14, 4, 35, 2),
+        ('Thương Ly Biệt','./public/audio/Thương Ly Biệt.mp3','./public/images/songs/thuonglybiet.jpg', 8, 2, 24 , 2),
+        ('Và Thế Là Hết','./public/audio/Và Thế Là Hết - Chillies (Original).mp3','./public/images/songs/vathelahet.jpg', 10, 2, 25, 3),
+        ('Vùng Lá Me Bay','./public/audio/Như Quỳnh - Vùng Lá Me Bay (Anh Việt Thanh).mp3','./public/images/songs/vunglamebay.jpg', 13, 4, 36, 2),
+        ('Cô Hàng Xóm','./public/audio/PBN 72  Quang Lê - Cô Hàng Xóm.mp3','./public/images/songs/cohangxom.jpg', 12, 4, 37, 2),
+        ('Về Đâu Mái Tóc Người Thương','./public/audio/Về Đâu Mái Tóc Người Thương - Quang Lê.mp3','./public/images/songs/vedaumaitocnguoithuong.jpg', 13, 4, 38, 2),
+        ('Xuân Này Con Về Mẹ Ở Đâu','./public/audio/Quang Lê - Xuân Này Con Về Mẹ Ở Đâu_ (Nhật Ngân) PBN 76.mp3','./public/images/songs/xuannayconvemeodau.jpg', 14, 4, 39, 2);
   
 
 
@@ -298,8 +298,16 @@ insert into Playlist_Details values
 
 insert into Song_Libraries values
 	(1, 1), (2, 1), (3, 1),
-    (4, 2), (5, 2), (6, 2);
+    (4, 1), (5, 1), (6, 1);
     
 insert into Album_Libraries values
 	(1, 1),
-    (2, 2);
+    (2, 1),
+    (3, 1),
+    (4, 1),
+    (5, 1),
+    (6, 1),
+    (7, 3),
+    (8, 3),
+    (9, 3),
+    (10, 3);

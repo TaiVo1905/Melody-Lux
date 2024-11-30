@@ -78,6 +78,7 @@ function handleTimeSongUpdate () {
         let seconds = Math.floor(currentTime%60);
         $(".controls_time--left").innerText = (minutes < 10 ? "0" + minutes:minutes) + ":" + (seconds < 10 ? "0" + seconds:seconds);
         $("#progress").value = currentTime/currentSong.duration * 100;
+        // console.log(currentSong.volume = 0.1);
     }
     $("#progress").addEventListener("input", () =>{
         currentSong.currentTime = $("#progress").value / 100 * currentSong.duration;
