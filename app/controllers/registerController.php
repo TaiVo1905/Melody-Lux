@@ -1,6 +1,6 @@
 <?php
     require_once './app/components/register_login.php';
-    require_once './app/models/loginModel.php';
+    require_once './app/models/registerModel.php';
 
 
     function handleRegister(){
@@ -28,12 +28,16 @@
         }
         if (empty($username_error) && empty($password_error) && empty($email_error) && empty($code_error)) {
             register_user($username, $password, $email) ;
-            echo "success";
+            header('location: logIn');
         }else{
-            echo "Registration failed. Please try again.";
+            echo "<div style = 'z-index: 1000; position: absolute'>Registration failed. Please try again.</div>";
         }
     }
-    if($_SERVER["REQUEST_METHOD"] = "POST"){
-        handleRegister();
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['registersub'])){
+        if(checkEmail($email)){
+            handleRegister();
+        }else{
+            echo "<div style = 'z-index: 1000; position: absolute'>Email already exists.</div>";
+        }
     }
 ?>

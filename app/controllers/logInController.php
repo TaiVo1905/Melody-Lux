@@ -13,11 +13,15 @@
             $_SESSION['user_img'] = $user['user_img'];      
             header('location: discover');
         }else {
-            echo "Invalid email or password";
+            return "Invalid email or password";
         }
     }
-    if (isset($_POST['loginbtn'])) { 
-        handleLogin();
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['loginbtn'])) { 
+        $fail = handleLogin();
+        if($fail){
+            // echo `<div style = " color: red">Fail</div>`;
+            echo $fail;
+        }
     }
   
 ?>
