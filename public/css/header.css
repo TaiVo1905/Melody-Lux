@@ -96,6 +96,11 @@
     display: none;
 }
 
+#personall a{
+    text-decoration: none;
+    color: white;
+}
+
 .imgbxx {
     display: flex;
     align-items: center;
@@ -235,4 +240,8 @@
 
 .button_zing:hover {
     background-color: #7d52c1; 
+}
+
+#logoutbtn {
+    cursor: pointer;
 }

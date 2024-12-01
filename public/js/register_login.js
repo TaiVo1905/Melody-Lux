@@ -10,7 +10,6 @@ const logInForm = $('.login');
 const registerForm = $('.register');
 const wrapper = $('.wrapper');
 
-
 registerLink.addEventListener('click',() => {
     window.location.href = "register";
 });
@@ -34,14 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function sendEmailCode(email) { // Tạo yêu cầu AJAX var 
-    xhr = new XMLHttpRequest(); xhr.open("GET", "./app/mail/sendEmail.php?func=sendEmailCode&email=" + encodeURIComponent(email), true); 
-    xhr.onreadystatechange = function() { if (xhr.readyState == 4 && xhr.status == 200) { // Xử lý kết quả trả về từ PHP 
-    var response = xhr.responseText;
-        document.querySelector(".input").value = response;
-    } };
+    xhr = new XMLHttpRequest();
+    xhr.open("GET", "./app/mail/sendEmail.php?func=sendEmailCode&email=" + encodeURIComponent(email), true); 
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) { // Xử lý kết quả trả về từ PHP 
+            var response = xhr.responseText;
+            document.querySelector(".input").value = response;
+        }
+    };
     xhr.send();
 }
-
 
 sendCodebtn.addEventListener("click", () => {
     sendEmailCode(registerForm.querySelector("input[type='email']").value);

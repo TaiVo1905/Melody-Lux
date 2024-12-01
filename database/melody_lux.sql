@@ -130,9 +130,9 @@ VALUES
 -- insert vào bảng user
 INSERT INTO users (email, password, user_name, user_img, background_id, role)
 VALUES
-  ('congdoan0806@gmail.com', 'melody0806', 'Công Đoàn', 'CongDoan.jpg',1, 1),
-  ('voductaitxqt123@gmail.com', 'melodylux1905', 'Đức Tài', 'DucTai.jpg', 2, 0),
-  ('tramh7879@gmail.com', 'luxury0101', 'Mai Trâm', 'MaiTram.jpg', 3, 1);
+  ('congdoan0806@gmail.com', 'melody0806', 'Công Đoàn', './public/images/users/congdoan.jpg',1, 1),
+  ('voductaitxqt123@gmail.com', 'melodylux1905', 'Đức Tài', './public/images/users/ductai.jpg', 2, 0),
+  ('tramh7879@gmail.com', 'luxury0101', 'Mai Trâm', './public/images/users/maitram.jpg', 3, 1);
 
 -- insert vào bảng author-singers
 INSERT INTO author_singers (author_singer_name)
@@ -244,7 +244,7 @@ VALUES
         ('Chúng Ta Của Tương Lai','./public/audio/Chúng Ta Của Tương Lai - Sơn Tùng M-TP.mp3','./public/images/songs/chungtacuatuonglai.jpg', 5, 2, 10, 1),
         ('Chúng Ta Không Thuộc Về Nhau Remix','./public/audio/Chúng Ta Không Thuộc Về Nhau Remix.mp3','./public/images/songs/chungtakhongthuocvenhau.jpg', 5, 2, 10, 1),
         ('Đoạn Tuyệt Nàng Đi ','./public/audio/Đoạn Tuyệt Nàng Đi - PHÁT HUY T4.mp3','./public/images/songs/doantuyetnangdi.jpg', 4, 2, 14,2),
-        ('Hồng Nhan','./public/Hồng Nhan - Jack (G5R).mp3','./public/images/songs/hongnhan.jpg', 15, 3, 15, 1),
+        ('Hồng Nhan','./public/audio/Hồng Nhan - Jack (G5R).mp3','./public/images/songs/hongnhan.jpg', 15, 3, 15, 1),
         ('Nàng Thơ','./public/audio/Nàng Thơ - Hoàng Dũng  OFFICIAL.mp3','./public/images/songs/nangtho.jpg', 4, 1, 16, 3),
         ('Đi Giữa Trời Rực Rỡ','./public/audio/Đi Giữa Trời Rực Rỡ - Ngô Lan Hương (MV Lyrics).mp3','./public/images/songs/digiưatroirucro.jpg', 5, 1, 17, 3),
         ('Nơi Vực Nơi Trời','./public/audio/NƠI VỰC NƠI TRỜI - LÊ BẢO BÌNH ft V.A REMIX .mp3','./public/images/songs/noivucnoitroi.jpg', 6, 2, 31, 2),

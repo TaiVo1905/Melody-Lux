@@ -21,11 +21,11 @@
                     <ion-icon name="pause-outline" class="active"  id="pause_song"></ion-icon>
                 </li>
                 <li class="controls_player--icon"><ion-icon name="play-skip-forward-outline"></ion-icon></li>
-                <li class="controls_player--icon"><ion-icon name="repeat-outline"></ion-icon></li>
+                <li class="controls_player--icon active"><ion-icon name="repeat-outline"></ion-icon></li>
             </div>
             <div class="controls_time">
                 <span class="controls_time--left" style="color:#595560;padding-right:14px;">00.00</span>
-                <input id="progress" class="controls_time--range" type="range" min="0" max="100" value="0" step="1">
+                <input id="progress" class="controls_time--range" type="range" value="0" min="0" max="100" step="0.1">
                 <span class="controls_time--right" style="color:white;padding-left:14px;">03.22</span>
             </div>
             <audio id="currentSong" src="./public/audio/DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3"></audio>
@@ -34,10 +34,13 @@
             <div class="controls_extend--lever">
                 <li class="controls_extend--lever_item"><ion-icon name="tv-outline"></ion-icon></li>
                 <li class="controls_extend--lever_item"><ion-icon name="mic-outline"></ion-icon></li>
-                <li class="controls_extend--lever_item"><ion-icon name="volume-high-outline"></ion-icon></li>
+                <li class="controls_extend--lever_item">
+                    <ion-icon name="volume-high-outline" class="volumeHigh"></ion-icon>
+                    <ion-icon name="volume-mute-outline" class="volumeLow active"></ion-icon>
+                </li>
                 <!-- <li class="controls_extend--lever_item"><ion-icon name="volume-mute-outline"></ion-icon></li> -->
                 <li class="controls_extend--lever_item_range">
-                    <input id="controls_lever_range" type="range" class="range_volum" value="100" min="0" max="100" step="1">
+                    <input id="controls_lever_range" type="range" class="range_volum" value="1" min="0" max="1" step="0.1">
                 </li>
                 <li class="controls_extend--lever_item"><ion-icon name="musical-note-outline"></ion-icon></li>
             </div>

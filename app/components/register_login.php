@@ -78,7 +78,7 @@
                     <span class="icon">
                         <button type="button" class="sendCodebtn">Send code</button>
                     </span>
-                    <input type="text" name ="otpCode" required>
+                    <input type="number" name ="otpCode" required>
                     <label >Authentication code</label>
                 </div>
                 <div class="remember-forgot">
