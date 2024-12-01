@@ -55,6 +55,8 @@
                 ?>
    </div>
    <script src="/melody-lux/public/js/rank-item.js"></script>
+    <script src="./public/js/header.js?v<?php echo time(); ?>"></script>
+
 </body>
 </html>
           

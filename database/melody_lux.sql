@@ -130,9 +130,9 @@ VALUES
 -- insert vào bảng user
 INSERT INTO users (email, password, user_name, user_img, background_id, role)
 VALUES
-  ('congdoan0806@gmail.com', 'melody0806', 'Công Đoàn', 'CongDoan.jpg',1, 1),
-  ('voductaitxqt123@gmail.com', 'melodylux1905', 'Đức Tài', 'DucTai.jpg', 2, 0),
-  ('tramh7879@gmail.com', 'luxury0101', 'Mai Trâm', 'MaiTram.jpg', 3, 1);
+  ('congdoan0806@gmail.com', 'melody0806', 'Công Đoàn', './public/images/users/congdoan.jpg',1, 1),
+  ('voductaitxqt123@gmail.com', 'melodylux1905', 'Đức Tài', './public/images/users/ductai.jpg', 2, 0),
+  ('tramh7879@gmail.com', 'luxury0101', 'Mai Trâm', './public/images/users/maitram.jpg', 3, 1);
 
 -- insert vào bảng author-singers
 INSERT INTO author_singers (author_singer_name)

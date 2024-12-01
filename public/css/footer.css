@@ -108,7 +108,7 @@ border-radius: 50%;
     color: #B46BDB;
 }
 
-.controls_player--icon.active{
+.controls_player--icon.active ion-icon {
     color: #B46BDB;
 }
 .controls_time {

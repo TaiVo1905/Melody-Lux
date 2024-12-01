@@ -20,7 +20,16 @@
                 <ion-icon class = "icon_header" name="settings"></ion-icon>
             </div>
             <div class="border_circle">
-                <a href="logIn"><ion-icon class = "icon_header" name="person" ></ion-icon></a>
+                <ion-icon class = "icon_header" id="border_circle" name="person"></ion-icon>
             </div>
         </div>
+        <?php
+            include_once("./app/components/userRegister.php");
+            include_once("./app/components/userLogin.php");
+            if(!$_SESSION["username"]) {
+                echo createRegister();
+            } else {
+                echo createPersonalCard($_SESSION["username"], $_SESSION['user_img']);
+            }
+        ?>
     </div>
