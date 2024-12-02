@@ -1,6 +1,6 @@
 .header_container {
     display: flex;
-    width: 85%;
+    /* width: 85%; */
     justify-content: space-between;
     align-items: center;
     background-color: hsl(264, 40%, 10%);
@@ -15,7 +15,7 @@
     width: 615px;
     justify-content: space-between;
     align-items: center;
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .icon_header {
@@ -70,7 +70,8 @@
     width: 230px;
     display: flex;
     justify-content: space-between;
-    margin-right: 50px;
+    margin-right: 36px;
+    margin-left: 233px;
 }
 
 .border_circle {

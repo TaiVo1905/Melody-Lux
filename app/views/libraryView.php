@@ -34,7 +34,7 @@
             <div class="col c-2">
                 <?php include_once("./app/components/sidebar.php");?>
             </div>
-            <div class="right col c-10">
+            <div class="col c-10">
                 <?php 
                 include_once("./app/components/header.php");
                 ?>
