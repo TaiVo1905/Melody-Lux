@@ -1,5 +1,5 @@
-// const $=document.querySelector.bind(document);
-// const $$=document.querySelectorAll.bind(document);
+const $=document.querySelector.bind(document);
+const $$=document.querySelectorAll.bind(document);
 document.addEventListener("DOMContentLoaded", () => {
     $('.sidebar_top .bar_title:nth-child(1)').classList.add("active");
 })
