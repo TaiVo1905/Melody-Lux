@@ -1,8 +1,8 @@
 
 <?php
-    function renderSongLibrary($path_img, $song_name, $author_singer_name, $path_audio) {
+    function renderSongLibrary($path_img, $song_name, $author_singer_name, $path_audio, $song_id) {
         echo "          
-            <div class='song_items'>
+            <div class='song_items' data-song-id='".$song_id."'>
                 <div class='song_item_left'>
                     <div class='item_left_content'>
                         <ion-icon class='music_icon' name='musical-notes-outline'></ion-icon>

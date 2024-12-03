@@ -40,15 +40,15 @@
                 ?>
                 <h1 class="header-name">Thư viện</h1>
                 <div class="library-nav">
-                    <li class="library-nav--item active">Tổng quan</li>
-                    <li class="library-nav--item">Bài hát</li>
-                    <li class="library-nav--item">Playlist</li>
-                    <li class="library-nav--item">Nghệ sĩ</li>
-                    <li class="library-nav--item">Album</li>
-                    <li class="library-nav--item">MV</li>
-                    <li class="library-nav--item">Tải lên</li>
+                    <li class="library-nav--item active overview">Tổng quan</li>
+                    <li class="library-nav--item song-view">Bài hát</li>
+                    <li class="library-nav--item playlist-view">Playlist</li>
+                    <li class="library-nav--item author-view">Nghệ sĩ</li>
+                    <li class="library-nav--item album-view">Album</li>
+                    <li class="library-nav--item mv-view">MV</li>
+                    <li class="library-nav--item upload-view">Tải lên</li>
                 </div>
-                <div class="row no-gutters">
+                <div class="row no-gutters song-fiel">
                     <h3 class="header-name">Bài hát</h3>
                     <div class="col c-3">
                         <div class="libarary-img--animaiton">
@@ -64,43 +64,49 @@
                                 $user_id = $_SESSION['user_id'];
                                 $songs = getSongLibraryUser($user_id);
                                 while ($song = mysqli_fetch_assoc($songs)){
-                                    renderSongLibrary($song['path_img'], $song['song_name'], $song['author_singer_name'], $song['path_audio']);
+                                    renderSongLibrary($song['path_img'], $song['song_name'], $song['author_singer_name'], $song['path_audio'], $song['song_id']);
                                 };
                             }
                         ?>
                     </div>
                 </div>
                 <div class="row no-gutters">
-                    <h3 class="header-name">Playlist</h3>
-                    <div class="col c-3">
-                        <?php include_once("./app/components/playList.php");?>
+                    <div class="playlist-fiel">
+                        <h3 class="header-name">Playlist</h3>
+                        <div class="col c-3">
+                            <?php include_once("./app/components/playList.php");?>
+                        </div>
                     </div>
                     <div class="col c-9"></div>
-                    <h3 class="header-name">Nghệ sĩ</h3>
-                    <?php include_once("./app/components/artist.php");
-                    $artists = [
-                        ['imgPath' => './public/images/albums/album1.jpg', 'name' => 'ANH TRAI "SAY HI"'],
-                        ['imgPath' => './public/images/albums/album2.jpg', 'name' => 'Đức Phúc'],
-                        ['imgPath' => './public/images/albums/album3.jpg', 'name' => 'Sơn Tùng M-TP'],
-                        ['imgPath' => './public/images/albums/album4.jpg', 'name' => 'Lê Linh'],
-                        ['imgPath' => './public/images/albums/album5.jpg', 'name' => 'Jack'],
-                        ['imgPath' => './public/images/albums/album6.jpg', 'name' => 'Hồ Quang Hiếu']
-                    ];
-                    echo createArtistContainer($artists);      
-                    ?>
-                    <h3 class="header-name">Albums</h3>
-                    <div class="albums_hot">
-                        <?php
-                            require_once './app//models/libraryModel.php'; 
-                            include_once("./app/components/album.php");
-                            if ($_SESSION['user_id']){
-                                $user_id = $_SESSION['user_id'];
-                                $albums = getAlbumLibraryUser($user_id);
-                                while ($album = mysqli_fetch_assoc($albums)){
-                                    renderAlbumLibrary($album['album_name'], $album['author_singer_name'], $album['album_img']);
-                                };
-                            }
+                    <div class="author-fiel">
+                        <h3 class="header-name">Nghệ sĩ</h3>
+                        <?php include_once("./app/components/artist.php");
+                        $artists = [
+                            ['imgPath' => './public/images/albums/album1.jpg', 'name' => 'ANH TRAI "SAY HI"'],
+                            ['imgPath' => './public/images/albums/album2.jpg', 'name' => 'Đức Phúc'],
+                            ['imgPath' => './public/images/albums/album3.jpg', 'name' => 'Sơn Tùng M-TP'],
+                            ['imgPath' => './public/images/albums/album4.jpg', 'name' => 'Lê Linh'],
+                            ['imgPath' => './public/images/albums/album5.jpg', 'name' => 'Jack'],
+                            ['imgPath' => './public/images/albums/album6.jpg', 'name' => 'Hồ Quang Hiếu']
+                        ];
+                        echo createArtistContainer($artists);      
                         ?>
+                    </div>
+                    <div class="album-fiel">
+                        <h3 class="header-name">Albums</h3>
+                        <div class="albums_hot">
+                            <?php
+                                require_once './app//models/libraryModel.php'; 
+                                include_once("./app/components/album.php");
+                                if ($_SESSION['user_id']){
+                                    $user_id = $_SESSION['user_id'];
+                                    $albums = getAlbumLibraryUser($user_id);
+                                    while ($album = mysqli_fetch_assoc($albums)){
+                                        renderAlbumLibrary($album['album_name'], $album['author_singer_name'], $album['album_img']);
+                                    };
+                                }
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -110,8 +116,8 @@
 </div>
 
 </body>
-<script src="./public/js/libraryView.js?v<?php echo time(); ?>"></script>
 <script src="./public/js/header.js?v<?php echo time(); ?>"></script>
 <script src="./public/js/handleSong.js?v<?php echo time(); ?>"></script>
+<script src="./public/js/libraryView.js?v<?php echo time(); ?>"></script>
 <script src="/melody-lux/public/js/rank-item.js?v<?php echo time(); ?>"></script>
 </html>
