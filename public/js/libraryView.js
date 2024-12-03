@@ -109,25 +109,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const heartIcon = heartboxx.querySelector('.song_icon');
             const songItem = heartboxx.closest('.song_items');
             const songId = parseInt(songItem.dataset.songId); // Lấy song_id từ data attribute
-            console.log(songId); //
-            // Toggle heart icon class
-            heartIcon.classList.toggle('heart-filled');
+                console.log(songId); //
+                // Toggle heart icon class
+                heartIcon.classList.toggle('heart-filled');
 
-            // Gửi AJAX request đến PHP
-            const xhr = new XMLHttpRequest();
-            xhr.open('POST', './app/controllers/librarysController.php&', true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4) {
-                if (xhr.status == 200) {
-                    console.log(xhr.responseText);
-                } else {
-                    console.log("Error saving current song");
+                // Gửi AJAX request đến PHP
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', './app/controllers/librarysController.php', true);
+                xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        console.log(xhr.responseText);
+                        if(parseInt(xhr.responseText) == 1){
+                            songItem.remove()
+                        }
+                    } else {
+                        console.log("Error saving current song");
+                    }
                 }
-            }
-        };
-        xhr.send(JSON.stringify({ func: 'removeSongLibrary', data: songId }));
+            };
+            xhr.send(JSON.stringify({ func: 'removeSongLibrary', data: songId }));
 
+            });
         });
     });
-});

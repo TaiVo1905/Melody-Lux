@@ -7,8 +7,9 @@ if (isset($request["func"]) && isset($request["data"])) {
     $func = $request["func"];
     $data = $request["data"];
     if(function_exists($func)){
-        $func($_SESSION['user_id'], $data);
-        echo 3;
+
+        echo $func($_SESSION['user_id'], $data);
+        
     } else {
         echo "Hàm không tồn tại.";
     }
