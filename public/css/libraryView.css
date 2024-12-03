@@ -107,7 +107,7 @@ transition: 1s linear 0.02s;
 .songs{
 height: 244px;
 overflow-y: auto;
-
+margin-left: 280px;
 }
 
 .songs::-webkit-scrollbar {
@@ -121,3 +121,4 @@ background-color: #ccc;
 .songs::-webkit-scrollbar-thumb:hover {
 background-color: #aaa;
 }
+
