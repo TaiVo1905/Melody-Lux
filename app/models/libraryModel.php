@@ -23,7 +23,7 @@
     function getSongLibrary($user_id){
         $db = connectDB ();
 
-        $sql = "SELECT  s.song_name, s.path_audio, s. path_img, auS.author_singer_name
+        $sql = "SELECT  s.song_name, s.path_audio, s. path_img, auS.author_singer_name, sl.song_id
             FROM  Song_Libraries AS sl
             JOIN Songs AS s ON s.song_id = sl.song_id
             JOIN  Song_Singers AS ss ON ss.song_id = s.song_id 

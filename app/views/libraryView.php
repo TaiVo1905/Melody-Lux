@@ -64,7 +64,7 @@
                                 $user_id = $_SESSION['user_id'];
                                 $songs = getSongLibraryUser($user_id);
                                 while ($song = mysqli_fetch_assoc($songs)){
-                                    renderSongLibrary($song['path_img'], $song['song_name'], $song['author_singer_name'], $song['path_audio']);
+                                    renderSongLibrary($song['path_img'], $song['song_name'], $song['author_singer_name'], $song['path_audio'], $song['song_id']);
                                 };
                             }
                         ?>
@@ -116,8 +116,8 @@
 </div>
 
 </body>
-<script src="./public/js/libraryView.js?v<?php echo time(); ?>"></script>
 <script src="./public/js/header.js?v<?php echo time(); ?>"></script>
 <script src="./public/js/handleSong.js?v<?php echo time(); ?>"></script>
+<script src="./public/js/libraryView.js?v<?php echo time(); ?>"></script>
 <script src="/melody-lux/public/js/rank-item.js?v<?php echo time(); ?>"></script>
 </html>
