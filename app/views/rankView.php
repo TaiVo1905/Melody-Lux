@@ -44,7 +44,7 @@
                         $stt = 0;
                         while ($song = mysqli_fetch_assoc($songs)){
                             ++$stt;
-                            renderRankItems($stt, $song['path_img'], $song['song_name'], $song['author_singer_name'], $song['path_audio']);
+                            renderRankItems($stt, $song['path_img'], $song['song_name'], $song['author_singer_name'], $song['path_audio'], $song['song_id']);
                         };
                     ?>
                 </div>
@@ -54,9 +54,10 @@
                     include_once './app/components/footer.php';
                 ?>
    </div>
-   <script src="/melody-lux/public/js/rank-item.js"></script>
+   <script src="./public/js/handleSong.js?v<?php echo time(); ?>"></script>
+   <script src="./public/js/search.js?v<?php echo time(); ?>"></script>
+   <script src="/melody-lux/public/js/rank-item.js?v<?php echo time(); ?>"></script>
     <script src="./public/js/header.js?v<?php echo time(); ?>"></script>
-
 </body>
 </html>
           

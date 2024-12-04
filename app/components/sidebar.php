@@ -4,12 +4,10 @@
             <img src="./public/images/logo/melody_lux.png" alt="">
         </div>
         <div class="sidebar_top">
-            <a href="library">
                 <div class="bar_title">
                     <ion-icon class="icon_sidebar" name="home-outline"></ion-icon>
                     <p class="bar_title_content">Thư viện</p>
                 </div>
-            </a>
             <a href="discover">
                 <div class="bar_title">
                     <i class="fas fa-bullseye icon_sidebar"></i>

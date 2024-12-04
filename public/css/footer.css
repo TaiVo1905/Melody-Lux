@@ -43,7 +43,7 @@ border-radius: 50%;
 }
 
 .media_title--name {
-    height: 16px;
+    height: 20px;
     font-size: 16px;
     font-weight: 700;
     color: #fcfbfc;
@@ -51,7 +51,7 @@ border-radius: 50%;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
-    line-height: 15px;
+    line-height: 20px;
 }
 
 .media_title--author {

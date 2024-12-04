@@ -13,7 +13,7 @@
             $password_error = "Invalid password";
         }
         
-        if (!validate_email($email)) {
+        if (!validate_email($email) || $mail != $_COOKIE["email"]) {
             $email_error = "Invalid email";
         }
         
@@ -26,7 +26,7 @@
                 exit();
             }
         }else{
-            echo "<div style = 'z-index: 1000; position: absolute'>Registration failed. Please try again.</div>";
+            echo "<script>alert('$username_error, $password_error, $email_error, $code_error')</script>";
         }
     }
     if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['registersub'])){
@@ -37,7 +37,7 @@
         if(!checkEmail($email)){
             handleRegister($username, $email, $password, $code);
         }else{
-            echo "<div style = 'z-index: 1000; position: absolute'>Email already exists.</div>";
+            echo "<script>alert('Email already exists!')</script>";
         }
     }
     require_once './app/components/register_login.php';

@@ -7,9 +7,9 @@
 
 <?php
 
-    function renderSearchResults($path_img, $song_name, $author_singer_name, $path_audio){
+    function renderSearchResults($path_img, $song_name, $author_singer_name, $path_audio, $song_id){
         echo '
-        <div class="songSearch_items">
+        <div class="songSearch_items" data-song-id="' . $song_id . '">
             <div class="songSearch_item_left">
                 <div class="songSearchitem_left_content">
                     <div class="songSearch_song">

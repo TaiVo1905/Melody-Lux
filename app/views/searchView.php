@@ -53,7 +53,7 @@
                                     echo 'Không tìm thấy kết quả';
                                 }
                                 while ($row = mysqli_fetch_assoc($results)) {
-                                    renderSearchResults($row['path_img'], $row['song_name'], $row['author_singer_name'], $row['path_audio']);
+                                    renderSearchResults($row['path_img'], $row['song_name'], $row['author_singer_name'], $row['path_audio'], $row['song_id']);
                                 }
                             }
                         }
@@ -65,7 +65,8 @@
                     include_once './app/components/footer.php';
                 ?>
    </div>
-   <script src="./public/js/search.js?v=<?php echo time()?>"></script>
+    <script src="./public/js/handleSong.js?v<?php echo time(); ?>"></script>
+    <script src="./public/js/search.js?v=<?php echo time()?>"></script>
     <script src="./public/js/header.js?v<?php echo time(); ?>"></script>
     
 </body>

@@ -9,6 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 function sendEmailCode($email){;
     $randomNumber = random_int(100000, 999999);
     setcookie("code", $randomNumber, time() + 180, "/");
+    setcookie("email", $email, time() + 180, "/");
     $mail = new PHPMailer(true);
     try {
         //Server settings
