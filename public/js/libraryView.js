@@ -110,12 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const songItem = heartboxx.closest('.song_items');
             const songId = parseInt(songItem.dataset.songId); // Lấy song_id từ data attribute
                 console.log(songId); //
-                // Toggle heart icon class
                 heartIcon.classList.toggle('heart-filled');
 
-                // Gửi AJAX request đến PHP
                 const xhr = new XMLHttpRequest();
-                xhr.open('POST', './app/controllers/librarysController.php', true);
+                xhr.open('POST', './app/controllers/handleSLibraryController.php', true);
                 xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
                 xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4) {

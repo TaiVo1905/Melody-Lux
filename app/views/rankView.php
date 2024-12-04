@@ -43,8 +43,9 @@
                         $songs = songModel();
                         $stt = 0;
                         while ($song = mysqli_fetch_assoc($songs)){
+                            $isSongstatus = checkExitStatus($song['song_id']);
                             ++$stt;
-                            renderRankItems($stt, $song['path_img'], $song['song_name'], $song['author_singer_name'], $song['path_audio']);
+                            renderRankItems($stt, $song['path_img'], $song['song_name'], $song['author_singer_name'], $song['path_audio'], $song['song_id'], $isSongstatus);
                         };
                     ?>
                 </div>
@@ -54,7 +55,7 @@
                     include_once './app/components/footer.php';
                 ?>
    </div>
-   <script src="/melody-lux/public/js/rank-item.js"></script>
+   <script src="/melody-lux/public/js/rank-item.js?v<?php echo time(); ?>"></script>
     <script src="./public/js/header.js?v<?php echo time(); ?>"></script>
 
 </body>

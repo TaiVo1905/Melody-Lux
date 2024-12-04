@@ -5,9 +5,11 @@
 
 <?php
 require_once './app/models/songModel.php';
-    function renderRankItems($stt, $path_img, $song_name, $author_singer_name, $path_audio){
+    function renderRankItems($stt, $path_img, $song_name, $author_singer_name, $path_audio, $song_id, $isSongstatus){
+        $heartIcon = $isSongstatus 
+        ? 'active' : null; ;
         echo '
-        <div class="rank_items">
+        <div class="rank_items" data-song-id="'.$song_id.'">
             <div class="rank_item_left">
                 <div class="rankitem_left_content">
                     <div class="number-box">'.$stt.'</div>
@@ -37,7 +39,7 @@ require_once './app/models/songModel.php';
                     <div class="items_icon_rank micro_icon">
                         <ion-icon class="rank_icon" name="mic-outline"></ion-icon>
                     </div>
-                    <div class="items_icon_rank heart_icon">
+                    <div class="items_icon_rank heart_icon '.$heartIcon.'">
                         <ion-icon class="rank_icon" name="heart"></ion-icon>
                     </div>
                     <!-- Với chỉnh chỗ này  -->

@@ -7,9 +7,11 @@
 
 <?php
 
-    function renderSearchResults($path_img, $song_name, $author_singer_name, $path_audio){
+    function renderSearchResults($path_img, $song_name, $author_singer_name, $path_audio, $song_id, $isSongstatus){
+        $heartIcon = $isSongstatus 
+        ? 'active' : null; ;
         echo '
-        <div class="songSearch_items">
+        <div class="songSearch_items" data-song-id="'.$song_id.'">
             <div class="songSearch_item_left">
                 <div class="songSearchitem_left_content">
                     <div class="songSearch_song">
@@ -37,8 +39,8 @@
                     <div class="items_icon_songSearch micro_icon">
                         <ion-icon class="songSearch_icon" name="mic-outline"></ion-icon>
                     </div>
-                    <div class="items_icon_songSearch heart_icon">
-                        <ion-icon class="songSearch_icon" name="heart"></ion-icon>
+                    <div class="items_icon_songSearch heart_icon '.$heartIcon.'">
+                       <ion-icon class="songSearch_icon" name="heart"></ion-icon>
                     </div>
                     <!-- Với chỉnh chỗ này  -->
                     <div class="items_icon_songSearch" style="position:relative;">
