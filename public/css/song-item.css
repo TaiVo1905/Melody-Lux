@@ -18,19 +18,14 @@
     align-items: center;
     width: 500px;
 }
-.music_icon{
-    color: #ffffff80;
-    font-size: 18px;
-}
 .item_left_content{
     display: flex; 
     align-items: center;
     justify-content: flex-start;
-    width: 70%;
+    width: 100%;
 }
 
 .song_song{
-    /* padding-top: 5px; */
     display: flex;
     padding-left: 8px;
 }
@@ -42,7 +37,6 @@
     overflow: hidden;
     cursor: pointer;
     padding-left: 5px;
-    
 }
 .song_song img{
     width: 100%;
@@ -50,9 +44,8 @@
     object-fit: cover;
     display: block;
     border-radius: 8px;
-    /* margin-right: 10px; */
 }
-.play-icon {
+.play-iconss {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -64,13 +57,12 @@
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-.song_items:hover .play-icon {
+.song_items:hover .play-iconss {
     opacity: 1;
 }
-
 .song_song_singer{
-    padding-left: 10px;
     padding-top: 5px;
+    padding-left: 10px;
 }
 .song_item_right{
     display: flex; 
@@ -78,14 +70,17 @@
     width: 500px;
     justify-content: space-between;
 }
-
+.letter_spec{
+    font-size: 18px;
+    color: #ffffff;
+}
 .song_song_name{
-    font-size: 14px;
+    font-size: 16px;
     color: #ffffff;
     cursor: pointer;
 }
 .song_singer{
-    font-size: 12px;
+    font-size: 13px;
     color: #ffffff80;
     cursor: pointer;
     line-height: 24px;
@@ -99,7 +94,7 @@
 }
 .song_item_right .song_name{
     color: #ffffff80;
-    font-size: 12px;
+    font-size: 15px;
 }
 .song_icon{
     color: #ffffff;
@@ -108,18 +103,26 @@
 .items_icon_song{
     width: 40px;
     height: 40px;
-    /* background-color:antiquewhite; */
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
+.micro_icon{
+    opacity: 0;
+}
+.heart-filled{
+    color: #B36CDB;
+}
 /* hover */
 .song_items:hover{
-    background-color: #3f3f3f;
-    border-radius: 6px;
+    background-color: #2F2739;
 }
+.song_items.active {
+    background-color: #2F2739;
+}
+
 .items_icon_song:hover{
     background-color: #40374a;
 }
@@ -139,25 +142,42 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Lớp tối (40% đen) */
+    background-color: rgba(0, 0, 0, 0.4); 
     opacity: 0;
     transition: opacity 0.3s ease;
-    z-index: 1; /* Lớp phủ nằm trên hình ảnh */
+    z-index: 1; 
 }
-/* moi them */
-.micro_icon{
-    opacity: 0;;
-}
-
-
-/* Hiệu ứng hover */
 .song_items:hover img {
-    opacity: 0.6; /* Lớp tối xuất hiện */
-}
-.heart-filled{
-    color: #B36CDB;
+    opacity: 0.6; 
 }
 .song_items:hover .micro_icon {
-    opacity: 1; /* Lớp tối xuất hiện */
+    opacity: 1; 
+}
+/* bổ sung code chỗ này nha */
+.song_music{
+    color: #ffffff;
+}
+.timemusic {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    height: 100%;
+    line-height: 54px;
+    text-align: center;
 }
 
+.song_music {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.song_items:hover .timemusic {
+    opacity: 0;
+}
+
+.song_items:hover .song_music {
+    opacity: 1;
+}
+.music_icon{
+color: #ffffff80;
+font-size: 18px;
+}

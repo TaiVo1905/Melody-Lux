@@ -77,32 +77,65 @@
                         }
                      ?>
                      </div>
-                    <h4>Nhạc Hot gây bão</h4>
+                     <h4>Nhạc trẻ</h4> 
                     <div class="albums_hot">
-                         <?php
-                        include_once './app/models/albumModel.php'; 
-                        $result = displayAlbums(5,0);
-                        if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img']);
+                            <?php
+                            include_once './app/models/albumModel.php'; 
+                            $category_id = 2; 
+                            $result = displayAlbums($category_id,5, 0);
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img'], $row['category']);
+                                }
+                            } else {
+                                echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
                             }
-                        } else {
-                            echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
-                        }
-                        ?>
+                            ?>
                     </div>
-                    <h4>Chill</h4>
+                    <h4>Bolero và trữ tình</h4> 
                     <div class="albums_hot">
-                         <?php
-                        $result = displayAlbums(5,5);
-                        if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img']);
+                            <?php
+                            include_once './app/models/albumModel.php'; 
+                            $category_id = 4; 
+                            $result = displayAlbums($category_id,5, 0);
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img'], $row['category']);
+                                }
+                            } else {
+                                echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
                             }
-                        } else {
-                            echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
-                        }
-                         ?>
+                            ?>
+                    </div>
+                    <h4>Nhạc tình cảm</h4> 
+                    <div class="albums_hot">
+                            <?php
+                            include_once './app/models/albumModel.php'; 
+                            $category_id = 1; 
+                            $result = displayAlbums($category_id,5, 0);
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img'], $row['category']);
+                                }
+                            } else {
+                                echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
+                            }
+                            ?>
+                    </div>
+                    <h4>EDM</h4> 
+                    <div class="albums_hot">
+                            <?php
+                            include_once './app/models/albumModel.php'; 
+                            $category_id = 3; 
+                            $result = displayAlbums($category_id,5, 0);
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img'], $row['category']);
+                                }
+                            } else {
+                                echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
+                            }
+                            ?>
                     </div>
                  </div>
             </div>

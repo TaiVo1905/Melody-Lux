@@ -26,7 +26,7 @@
 
     <link rel="stylesheet" href="/melody-lux/public/css/song.css?v<?php echo time(); ?>">
 
-    <link rel="stylesheet" href="/melody-lux/public/css/grid.css">
+    <link rel="stylesheet" href="/melody-lux/public/css/grid.css?v<?php echo time(); ?>">
 
     <link rel="stylesheet" href="/melody-lux/public/css/album.css?v<?php echo time(); ?>">
 
@@ -42,8 +42,9 @@
     }
     .albums_hot{
         display: flex;
+        flex-direction: column;
         gap: 20px;
-        padding-left: 116px;
+        padding: 25px 50px 0 50px;
     }
 </style>
 <body>
@@ -68,30 +69,50 @@
                     <h4>Trữ Tình & Bolero</h4>
                     <div class="albums_hot">
                          <?php
-                        include_once './app/models/albumModel.php';
-                        $result = displayAlbums(5,10);
+                        include_once './app/components/song-item.php';
+
+                        include_once './app/models/songModel.php';
+                        $result = songCategory(4);
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
-                                echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img']);
+                                renderSong($row['song_id'], $row['path_img'], $row['song_name'], $row['author_singer_name'], $row['path_audio']);
                             }
                         } else {
                             echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
                         } 
                         ?> 
                     </div>
-                    <h4>Dance/Electronic</h4>
+                    <h4>Nhạc Trẻ</h4>
                     <div class="albums_hot">
-                         <?php
-                        include_once './app/models/albumModel.php'; 
-                        $result = displayAlbums(5,15);
+                    <?php
+                        include_once './app/components/song-item.php';
+
+                        include_once './app/models/songModel.php';
+                        $result = songCategory(2);
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
-                                echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img']);
+                                renderSong($row['song_id'], $row['path_img'], $row['song_name'], $row['author_singer_name'], $row['path_audio']);
                             }
                         } else {
                             echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
                         } 
-                         ?>
+                        ?>
+                    </div>
+                    <h4>Nhạc Tình Cảm</h4>
+                    <div class="albums_hot">
+                    <?php
+                        include_once './app/components/song-item.php';
+
+                        include_once './app/models/songModel.php';
+                        $result = songCategory(1);
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                renderSong($row['song_id'], $row['path_img'], $row['song_name'], $row['author_singer_name'], $row['path_audio']);
+                            }
+                        } else {
+                            echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
+                        } 
+                        ?>
                     </div>
                  </div>
             </div>

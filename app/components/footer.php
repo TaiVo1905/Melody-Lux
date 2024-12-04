@@ -21,7 +21,7 @@
                     <ion-icon name="pause-outline" class="active"  id="pause_song"></ion-icon>
                 </li>
                 <li class="controls_player--icon"><ion-icon name="play-skip-forward-outline"></ion-icon></li>
-                <li class="controls_player--icon active"><ion-icon name="repeat-outline"></ion-icon></li>
+                <li class="controls_player--icon"><ion-icon name="repeat-outline"></ion-icon></li>
             </div>
             <div class="controls_time">
                 <span class="controls_time--left" style="color:#595560;padding-right:14px;">00.00</span>

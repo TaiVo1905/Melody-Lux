@@ -7,7 +7,6 @@ if (isset($request["func"]) && isset($request["data"])) {
     $data = $request["data"];
     if(function_exists($func)){
         $func($data[0], $data[1], $data[2], $data[3], $data[4]);
-        echo 3;
     } else {
         echo "Hàm không tồn tại.";
     }

@@ -15,6 +15,7 @@ const cdThumbAnimate = media_cd.animate(
 )
 const media = $('.media');
 const controls_lever_range = $("#controls_lever_range");
+const song_items = $$(".songs .song_items");
 
 document.addEventListener('DOMContentLoaded', async () => {
     await handleCurrentSong(1, true);
@@ -124,10 +125,102 @@ async function handleEvent() {
     }
 
     currentSong.onended = async () => {
+        var songid;
         if ($(".controls_player li:nth-child(5)").classList.contains("active")) {
-            await saveCurrentSong(1, parseInt(media.dataset.songId), "00:00", false, false);
-            await handleCurrentSong(1, true);
+            songid = parseInt(media.dataset.songId);
+        } else if ($(".controls_player li:nth-child(1)").classList.contains("active")) {
+            handleSongRandom();
+        } else {
+            songid = nextSong();
         }
+        await saveCurrentSong(1, songid, "00:00", false, false);
+        await handleCurrentSong(1, true);
+    }
+
+    $(".controls_player li:nth-child(2)").onclick = async () => {
+        var songid;
+        if ($(".controls_player li:nth-child(1)").classList.contains("active")) {
+            handleSongRandom();
+        } else {
+            for (let i = 0; i < song_items.length; i++) {
+                if(song_items[i].classList.contains("active")) {
+                    song_items[i].classList.remove("active");
+                    if(song_items[i] == song_items[0]) {
+                        songid = parseInt(song_items[song_items.length - 1].dataset.songId);
+                        song_items[song_items.length - 1].classList.add("active");
+                    }else {
+                        songid = parseInt(song_items[i].previousElementSibling.dataset.songId);
+                        song_items[i-1].classList.add("active");
+
+                    }                 
+                    break;
+                }
+            }
+        }
+        console.log(songid);
+        await saveCurrentSong(1, songid, "00:00", false, false);
+        await handleCurrentSong(1, true);
+    }
+    $(".controls_player li:nth-child(4)").onclick = async () => {
+        const songid = nextSong();
+        await saveCurrentSong(1, songid, "00:00", false, false);
+        await handleCurrentSong(1, true);
+    }
+}
+
+function nextSong() {
+    var songid;
+        if ($(".controls_player li:nth-child(1)").classList.contains("active")) {
+            handleSongRandom();
+        } else {
+            for (let i = 0; i < song_items.length; i++) {
+                if(song_items[i].classList.contains("active")) {
+                    song_items[i].classList.remove("active");
+                    if(song_items[i] == song_items[song_items.length - 1]) {
+                        songid = parseInt(song_items[0].dataset.songId);
+                        song_items[0].classList.add("active");
+                    }else {
+                        songid = parseInt(song_items[i].nextElementSibling.dataset.songId);
+                        song_items[i+1].classList.add("active");
+
+                    }
+                    return songid;
+                }
+            }
+        }
+}
+
+function handleSongRandom () {
+    if (window.location.href.includes("library")) {
+        do {
+            var random = Math.floor(Math.random() * song_items.length);
+        }
+        while (random == currentSong.dataset.songId);
+        songid = parseInt(song_items[random].dataset.songId);
+        song_items.Some(item => {
+            if(item.classList.contains("active")) {
+                item.classList.remove("active");
+                return;
+            }
+        })
+        song_items[random].classList.add("active");
+    }
+}
+
+function handleSongClickprev() {
+    if (window.location.href.includes("library")) {
+        do {
+            var random = Math.floor(Math.random() * song_items.length);
+        }
+        while (random == currentSong.dataset.songId);
+        songid = parseInt(song_items[random].dataset.songId);
+        for (let i = 0; i < song_items.length; i++) {
+            if(song_items[i].classList.contains("active")) {
+                song_items[i].classList.remove("active");
+                break;
+            }
+        }
+        song_items[random].classList.add("active");
     }
 }
 
@@ -135,6 +228,22 @@ $$(".gallery .item").forEach(item => {
     item.addEventListener("click", async () => {
         await saveCurrentSong(1, parseInt(item.dataset.songId), "00:00", false, false);
         await handleCurrentSong(1, true);
+    });
+});
+
+song_items.forEach(item => {
+    item.addEventListener("click", async (e) => {
+        if (!e.target.closest(".item_action")) {
+            console.log(item);
+            await saveCurrentSong(1, parseInt(item.dataset.songId), "00:00", false, false);
+            await handleCurrentSong(1, true);
+            song_items.forEach(item => {
+                if(item.classList.contains("active")) {
+                    item.classList.remove("active");
+                }
+            })
+            item.classList.add("active");
+        }
     });
 });
 
@@ -150,3 +259,26 @@ currentSong.onpause = async () => {
     play_song.classList.remove("active");
     await saveCurrentSong(1, parseInt(media.dataset.songId), currentSong.currentTime, false, false);
 }
+
+$(".controls_player li:nth-child(1)").onclick = async () => {
+    $(".controls_player li:nth-child(1)").classList.toggle("active");
+}
+
+$(".controls_player li:nth-child(5)").onclick = async () => {
+    $(".controls_player li:nth-child(5)").classList.toggle("active");
+}
+
+// async function getUser() {
+//         const xhr = new XMLHttpRequest();
+//         xhr.open("GET", "./app/controllers/userController.php?func=getUserid", true);
+//         xhr.onreadystatechange = function() {
+//             if (xhr.readyState == 4) {
+//                 if (xhr.status == 200) {
+//                     xhr.responseText;
+//                 } else {
+//                     "Error getting current song";
+//                 }
+//             }
+//         };
+//         xhr.send();
+// }
