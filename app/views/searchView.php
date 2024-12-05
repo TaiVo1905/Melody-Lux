@@ -53,7 +53,8 @@
                                     echo 'Không tìm thấy kết quả';
                                 }
                                 while ($row = mysqli_fetch_assoc($results)) {
-                                    renderSearchResults($row['path_img'], $row['song_name'], $row['author_singer_name'], $row['path_audio']);
+                                    $isSongstatus = checkExitStatus($row['song_id']);             
+                                    renderSearchResults($row['path_img'], $row['song_name'], $row['author_singer_name'], $row['path_audio'], $row['song_id'], $isSongstatus);
                                 }
                             }
                         }
