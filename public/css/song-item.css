@@ -22,7 +22,7 @@
     display: flex; 
     align-items: center;
     justify-content: flex-start;
-    width: 70%;
+    width: 100%;
 }
 
 .song_song{
@@ -119,6 +119,10 @@
 .song_items:hover{
     background-color: #2F2739;
 }
+.song_items.active {
+    background-color: #2F2739;
+}
+
 .items_icon_song:hover{
     background-color: #40374a;
 }
@@ -156,6 +160,9 @@
 .timemusic {
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
+    height: 100%;
+    line-height: 54px;
+    text-align: center;
 }
 
 .song_music {
@@ -174,6 +181,6 @@
 color: #ffffff80;
 font-size: 18px;
 }
-ion-icon[name="heart"]{
+ion-icon[name="heart"]:not(#heart){
     color: #6f42c1;
 }

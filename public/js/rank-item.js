@@ -1,6 +1,4 @@
-
 // làm số rank
-
 document.addEventListener('DOMContentLoaded', function () {
     const children = document.querySelectorAll('.number-box');
     if (children.length >= 3) {
@@ -10,6 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.warn("Không đủ thẻ .number-box để thay đổi màu sắc!");
     }
+    if(window.location.href.includes("rank")) {
+        document.querySelectorAll('.sidebar_center .bar_title')[0].classList.add("active");
+    }
+
 
 });
         

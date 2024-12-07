@@ -1,8 +1,8 @@
 
 <?php
-    function renderSongLibrary($path_img, $song_name, $author_singer_name, $path_audio, $song_id) {
-        echo "          
-            <div class='song_items' data-song-id='".$song_id."'>
+    function renderSong($song_id, $path_img, $song_name, $author_singer_name, $path_audio) {
+        return "          
+            <div class='song_items' data-song-id='" . $song_id . "'>
                 <div class='song_item_left'>
                     <div class='item_left_content'>
                         <ion-icon class='music_icon' name='musical-notes-outline'></ion-icon>
@@ -34,10 +34,10 @@
                             <ion-icon class='song_icon' name='heart'></ion-icon>
                         </div>
                         <div class='items_icon_song' style='position:relative;'>
-                            <li style='position: absolute; list-style-type: none;'> 
-                                <ion-icon class='song_music' name='ellipsis-horizontal-outline'></ion-icon>
-                            </li>
-                            <p class='timemusic' style='color: #ffffff;' data-path='".$path_audio."'></p>
+                        <li style='position: absolute; list-style-type: none;'> 
+                            <ion-icon class='song_music' name='ellipsis-horizontal-outline'></ion-icon>
+                        </li>
+                        <p class='timemusic' style='color: #ffffff;' data-path='".$path_audio."'></p>
                         </div>
                     </div>
                 </div>
@@ -45,16 +45,4 @@
         ";
     }
 ?>
-    <script>
-        var heartBox = document.querySelectorAll('.heart_icon');
-        // var heart = document;
-        document.addEventListener('DOMContentLoaded', () => {
-
-            heartBox.forEach((heartboxx) => {
-                heartboxx.addEventListener('click', function() {
-                heartboxx.querySelector('.song_icon').classList.toggle('heart-filled');
-            });
-            })
-        })
-    </script>
     

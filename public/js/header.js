@@ -2,10 +2,10 @@ const border_circle = document.getElementById('border_circle');
 const personal = document.getElementById('personall');
 const logoutbtn = document.querySelector('#logoutbtn');
 
-border_circle.addEventListener('mouseenter', () => {
+border_circle?.addEventListener('mouseenter', () => {
     personal.style.display = 'block';
 });
-personal.addEventListener('mouseleave', () => {
+personal?.addEventListener('mouseleave', () => {
     personal.style.display = 'none';
 });
 
@@ -26,7 +26,7 @@ function logOut() {
     });
 }
 
-logoutbtn.addEventListener("click", () => {
+logoutbtn?.addEventListener("click", () => {
     logOut()
         .then(() => {
             window.location.href = "discover";
@@ -35,3 +35,15 @@ logoutbtn.addEventListener("click", () => {
             alert("Logout failed. Please try again.");
         });
 });
+
+$$('.sidebar_top .bar_title')[0].addEventListener("click", (e) => {
+    if(sessionStorage.getItem("userId") == "") {
+        if(confirm("Bạn cần đăng nhập!")) {
+            window.location.href = "logIn";
+        }
+    } else {
+        window.location.href = "library";
+
+    }
+
+})

@@ -12,7 +12,7 @@
             header("location: discover");
             exit();
         }else {
-            return "Invalid email or password";
+            echo "<script>alert('Invalid email or password!')</script>";
         }
     }
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['loginbtn'])) { 

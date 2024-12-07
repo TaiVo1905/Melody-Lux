@@ -50,7 +50,7 @@
                             if (!empty($query)) {
                                 $results = searchSong($query);
                                 if(mysqli_num_rows($results) == 0) {
-                                    echo 'Không tìm thấy kết quả';
+                                    echo '<h5 style="color: red">Không tìm thấy kết quả</h5>';
                                 }
                                 while ($row = mysqli_fetch_assoc($results)) {
                                     $isSongstatus = checkExitStatus($row['song_id']);             
@@ -66,7 +66,8 @@
                     include_once './app/components/footer.php';
                 ?>
    </div>
-   <script src="./public/js/search.js?v=<?php echo time()?>"></script>
+    <script src="./public/js/handleSong.js?v<?php echo time(); ?>"></script>
+    <script src="./public/js/search.js?v=<?php echo time()?>"></script>
     <script src="./public/js/header.js?v<?php echo time(); ?>"></script>
     
 </body>

@@ -55,9 +55,10 @@
                     include_once './app/components/footer.php';
                 ?>
    </div>
-   <script src="/melody-lux/public/js/rank-item.js?v<?php echo time(); ?>"></script>
+    <script src="/melody-lux/public/js/handleSong.js?v<?php echo time(); ?>"></script>
+    <script src="/melody-lux/public/js/search.js?v<?php echo time(); ?>"></script>
+    <script src="/melody-lux/public/js/rank-item.js?v<?php echo time(); ?>"></script>
     <script src="./public/js/header.js?v<?php echo time(); ?>"></script>
-
 </body>
 </html>
           

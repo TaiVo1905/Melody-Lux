@@ -56,7 +56,7 @@
             <div class="col c-2">
                 <?php
                 include_once './app/components/sidebar.php';
-                ?>  
+                ?> 
             </div>
             <div class="col c-10">
                 <?php
@@ -144,8 +144,9 @@
                 ?>
         </div>
    </div>
-   <script src="./public/js/discoverView.js?v<?php echo time(); ?>"></script>
-   <script src="./public/js/handleSong.js?v<?php echo time(); ?>"></script>
-   <script src="./public/js/search.js?v<?php echo time(); ?>"></script>
+    <script src="./public/js/discoverView.js?v<?php echo time(); ?>"></script>
+    <script src="./public/js/handleSong.js?v<?php echo time(); ?>"></script>
+    <script src="./public/js/search.js?v<?php echo time(); ?>"></script>
     <script src="./public/js/header.js?v<?php echo time(); ?>"></script>
 </body>
+</html>

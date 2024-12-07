@@ -1,8 +1,5 @@
 // const $=document.querySelector.bind(document);
 // const $$=document.querySelectorAll.bind(document);
-document.addEventListener("DOMContentLoaded", () => {
-    $('.sidebar_top .bar_title:nth-child(1)').classList.add("active");
-})
 
 const profile_head_list = document.querySelectorAll('.library-nav--item');
 
@@ -78,6 +75,7 @@ setTimeout(function(){
 },6000)
 
 document.addEventListener("DOMContentLoaded", () => {
+    $('.sidebar_top .bar_title:nth-child(1)').classList.add("active");
     const tabs = document.querySelectorAll(".library-nav--item");
     const fields = document.querySelectorAll(".song-fiel, .playlist-fiel, .author-fiel, .album-fiel");
 
@@ -103,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const heartBox = document.querySelectorAll('.heart_icon');
-
+    console.log(heartBox);
     heartBox.forEach((heartboxx) => {
         heartboxx.addEventListener('click', function() {
             const heartIcon = heartboxx.querySelector('.song_icon');
@@ -120,7 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (xhr.status == 200) {
                         console.log(xhr.responseText);
                         if(parseInt(xhr.responseText) == 1){
-                            songItem.remove()
+                            songItem.remove();
+                            $("#heart").classList.remove("active");
                         }
                     } else {
                         console.log("Error saving current song");
