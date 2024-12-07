@@ -37,6 +37,17 @@
         $result = mysqli_query($conn, $sql);
         return $result;
     }
+    function checkExitStatus($song_id){
+        $db = connectDB();
+        $sql = "SELECT * FROM song_libraries WHERE user_id = $_SESSION[user_id] AND song_id = $song_id";
+        $result = mysqli_query($db, $sql);
+        if(mysqli_num_rows($result) > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     function songCategory ($category){
         $conn = connectDB();
         $sql = "select songs.song_id, songs.song_name, songs.path_audio, songs.path_img, songs.plays,

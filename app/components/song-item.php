@@ -1,7 +1,7 @@
 
 <?php
     function renderSong($song_id, $path_img, $song_name, $author_singer_name, $path_audio) {
-        echo "          
+        return "          
             <div class='song_items' data-song-id='" . $song_id . "'>
                 <div class='song_item_left'>
                     <div class='item_left_content'>
@@ -45,16 +45,4 @@
         ";
     }
 ?>
-    <script>
-        var heartBox = document.querySelectorAll('.heart_icon');
-        // var heart = document;
-        document.addEventListener('DOMContentLoaded', () => {
-
-            heartBox.forEach((heartboxx) => {
-                heartboxx.addEventListener('click', function() {
-                heartboxx.querySelector('.song_icon').classList.toggle('heart-filled');
-            });
-            })
-        })
-    </script>
     

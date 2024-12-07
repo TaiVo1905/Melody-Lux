@@ -73,25 +73,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
     
-    song_items.forEach(item => {
-        item.addEventListener("click", async (e) => {
-            if (!e.target.closest(".item_action")) {
-                console.log(item);
-                await saveCurrentSong(userId, parseInt(item.dataset.songId), "00:00");
-                await handleCurrentSong(userId, true);
-                for(let i = 0; i < song_items.length; i++) {
-                    if(song_items[i].classList.contains("active")) {
-                        song_items[i].classList.remove("active");
-                        break;
-                    }
-                }
-                item.classList.add("active");
-            }
-        });
-        if(item.dataset.songId == media.dataset.songId) {
-            item.classList.add("active");
-        }
-    });
+    selectorSongItems(userId);
 
     rank_items.forEach(item => {
         item.addEventListener("click", async (e) => {
@@ -203,6 +185,12 @@ async function handleCurrentSong(userid = 2, checkPlay = false) {
         if (response[0]["song_repeat"] == 1) {
             $(".controls_player li:nth-child(5)").classList.add("active");
         }
+        console.log(response[0]["isSongstatus"]);
+        if(response[0]["isSongstatus"] == true) {
+            $("#heart").classList.add("active");
+        } else {
+            $("#heart").classList.remove("active");
+        }
         
         if (checkPlay) {
             currentSong.play();
@@ -272,6 +260,7 @@ async function handleEvent(userId) {
             songid = handleSongRandom();
         } else {
             if(window.location.href.includes("library")) {
+                const song_items = $$(".song_items");
                 for (let i = 0; i < song_items.length; i++) {
                     if(song_items[i].classList.contains("active")) {
                         song_items[i].classList.remove("active");
@@ -350,6 +339,7 @@ function nextSong() {
             return handleSongRandom(songid);
         } else {
             if(window.location.href.includes("library")) {
+                const song_items = $$(".song_items");
                 for (let i = 0; i < song_items.length; i++) {
                     if(song_items[i].classList.contains("active")) {
                         song_items[i].classList.remove("active");
@@ -403,6 +393,7 @@ function nextSong() {
 
 function handleSongRandom (songid) {
     if (window.location.href.includes("library")) {
+        const song_items = $$(".song_items");
         do {
             var random = Math.floor(Math.random() * song_items.length);
         }
@@ -458,4 +449,100 @@ function handleSongRandom (songid) {
     return songid;
 }
 
+$("#heart").addEventListener('click', function () {
+    this.classList.toggle('active');
+    const songId = parseInt(media.dataset.songId); // Lấy song_id từ data attribute
+    if (this.classList.contains('active')) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', './app/controllers/handleSLibraryController.php', true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    if (window.location.href.includes("library")) {
+                        $(".songs").innerHTML = xhr.responseText;
+                        $(`.song_items[data-song-id="${songId}"]`).classList.add("active");
+                        selectorHeart();
+                        selectorSongItems(sessionStorage.getItem("userId") == "" ? 2 : JSON.parse(sessionStorage.getItem("userId")))
+                    }
+                } else {
+                    console.log("Error saving current song");
+                }
+            }
+        };
+        xhr.send(JSON.stringify({ func: 'addSongToLibrary', data: songId }));  
+    }else{
+        if (window.location.href.includes("library")) {
+            $(`.song_items[data-song-id="${songId}"]`).remove();
+        }
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', './app/controllers/handleSLibraryController.php', true);
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    console.log(xhr.responseText);
+                } else {
+                    console.log("Error saving current song");
+                }
+            }
+        };
+        xhr.send(JSON.stringify({ func: 'removeSongLibrary', data: songId }));
+    }
+});
 // sessionStorage.removeItem("userId")
+
+function selectorHeart () {
+    const heartBox = document.querySelectorAll('.heart_icon');
+    console.log(heartBox);
+    heartBox.forEach((heartboxx) => {
+        heartboxx.addEventListener('click', function() {
+            const heartIcon = heartboxx.querySelector('.song_icon');
+            const songItem = heartboxx.closest('.song_items');
+            const songId = parseInt(songItem.dataset.songId); // Lấy song_id từ data attribute
+            console.log(songId); //
+            heartIcon.classList.toggle('heart-filled');
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', './app/controllers/handleSLibraryController.php', true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    console.log(xhr.responseText);
+                    if(parseInt(xhr.responseText) == 1){
+                        songItem.remove();
+                    }
+                } else {
+                    console.log("Error saving current song");
+                }
+            }
+        };
+        xhr.send(JSON.stringify({ func: 'removeSongLibrary', data: songId }));
+
+        });
+    });
+}
+
+function selectorSongItems(userId) {
+    const song_items = $$(".song_items");
+    song_items.forEach(item => {
+        item.addEventListener("click", async (e) => {
+            if (!e.target.closest(".item_action")) {
+                console.log(item);
+                await saveCurrentSong(userId, parseInt(item.dataset.songId), "00:00");
+                await handleCurrentSong(userId, true);
+                for(let i = 0; i < song_items.length; i++) {
+                    if(song_items[i].classList.contains("active")) {
+                        song_items[i].classList.remove("active");
+                        break;
+                    }
+                }
+                item.classList.add("active");
+            }
+        });
+        if(item.dataset.songId == media.dataset.songId) {
+            item.classList.add("active");
+        }
+    });
+}

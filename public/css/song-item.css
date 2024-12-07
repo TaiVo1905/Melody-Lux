@@ -181,6 +181,6 @@
 color: #ffffff80;
 font-size: 18px;
 }
-ion-icon[name="heart"]{
+ion-icon[name="heart"]:not(#heart){
     color: #6f42c1;
 }

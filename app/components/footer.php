@@ -2,12 +2,12 @@
         <div class="media" data-song-id="9">
             <div class="media_cd" style="background-image: url('./public/images/singers/chuBin.jpg')"></div>
             <div class="media_title">
-                <marquee class="media_title--name" scrolldelay="130">Cô đơn trên sofa</marquee>
-                <a class="media_title--author">Chu Bin</a>
+                <marquee class="media_title--name" scrolldelay="130">Chưa có bài hát</marquee>
+                <a class="media_title--author"></a>
             </div>
             <div class="media_icon">
-                <li class="meadia_icon_more heart">
-                <ion-icon name="heart-outline"></ion-icon>
+                <li class="meadia_icon_more">
+                <ion-icon name="heart" id="heart"></ion-icon>
                 <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
                 </li>
             </div>
@@ -24,9 +24,9 @@
                 <li class="controls_player--icon"><ion-icon name="repeat-outline"></ion-icon></li>
             </div>
             <div class="controls_time">
-                <span class="controls_time--left" style="color:#595560;padding-right:14px;">00.00</span>
+                <span class="controls_time--left" style="color:#595560;padding-right:14px;">00:00</span>
                 <input id="progress" class="controls_time--range" type="range" value="0" min="0" max="100" step="0.1">
-                <span class="controls_time--right" style="color:white;padding-left:14px;">03.22</span>
+                <span class="controls_time--right" style="color:white;padding-left:14px;">00:00</span>
             </div>
             <audio id="currentSong" src="./public/audio/DieuThuocTanNguoiTrongGiangHo6OST-LamChanKhang-5488925.mp3"></audio>
         </div>
