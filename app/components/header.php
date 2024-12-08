@@ -11,7 +11,7 @@
         </div>
         <div class="header_right">
             <div class="border_circle">
-                <i class="lni lni-stamp icon_header "></i>
+                <i class="lni lni-stamp icon_header" id="lni"></i>
             </div>
             <div class="border_circle">
                 <ion-icon class = "icon_header" name="cloud-upload"></ion-icon>
@@ -26,6 +26,8 @@
         <?php
             include_once("./app/components/userRegister.php");
             include_once("./app/components/userLogin.php");
+            include_once("./app/components/background.php");
+            echo createThemeContainer();
             if(!$_SESSION["username"]) {
                 echo createRegister();
             } else {
