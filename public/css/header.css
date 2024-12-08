@@ -246,3 +246,116 @@
 #logoutbtn {
     cursor: pointer;
 }
+  /* Phần background */
+  .theme-container {
+    width: 945px;
+    background-color:  #2F2739;
+    border-radius: 10px;
+    padding: 10px 30px 0px 30px;
+    position: absolute;
+    left:265px;
+    color: white;
+    display: none;
+    /* display: block; */
+    top: 60px;
+    z-index: 6;
+}
+
+.themes {
+    display: flex;
+    gap: 25px;
+}
+
+.theme-item {
+    width: 155px;
+    height: 155px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.theme-item:hover {
+    transform: scale(1.05);
+}
+
+.theme-item img {
+    height: 260%;
+    object-fit: cover;
+    object-position: 2%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.theme-item .overlay {
+    opacity: 0;
+    transform: scale(0.9); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(102, 101, 101, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+.theme-item:hover .overlay {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.theme-item .apply-btn,
+.theme-item .preview-btn {
+    background-color: #B22222; 
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-item .preview-btn {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.theme-item .apply-btn:hover {
+    background-color: #FF4500; 
+}
+
+.theme-item .preview-btn:hover {
+    background-color: white;
+    color: #333;
+}
+.ns{
+    color: white;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.theme-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    opacity: 0.5;
+    display: none;
+    background-size: 130% auto; 
+    background-position: left 10%; 
+    pointer-events: none;  
+}
