@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const border_circle = document.getElementById('border_circle'); 
+    const border_circle = document.getElementById('border_circle');
     const personal = document.getElementById('personall');
     const logoutbtn = document.querySelector('#logoutbtn');
     border_circle.addEventListener('mouseenter', () => {
@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
             xhr.send();
         });
     }
-
     logoutbtn.addEventListener("click", () => {
         logOut()
             .then(() => {
@@ -38,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const lni = document.getElementById('lni');
     const theme_container = document.getElementById('theme-container');
-    
+
     lni.addEventListener('mouseover', () => {
         theme_container.style.display = 'block';
     });
@@ -60,7 +59,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const img = themeItem.querySelector('img').src;
             localStorage.setItem('themeBackgroundImage', img);
             themeBackground.style.backgroundImage = `url(${img})`;
-            themeBackground.style.display = 'block'; 
+            themeBackground.style.display = 'block';
         });
+    });
+
+    document.querySelectorAll('.sidebar_top .bar_title')[0].addEventListener("click", (e) => {
+        if (sessionStorage.getItem("userId") == "") {
+            if (confirm("Bạn cần đăng nhập!")) {
+                window.location.href = "logIn";
+            }
+        } else {
+            window.location.href = "library";
+        }
     });
 });

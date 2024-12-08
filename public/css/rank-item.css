@@ -130,6 +130,11 @@
 .heart-filled{
     color: #B36CDB;
 }
+
+.rank_items.active{
+    background-color: #2F2739;
+}
+
 /* hover */
 .rank_items:hover{
     background-color: #2F2739;

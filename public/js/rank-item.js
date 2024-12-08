@@ -1,6 +1,4 @@
-
 // làm số rank
-
 document.addEventListener('DOMContentLoaded', function () {
     const children = document.querySelectorAll('.number-box');
     if (children.length >= 3) {
@@ -10,19 +8,54 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.warn("Không đủ thẻ .number-box để thay đổi màu sắc!");
     }
+    if(window.location.href.includes("rank")) {
+        document.querySelectorAll('.sidebar_center .bar_title')[0].classList.add("active");
+    }
+
 
 });
         
-
+   
 // làm hình trái tym
 const heartIcons = document.querySelectorAll('.heart_icon');
 
 heartIcons.forEach(heart => {
     heart.addEventListener('click', function () {
         this.classList.toggle('active');
+        
+        const songItem = heart.closest('.rank_items');
+        const songId = parseInt(songItem.dataset.songId); // Lấy song_id từ data attribute
+        if (this.classList.contains('active')) {
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', './app/controllers/handleSLibraryController.php', true);
+                xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        console.log(xhr.responseText);
+                    } else {
+                        console.log("Error saving current song");
+                    }
+                }
+            };
+            xhr.send(JSON.stringify({ func: 'addSongToLibrary', data: songId }));  
+        }else{
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', './app/controllers/handleSLibraryController.php', true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        console.log(xhr.responseText);
+                    } else {
+                        console.log("Error saving current song");
+                    }
+                }
+            };
+            xhr.send(JSON.stringify({ func: 'removeSongLibrary', data: songId }));
+        }
     });
 });
-   
 // handle thời gian nhạc from ChatGPT
 const timeMusicElements = document.querySelectorAll('.timemusic');
 

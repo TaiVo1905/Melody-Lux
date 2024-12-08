@@ -37,4 +37,30 @@
         $result = mysqli_query($conn, $sql);
         return $result;
     }
+    function checkExitStatus($song_id){
+        $db = connectDB();
+        $sql = "SELECT * FROM song_libraries WHERE user_id = $_SESSION[user_id] AND song_id = $song_id";
+        $result = mysqli_query($db, $sql);
+        if(mysqli_num_rows($result) > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    function songCategory ($category){
+        $conn = connectDB();
+        $sql = "select songs.song_id, songs.song_name, songs.path_audio, songs.path_img, songs.plays,
+        albums.album_name, categories.category,
+        author_singers.author_singer_name
+        from songs
+        join albums on songs.album_id = albums.album_id
+        join categories on songs.category_id = categories.category_id
+        join author_singers on songs.author_id = author_singers.author_singer_id
+        where categories.category_id = $category
+        order by plays desc;";
+        //mục đích của lệnh này là gì?
+        $result = mysqli_query($conn, $sql);
+        return $result;
+    }
 ?>
