@@ -35,7 +35,15 @@ logoutbtn?.addEventListener("click", () => {
             alert("Logout failed. Please try again.");
         });
 });
-
+$(".icon_header[name='cloud-upload'").addEventListener('click', () => {
+    if (sessionStorage.getItem("userId") == "") {
+        if(confirm("Bạn cần đăng nhập!")) {
+            window.location.href = "logIn";
+        }
+    } else {
+        window.location.href = "uploadSong";
+    }
+})
 $$('.sidebar_top .bar_title')[0].addEventListener("click", (e) => {
     if(sessionStorage.getItem("userId") == "") {
         if(confirm("Bạn cần đăng nhập!")) {

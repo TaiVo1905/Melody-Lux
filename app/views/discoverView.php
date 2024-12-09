@@ -49,6 +49,9 @@
         margin: 0 68px;
         gap: 6px;
     }
+    .padding-bottom {
+        padding-bottom: 88px;
+    }
 </style>
 <body>
    <div class="grid" style="background-color: #170F23;">
@@ -58,7 +61,7 @@
                 include_once './app/components/sidebar.php';
                 ?> 
             </div>
-            <div class="col c-10">
+            <div class="col c-10 padding-bottom">
                 <?php
                 include_once './app/components/header.php';
                 ?>

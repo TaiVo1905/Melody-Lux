@@ -33,7 +33,9 @@ if(window.location.href.includes("search")) {
                     xhr.onreadystatechange = function() {
                     if (xhr.readyState == 4) {
                         if (xhr.status == 200) {
-                            console.log(xhr.responseText);
+                            if(songId == parseInt($(".media").dataset.songId)){
+                                $("#heart").classList.add("active");
+                            }
                         } else {
                             console.log("Error saving current song");
                         }
@@ -47,7 +49,9 @@ if(window.location.href.includes("search")) {
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState == 4) {
                         if (xhr.status == 200) {
-                            console.log(xhr.responseText);
+                            if(parseInt(xhr.responseText) == 1){
+                                $("#heart").classList.remove("active");
+                            }
                         } else {
                             console.log("Error saving current song");
                         }

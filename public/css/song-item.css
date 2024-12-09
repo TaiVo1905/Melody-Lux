@@ -181,6 +181,10 @@
 color: #ffffff80;
 font-size: 18px;
 }
-ion-icon[name="heart"]:not(#heart){
+/* ion-icon[name="heart"]:not(#heart){
+    color: #6f42c1;
+} */
+
+.items_icon_song.active ion-icon{
     color: #6f42c1;
 }

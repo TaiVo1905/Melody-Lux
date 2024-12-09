@@ -7,7 +7,7 @@
 require_once './app/models/songModel.php';
     function renderRankItems($stt, $path_img, $song_name, $author_singer_name, $path_audio, $song_id, $isSongstatus){
         $heartIcon = $isSongstatus 
-        ? 'active' : null; ;
+        ? 'active' : null;
         echo '
         <div class="rank_items" data-song-id="'.$song_id.'">
             <div class="rank_item_left">

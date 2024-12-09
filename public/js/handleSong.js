@@ -170,7 +170,6 @@ async function getCurrentSong(userid) {
 
 async function handleCurrentSong(userid = 2, checkPlay = false) {
     try {
-        console.log(userid)
         const response = await getCurrentSong(userid);
         currentSong.src = response[0]["path_audio"];
         const time = response[0]["current_song_time"].split(":");
@@ -261,64 +260,56 @@ async function handleEvent(userId) {
         } else {
             if(window.location.href.includes("library")) {
                 const song_items = $$(".song_items");
-                for (let i = 0; i < song_items.length; i++) {
-                    if(song_items[i].classList.contains("active")) {
+                for (let i = song_items.length -1; i >= 0; i--) {
+                    if(song_items[i] == song_items[0]) {
                         song_items[i].classList.remove("active");
-                        if(song_items[i] == song_items[0]) {
-                            songid = parseInt(song_items[song_items.length - 1].dataset.songId);
-                            song_items[song_items.length - 1].classList.add("active");
-                        }else {
-                            songid = parseInt(song_items[i].previousElementSibling.dataset.songId);
-                            song_items[i-1].classList.add("active");
-
-                        }                 
+                        songid = parseInt(song_items[song_items.length - 1].dataset.songId);
+                        song_items[song_items.length - 1].classList.add("active");
+                    }else if(song_items[i].classList.contains("active")) {
+                        song_items[i].classList.remove("active");
+                        songid = parseInt(song_items[i].previousElementSibling.dataset.songId);
+                        song_items[i-1].classList.add("active");
                         break;
-                    }
+                    }                
                 }
             } else if (window.location.href.includes("discover")) {
-                for (let i = 0; i < songDiscover.length; i++) {
-                    if(songDiscover[i].classList.contains("active")) {
+                for (let i = songDiscover.length -1; i >= 0; i--) {
+                    if(songDiscover[i] == songDiscover[0]) {
                         songDiscover[i].classList.remove("active");
-                        if(songDiscover[i] == songDiscover[0]) {
-                            songid = parseInt(songDiscover[songDiscover.length - 1].dataset.songId);
-                            songDiscover[songDiscover.length - 1].classList.add("active");
-                        }else {
-                            songid = parseInt(songDiscover[i].previousElementSibling.dataset.songId);
-                            songDiscover[i-1].classList.add("active");
-
-                        }                 
+                        songid = parseInt(songDiscover[songDiscover.length - 1].dataset.songId);
+                        songDiscover[songDiscover.length - 1].classList.add("active");
+                    }else if(songDiscover[i].classList.contains("active")) {
+                        songDiscover[i].classList.remove("active");
+                        songid = parseInt(songDiscover[i].previousElementSibling.dataset.songId);
+                        songDiscover[i-1].classList.add("active");
                         break;
-                    }
+                    }                
                 }
             } else if (window.location.href.includes("rank")) {
-                for (let i = 0; i < rank_items.length; i++) {
-                    if(rank_items[i].classList.contains("active")) {
+                for (let i = rank_items.length -1; i >= 0; i--) {
+                    if(rank_items[i] == rank_items[0]) {
                         rank_items[i].classList.remove("active");
-                        if(rank_items[i] == rank_items[0]) {
-                            songid = parseInt(rank_items[rank_items.length - 1].dataset.songId);
-                            rank_items[rank_items.length - 1].classList.add("active");
-                        }else {
-                            songid = parseInt(rank_items[i].previousElementSibling.dataset.songId);
-                            rank_items[i-1].classList.add("active");
-
-                        }                 
+                        songid = parseInt(rank_items[rank_items.length - 1].dataset.songId);
+                        rank_items[rank_items.length - 1].classList.add("active");
+                    }else if(rank_items[i].classList.contains("active")) {
+                        rank_items[i].classList.remove("active");
+                        songid = parseInt(rank_items[i].previousElementSibling.dataset.songId);
+                        rank_items[i-1].classList.add("active");
                         break;
-                    }
+                    }                
                 }
             } else if (window.location.href.includes("search")) {
-                for (let i = 0; i < songSearch_items.length; i++) {
-                    if(songSearch_items[i].classList.contains("active")) {
+                for (let i = songSearch_items.length -1; i >= 0; i--) {
+                    if(songSearch_items[i] == songSearch_items[0]) {
                         songSearch_items[i].classList.remove("active");
-                        if(songSearch_items[i] == songSearch_items[0]) {
-                            songid = parseInt(songSearch_items[songSearch_items.length - 1].dataset.songId);
-                            songSearch_items[songSearch_items.length - 1].classList.add("active");
-                        }else {
-                            songid = parseInt(songSearch_items[i].previousElementSibling.dataset.songId);
-                            songSearch_items[i-1].classList.add("active");
-
-                        }                 
+                        songid = parseInt(songSearch_items[songSearch_items.length - 1].dataset.songId);
+                        songSearch_items[songSearch_items.length - 1].classList.add("active");
+                    }else if(songSearch_items[i].classList.contains("active")) {
+                        songSearch_items[i].classList.remove("active");
+                        songid = parseInt(songSearch_items[i].previousElementSibling.dataset.songId);
+                        songSearch_items[i-1].classList.add("active");
                         break;
-                    }
+                    }                
                 }
             }
         }
@@ -341,50 +332,55 @@ function nextSong() {
             if(window.location.href.includes("library")) {
                 const song_items = $$(".song_items");
                 for (let i = 0; i < song_items.length; i++) {
-                    if(song_items[i].classList.contains("active")) {
+                    if(song_items[i] == song_items[song_items.length - 1]) {
+                        song_items[i].classList.remove("active");
+                        songid = parseInt(song_items[0].dataset.songId);
+                        song_items[0].classList.add("active");
+                    } else if(song_items[i].classList.contains("active")) {
                         song_items[i].classList.remove("active");
                         songid = parseInt(song_items[i].nextElementSibling.dataset.songId);
                         song_items[i+1].classList.add("active");
                         break;
-                    } else if(song_items[i] == song_items[song_items.length - 1]) {
-                        songid = parseInt(song_items[0].dataset.songId);
-                        song_items[0].classList.add("active");
                     }
                 }
             } else if (window.location.href.includes("discover")) {
                 for (let i = 0; i < songDiscover.length; i++) {
-                    if(songDiscover[i].classList.contains("active")) {
+                    if(songDiscover[i] == songDiscover[songDiscover.length - 1]) {
+                        songDiscover[i].classList.remove("active");
+                        songid = parseInt(songDiscover[0].dataset.songId);
+                        songDiscover[0].classList.add("active");
+                    } else if(songDiscover[i].classList.contains("active")) {
                         songDiscover[i].classList.remove("active");
                         songid = parseInt(songDiscover[i].nextElementSibling.dataset.songId);
                         songDiscover[i+1].classList.add("active");
                         break;
-                    } else if(songDiscover[i] == songDiscover[songDiscover.length - 1]) {
-                        songid = parseInt(songDiscover[0].dataset.songId);
-                        songDiscover[0].classList.add("active");
                     }
                 }
             } else if (window.location.href.includes("rank")){
                 for (let i = 0; i < rank_items.length; i++) {
-                    if(rank_items[i].classList.contains("active")) {
+                    if(rank_items[i] == rank_items[rank_items.length - 1]) {
+                        rank_items[i].classList.remove("active");
+                        songid = parseInt(rank_items[0].dataset.songId);
+                        rank_items[0].classList.add("active");
+                    } else if(rank_items[i].classList.contains("active")) {
                         rank_items[i].classList.remove("active");
                         songid = parseInt(rank_items[i].nextElementSibling.dataset.songId);
                         rank_items[i+1].classList.add("active");
-                    } else if(rank_items[i] == rank_items[rank_items.length - 1]) {
-                        songid = parseInt(rank_items[0].dataset.songId);
-                        rank_items[0].classList.add("active");
+                        break;
                     }
                 }
             } else if (window.location.href.includes("search")) {
                 for (let i = 0; i < songSearch_items.length; i++) {
-                    if(songSearch_items[i].classList.contains("active")) {
+                    if(songSearch_items[i] == songSearch_items[songSearch_items.length - 1]) {
+                        songSearch_items[i].classList.remove("active");
+                        songid = parseInt(songSearch_items[0].dataset.songId);
+                        songSearch_items[0].classList.add("active");
+                    } else if(songSearch_items[i].classList.contains("active")) {
                         songSearch_items[i].classList.remove("active");
                         songid = parseInt(songSearch_items[i].nextElementSibling.dataset.songId);
                         songSearch_items[i+1].classList.add("active");
                         break;
-                    } else if(songSearch_items[i] == songSearch_items[songSearch_items.length - 1]) {
-                        songid = parseInt(songSearch_items[0].dataset.songId);
-                        songSearch_items[0].classList.add("active");
-                    }
+                    } 
                 }
             }
             return songid;
@@ -464,6 +460,10 @@ $("#heart").addEventListener('click', function () {
                         $(`.song_items[data-song-id="${songId}"]`).classList.add("active");
                         selectorHeart();
                         selectorSongItems(sessionStorage.getItem("userId") == "" ? 2 : JSON.parse(sessionStorage.getItem("userId")))
+                    } else if (window.location.href.includes("rank")) {
+                        $(`.rank_items[data-song-id="${songId}"]`).querySelector(".heart_icon").classList.add("active");
+                    } else if (window.location.href.includes("category")) {
+                        $(`.song_items[data-song-id="${songId}"]`).querySelector(".heart_icon").classList.add("active");
                     }
                 } else {
                     console.log("Error saving current song");
@@ -474,6 +474,10 @@ $("#heart").addEventListener('click', function () {
     }else{
         if (window.location.href.includes("library")) {
             $(`.song_items[data-song-id="${songId}"]`).remove();
+        } else if (window.location.href.includes("rank")) {
+            $(`.rank_items[data-song-id="${songId}"]`).querySelector(".heart_icon").classList.remove("active");
+        } else if (window.location.href.includes("category")) {
+            $(`.song_items[data-song-id="${songId}"]`).querySelector(".heart_icon").classList.remove("active");
         }
         const xhr = new XMLHttpRequest();
         xhr.open('POST', './app/controllers/handleSLibraryController.php', true);

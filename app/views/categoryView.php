@@ -46,6 +46,10 @@
         gap: 20px;
         padding: 25px 50px 0 50px;
     }
+
+    .padding-bottom {
+        padding-bottom: 88px;
+    }
 </style>
 <body>
    <div class="grid" style="background-color: #170F23;">
@@ -55,7 +59,7 @@
                 include_once './app/components/sidebar.php';
                 ?>  
             </div>
-            <div class="col c-10">
+            <div class="col c-10 padding-bottom">
                 <?php
                 include_once './app/components/header.php';
                 ?>
@@ -75,7 +79,8 @@
                         $result = songCategory(4);
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
-                                renderSong($row['song_id'], $row['path_img'], $row['song_name'], $row['author_singer_name'], $row['path_audio']);
+                                $isSongstatus = checkExitStatus($row['song_id']);
+                                echo renderSong($row['song_id'], $row['path_img'], $row['song_name'], $row['author_singer_name'], $row['path_audio'], $isSongstatus);
                             }
                         } else {
                             echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
@@ -91,7 +96,8 @@
                         $result = songCategory(2);
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
-                                renderSong($row['song_id'], $row['path_img'], $row['song_name'], $row['author_singer_name'], $row['path_audio']);
+                                $isSongstatus = checkExitStatus($row['song_id']);
+                                echo renderSong($row['song_id'], $row['path_img'], $row['song_name'], $row['author_singer_name'], $row['path_audio'], $isSongstatus);
                             }
                         } else {
                             echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
@@ -107,7 +113,8 @@
                         $result = songCategory(1);
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
-                                renderSong($row['song_id'], $row['path_img'], $row['song_name'], $row['author_singer_name'], $row['path_audio']);
+                                $isSongstatus = checkExitStatus($row['song_id']);
+                                echo renderSong($row['song_id'], $row['path_img'], $row['song_name'], $row['author_singer_name'], $row['path_audio'], $isSongstatus);
                             }
                         } else {
                             echo "Không tìm thấy bài hát nào trong cơ sở dữ liệu.";
@@ -122,7 +129,7 @@
         </div>
    </div>
    <script src="./public/js/handleSong.js?v<?php echo time(); ?>"></script>
-   <script src="./public/js/categoryView.js"></script>
+   <script src="./public/js/categoryView.js?v<?php echo time(); ?>"></script>
    <script src="./public/js/header.js?v<?php echo time(); ?>"></script>
    <script src="./public/js/search.js?v<?php echo time(); ?>"></script>
 </body>
