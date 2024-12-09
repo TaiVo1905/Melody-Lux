@@ -1,0 +1,64 @@
+.form-container {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    margin-left: 425px;
+    margin-top: 90px;
+}
+.form-container h1 {
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input[type="text"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group input[type="file"]::file-selector-button {
+    display: none;
+}
+.form-group input[type="file"]::before {
+    content: 'Chọn tệp';
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-group input[type="file"]:hover::before {
+    background: #e0e0e0;
+}
+.form-group input[type="file"]:active::before {
+    background: #d0d0d0;
+}
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn-primary:hover {
+    background: #0056b3;
+}
+.btn-primary:active {
+    background: #004085;
+}
+.mt {
+    margin-top: 12px;
+}
