@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <link rel="icon" type="imge/x-icon" href="./public/images/logo/logo_x-icon.png"> -->
+    <link rel="icon" type="imge/x-icon" href="./public/images/logo/x-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Song</title>
+    <title>Tải nhạc lên</title>
     <?php include_once("./app/components/linkbootstrap.php")?>
     <link rel="stylesheet" href="./public/css/grid.css">
     <style>

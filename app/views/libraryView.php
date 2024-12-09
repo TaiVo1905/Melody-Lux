@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imge/x-icon" href="./public/images/logo/x-icon.png">
     <title>Thư viện</title>
     <?php include_once("./app/components/linkbootstrap.php");?>
     <link href="/melody-lux/public/css/grid.css" rel="stylesheet">
