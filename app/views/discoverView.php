@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" type="imge/x-icon" href="./public/images/logo/x-icon.png">
+    <title>Khám phá</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
@@ -85,7 +86,7 @@
                             <?php
                             include_once './app/models/albumModel.php'; 
                             $category_id = 2; 
-                            $result = displayAlbums($category_id,5, 0);
+                            $result = displayAlbums($category_id, 5, 0);
                             if (mysqli_num_rows($result) > 0) {
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img'], $row['category']);
@@ -100,7 +101,7 @@
                             <?php
                             include_once './app/models/albumModel.php'; 
                             $category_id = 4; 
-                            $result = displayAlbums($category_id,5, 0);
+                            $result = displayAlbums($category_id, 5, 0);
                             if (mysqli_num_rows($result) > 0) {
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img'], $row['category']);
@@ -114,8 +115,8 @@
                     <div class="albums_hot">
                             <?php
                             include_once './app/models/albumModel.php'; 
-                            $category_id = 1; 
-                            $result = displayAlbums($category_id,5, 0);
+                            $category_id = 1;
+                            $result = displayAlbums($category_id, 5, 0);
                             if (mysqli_num_rows($result) > 0) {
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img'], $row['category']);
@@ -130,7 +131,7 @@
                             <?php
                             include_once './app/models/albumModel.php'; 
                             $category_id = 3; 
-                            $result = displayAlbums($category_id,5, 0);
+                            $result = displayAlbums($category_id, 5, 0);
                             if (mysqli_num_rows($result) > 0) {
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     echo createAlbum($row['album_name'], $row['author_singer_name'], $row['album_img'], $row['category']);

@@ -39,7 +39,8 @@
     }
     function checkExitStatus($song_id){
         $db = connectDB();
-        $sql = "SELECT * FROM song_libraries WHERE user_id = $_SESSION[user_id] AND song_id = $song_id";
+        $userId = $_SESSION["user_id"] ? $_SESSION["user_id"] : 0;
+        $sql = "SELECT * FROM song_libraries WHERE user_id = $userId AND song_id = $song_id";
         $result = mysqli_query($db, $sql);
         if(mysqli_num_rows($result) > 0){
             return true;

@@ -353,7 +353,7 @@
     width: 100%;
     height: 100%;
     z-index: 4;
-    opacity: 0.5;
+    opacity: 0.25;
     display: none;
     background-size: 130% auto; 
     background-position: left 10%; 

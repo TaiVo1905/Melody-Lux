@@ -35,32 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
-    const lni = document.getElementById('lni');
-    const theme_container = document.getElementById('theme-container');
-
-    lni.addEventListener('mouseover', () => {
-        theme_container.style.display = 'block';
-    });
-
-    theme_container.addEventListener('mouseleave', () => {
-        theme_container.style.display = 'none';
-    });
-    const themeBackground = document.getElementById('theme-background');
-    const applyButtons = document.querySelectorAll('.theme-item .apply-btn');
-    const savedBackground = localStorage.getItem('themeBackgroundImage');
-    if (savedBackground) {
-        themeBackground.style.backgroundImage = `url(${savedBackground})`;
-        themeBackground.style.display = 'block';
-    }
-    applyButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            const themeItem = event.target.closest('.theme-item');
-            const img = themeItem.querySelector('img').src;
-            localStorage.setItem('themeBackgroundImage', img);
-            themeBackground.style.backgroundImage = `url(${img})`;
-            themeBackground.style.display = 'block';
-        });
-    });
   
 $(".icon_header[name='cloud-upload'").addEventListener('click', () => {
     if (sessionStorage.getItem("userId") == "") {
@@ -79,5 +53,34 @@ $(".icon_header[name='cloud-upload'").addEventListener('click', () => {
         } else {
             window.location.href = "library";
         }
+    });
+});
+
+// background
+
+const lni = document.getElementById('lni');
+const theme_container = document.getElementById('theme-container');
+
+lni.addEventListener('mouseover', () => {
+    theme_container.style.display = 'block';
+});
+
+theme_container.addEventListener('mouseleave', () => {
+    theme_container.style.display = 'none';
+});
+const themeBackground = document.getElementById('theme-background');
+const applyButtons = document.querySelectorAll('.theme-item .apply-btn');
+const savedBackground = localStorage.getItem('themeBackgroundImage');
+if (savedBackground) {
+    themeBackground.style.backgroundImage = `url(${savedBackground})`;
+    themeBackground.style.display = 'block';
+}
+applyButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const themeItem = event.target.closest('.theme-item');
+        const img = themeItem.querySelector('img').src;
+        localStorage.setItem('themeBackgroundImage', img);
+        themeBackground.style.backgroundImage = `url(${img})`;
+        themeBackground.style.display = 'block';
     });
 });
