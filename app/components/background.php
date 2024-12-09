@@ -9,7 +9,7 @@ function createThemeContainer() {
             <div class='themes'>
                 <div class='display:flex'>
                     <div class='theme-item iu'>
-                        <img src='../../public/images/backgrounds/background1.jpg' alt='Iu'>
+                        <img src='./public/images/backgrounds/background1.jpg' alt='Iu'>
                         <div class='overlay'>
                             <button class='apply-btn'>Áp Dụng</button>
                             <button class='preview-btn'>Xem Trước</button>
@@ -19,7 +19,7 @@ function createThemeContainer() {
                 </div>
                 <div class='display:flex'>
                     <div class='theme-item dark'>
-                        <img src='../../public/images/backgrounds/background2.jpg' alt='Lisa'>
+                        <img src='./public/images/backgrounds/background2.jpg' alt='Lisa'>
                         <div class='overlay'>
                             <button class='apply-btn'>Áp Dụng</button>
                             <button class='preview-btn'>Xem Trước</button>
@@ -29,7 +29,7 @@ function createThemeContainer() {
                 </div>
                 <div class='display:flex'>
                     <div class='theme-item purple'>
-                        <img src='../../public/images/backgrounds/background3.jpg' alt='Jennie'>
+                        <img src='./public/images/backgrounds/background3.jpg' alt='Jennie'>
                         <div class='overlay'>
                             <button class='apply-btn'>Áp Dụng</button>
                             <button class='preview-btn'>Xem Trước</button>
@@ -39,7 +39,7 @@ function createThemeContainer() {
                 </div>
                 <div class='display:flex'>
                     <div class='theme-item green'>
-                        <img src='../../public/images/backgrounds/background4.jpg' alt='Jisoo'>
+                        <img src='./public/images/backgrounds/background4.jpg' alt='Jisoo'>
                         <div class='overlay'>
                             <button class='apply-btn'>Áp Dụng</button>
                             <button class='preview-btn'>Xem Trước</button>
@@ -49,7 +49,7 @@ function createThemeContainer() {
                 </div>
                 <div class='display:flex'>
                     <div class='theme-item red'>
-                        <img src='../../public/images/backgrounds/background5.jpg' alt='Rose'>
+                        <img src='./public/images/backgrounds/background5.jpg' alt='Rose'>
                         <div class='overlay'>
                             <button class='apply-btn'>Áp Dụng</button>
                             <button class='preview-btn'>Xem Trước</button>

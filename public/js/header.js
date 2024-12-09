@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             xhr.send();
         });
     }
-    logoutbtn.addEventListener("click", () => {
+    logoutbtn?.addEventListener("click", () => {
         logOut()
             .then(() => {
                 window.location.href = "discover";
@@ -71,14 +71,6 @@ $(".icon_header[name='cloud-upload'").addEventListener('click', () => {
         window.location.href = "uploadSong";
     }
 })
-$$('.sidebar_top .bar_title')[0].addEventListener("click", (e) => {
-    if(sessionStorage.getItem("userId") == "") {
-        if(confirm("Bạn cần đăng nhập!")) {
-            window.location.href = "logIn";
-        }
-    } else {
-        window.location.href = "library";
-
     document.querySelectorAll('.sidebar_top .bar_title')[0].addEventListener("click", (e) => {
         if (sessionStorage.getItem("userId") == "") {
             if (confirm("Bạn cần đăng nhập!")) {
