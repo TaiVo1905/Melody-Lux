@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     theme_container.addEventListener('mouseleave', () => {
         theme_container.style.display = 'none';
     });
-
     const themeBackground = document.getElementById('theme-background');
     const applyButtons = document.querySelectorAll('.theme-item .apply-btn');
     const savedBackground = localStorage.getItem('themeBackgroundImage');
@@ -62,6 +61,23 @@ document.addEventListener('DOMContentLoaded', () => {
             themeBackground.style.display = 'block';
         });
     });
+  
+$(".icon_header[name='cloud-upload'").addEventListener('click', () => {
+    if (sessionStorage.getItem("userId") == "") {
+        if(confirm("Bạn cần đăng nhập!")) {
+            window.location.href = "logIn";
+        }
+    } else {
+        window.location.href = "uploadSong";
+    }
+})
+$$('.sidebar_top .bar_title')[0].addEventListener("click", (e) => {
+    if(sessionStorage.getItem("userId") == "") {
+        if(confirm("Bạn cần đăng nhập!")) {
+            window.location.href = "logIn";
+        }
+    } else {
+        window.location.href = "library";
 
     document.querySelectorAll('.sidebar_top .bar_title')[0].addEventListener("click", (e) => {
         if (sessionStorage.getItem("userId") == "") {

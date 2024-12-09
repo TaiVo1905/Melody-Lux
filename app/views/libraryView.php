@@ -26,6 +26,9 @@
         gap: 20px;
         justify-content: center;
     }
+    .padding-bottom {
+        padding-bottom: 88px;
+    }
 </style>
 <body>
 <div style="background-color: #170F23;">
@@ -34,7 +37,7 @@
             <div class="col c-2">
                 <?php include_once("./app/components/sidebar.php");?>
             </div>
-            <div class="col c-10">
+            <div class="col c-10 padding-bottom">
                 <?php 
                 include_once("./app/components/header.php");
                 ?>
