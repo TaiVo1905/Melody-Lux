@@ -25,6 +25,9 @@
     {   
         background-color: #170F23;
     }
+    .padding-bottom {
+        padding-bottom: 88px;
+    }
 </style>
 </head>
 <body>
@@ -35,7 +38,7 @@
                 include_once './app/components/sidebar.php';
                 ?>
             </div>
-            <div class="col c-10" style="background-color: #170F23;">
+            <div class="col c-10 padding-bottom" style="background-color: #170F23;">
                 
                 <?php
                     include_once './app/components/header.php';

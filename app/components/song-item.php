@@ -1,6 +1,8 @@
 
 <?php
-    function renderSong($song_id, $path_img, $song_name, $author_singer_name, $path_audio) {
+    function renderSong($song_id, $path_img, $song_name, $author_singer_name, $path_audio, $isSongstatus = true) {
+        $heartIcon = $isSongstatus 
+        ? 'active' : null;
         return "          
             <div class='song_items' data-song-id='" . $song_id . "'>
                 <div class='song_item_left'>
@@ -30,7 +32,7 @@
                         <div class='items_icon_song micro_icon'>
                             <ion-icon class='song_icon' name='mic-outline'></ion-icon>
                         </div>
-                        <div class='items_icon_song heart_icon'>
+                        <div class='items_icon_song heart_icon " . $heartIcon . "'>
                             <ion-icon class='song_icon' name='heart'></ion-icon>
                         </div>
                         <div class='items_icon_song' style='position:relative;'>
