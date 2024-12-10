@@ -2,9 +2,9 @@
 This website is created with HTML CSS JavaScript PHP and uses mysql to store data
 
 Author: Melody Lux Team
-- Thao Le  <tai.vo26@student.passerellesnumeriques.org>
-- Hung Hoang <tram.huynh26@student.passerellesnumeriques.org>
-- Hue Ho <doan.tran26@student.passerellesnumeriques.org>
+- Vo Duc Tai  <tai.vo26@student.passerellesnumeriques.org>
+- Huynh Thi Mai Tram <tram.huynh26@student.passerellesnumeriques.org>
+- Tran Cong Doan <doan.tran26@student.passerellesnumeriques.org>
 
 ## Requirements
 - [PHP](https://www.php.net/releases/8_1_6.php) >= 8.1.6
