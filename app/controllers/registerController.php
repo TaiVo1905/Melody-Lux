@@ -13,7 +13,7 @@
             $password_error = "Invalid password";
         }
         
-        if (!validate_email($email) || $mail != $_COOKIE["email"]) {
+        if (!validate_email($email) || $email != $_COOKIE["email"]) {
             $email_error = "Invalid email";
         }
         
